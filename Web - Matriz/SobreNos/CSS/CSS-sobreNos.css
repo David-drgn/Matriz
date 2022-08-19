@@ -1,0 +1,76 @@
+/*  MODIFICA TODO O LAYOUT  */
+@import url(CSS-import/Fontes.css);
+
+body{
+    overflow-y:hidden;
+}
+
+.area{
+    margin-left: 1.5%;
+    margin-top: 1%;
+
+    width: 97%;
+    height: 46%;
+
+    background-color:lightgray;
+
+    border-radius: 25px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.card{
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 20%;
+    border-radius: 100%;
+    background-color: aliceblue;
+}
+
+#total{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+ 
+    background-color: white;
+}
+
+.bruna:hover .brunaInfo{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#brunaInfo{
+    display: none;
+    position: absolute;
+    top: 10%;
+    background-color: gray;
+    left: 10%;
+    width: 25%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.head {
+    width: 100%;
+    height: 30px;
+    background-color: darkgray;
+    border-radius: 5px;
+}
+
+#Titulo{
+    font-size: auto;
+    height: 10%;
+}
+
+#title{
+    margin-left: 10px;
+}
+
+td {
+    text-align: center;
+}

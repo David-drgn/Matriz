@@ -1,0 +1,82 @@
+body{
+    overflow: hidden;
+}
+table{
+    border-collapse: collapse;
+    overflow-y: auto;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+
+    width: 98%;
+    height: 98%;;
+    background-color: #113159;
+    border-radius: 30px;
+}
+
+td{
+    width: 50%;
+}
+
+.body{
+    height: 30%;
+    background-color: #D9D9D9;
+}
+
+.perguntas{
+    width: 30%;
+    height: 30%;
+    background-color: #D9D9D9;
+}
+
+.card-pessoa{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    background-color: #A6A6A6;
+    border-radius: 30px;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    background-color: #A6A6A6;
+    border-radius: 30px;
+}
+
+h1{
+    color: white;
+}
+
+#respostas{
+    display: flex;
+    flex-direction: column;
+    height: 210px;
+}
+
+.button{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.responder{
+    height: 5%;
+}
+
+#envia{
+    width: 10%;
+}
+#resposta{
+    width: 70%;
+}
+
+.oliver{
+    display: flex;
+    justify-content: space-between;
+}

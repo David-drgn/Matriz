@@ -1,0 +1,232 @@
+b {
+    font-size: 30px;
+}
+
+#nivel{
+    position: absolute;
+    left: 33.5%;
+    top: 7vh;
+    background-color: #d9d9d9;
+    align-items: center;
+    display: none;
+    grid-template-columns: auto;
+    width: 250px;
+    height: 200px;
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow-x: auto;
+}
+
+.card {
+    background-color:#a6a6a6;
+    align-items: center;
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 45%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+h4{
+    width: 200%;
+}
+
+.container {
+    padding: 2px 16px;
+    word-wrap: break-word;
+    height: auto;
+    width: 100px;
+}
+
+.td-imagem{
+    width: 30%;
+}
+
+.progressbar {
+    background-color: black;
+    border-radius: 13px;
+    padding: 3px;
+    width: 50%;
+    margin-left: 70px;
+}
+
+#dado>div {
+    background-color: #6ce5e8;
+    width: 40%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+#dado2>div {
+    background-color: #6ce5e8;
+    width: 52%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+#dado3>div {
+    background-color: #6ce5e8;
+    width: 80%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+#Menu-gestor {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 30%;
+    height: 100%;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    overflow-y: scroll;
+}
+
+.cor{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+}
+
+#verde{
+    background-color: green;
+}
+
+#vermelho{
+    background-color: red;
+}
+
+#VermelhoLaranja{
+    background-color: orangered;
+}
+
+#VerdeAmarelo{
+    background-color: greenyellow;
+}
+
+#laranja{
+    background-color: orange;
+}
+
+#alinhar-centro{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #d9d9d9;
+    border-top-right-radius: 5%;
+}
+
+#Menu-funcao{
+    position: absolute;
+    top: 2vh;
+    left: 35%;
+    width: 200px;
+    height: 30px;
+}
+
+#funcao{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    cursor:pointer;
+    font-size: large;
+}
+
+#div-button{
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    height: 17%;
+}
+
+#table-button{
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: 60%;
+    height: 45%;
+}
+
+td.btn{
+    align-items: center;
+    text-align: center;
+}
+
+.button{
+    width: 100%;
+    height: 100%;
+    font-size: large;
+    border-radius: 5%;
+    border: 0px;
+    background-color: #d9d9d9;
+}
+
+#space{
+    width: 50px;
+}
+
+#tamanho-dados{
+    position: absolute;
+    top: 61%;
+    left: 0%;
+    width: 100%;
+    height: 60%;
+}
+
+#Progresso {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #a6a6a6;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.apresenta-porc{
+    position: absolute;
+    right: 10px;
+}
+
+.index-dado{
+    margin-left: 60px;
+}
+
+#Botao{
+    text-align: center;
+}
+
+#Botao-input{
+    font-size: 20px;
+    background-color: #d9d9d9;
+    width: 60%;
+}
+
+#imagem-usuario{
+    width: 60%;
+    height: 60%;
+}
+
+#Menu-funcionarios{
+    width: 68%;
+    height: 90%;
+    background-color: #d9d9d9;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 5%;
+    overflow-y:scroll;
+}

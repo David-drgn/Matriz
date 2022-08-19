@@ -1,0 +1,140 @@
+.card {
+    background-color: #a6a6a6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 45%;
+    height: auto;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 3.5%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.td-imagem {
+    width: 30%;
+}
+
+#Equipes{
+    position: absolute;
+    left: 32%;
+    top: 13vh;
+    background-color: #d9d9d9;
+    align-items: center;
+    display: none;
+    grid-template-columns: auto;
+    width: 250px;
+    height: 200px;
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow-x: auto;
+}
+
+#EquipesEditar{
+    display: none;
+    grid-template-columns: auto;
+    width: 400px;
+    height: 160px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #d6d6d6;
+    border-radius: 15px;
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.5);
+}
+
+.table-funcionarios{
+    margin-left: 10px;
+}
+
+#Menu-equipe {
+    position: absolute;
+    top: 8vh;
+    left: 35%;
+    width: 160px;
+    height: 30px;
+}
+
+#Menu-Editar {
+    position: absolute;
+    top: 13vh;
+    right: 20%;
+    width: 160px;
+    height: 30px;
+}
+
+#equipe {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    cursor: pointer;
+    font-size: large;
+}
+
+#div-button {
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    height: 17%;
+}
+
+#table-button {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: 60%;
+    height: 45%;
+}
+
+td.btn {
+    align-items: center;
+    text-align: center;
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    font-size: large;
+    border-radius: 15px;
+    border: 0px;
+    background-color: #d9d9d9;
+}
+
+#space {
+    width: 50px;
+}
+
+.apresenta-porc {
+    position: absolute;
+    right: 10px;
+}
+
+.index-dado {
+    margin-left: 60px;
+}
+
+#Botao-input {
+    font-size: 20px;
+    background-color: #d9d9d9;
+    width: 60%;
+}
+
+#Menu-funcionarios {
+    width: 68%;
+    height: 80%;
+    background-color: #d9d9d9;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 15px;
+    overflow-y: scroll;
+}
