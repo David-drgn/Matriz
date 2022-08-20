@@ -27,7 +27,7 @@ if (isset($_GET["Salvar"])) {
         $flag = 2;
     }
 
-    if ($flag == 1){
+    if ($flag == 1) {
         echo "<script>var confirmacao = confirm('Deseja tentar novamente?');
 
         if (confirmacao == true) {
@@ -36,10 +36,9 @@ if (isset($_GET["Salvar"])) {
 
         else {
             alert('Você selecionou Cancelar!');
-            window.location.href = 'ExcluirEquipe.php';
+            window.location.href = '../gestor.php';
         }</script>";
-    }
-     else if($flag == 2) {
+    } else if ($flag == 2) {
         $nome = md5(uniqid(""));
         $Criando = "INSERT INTO equipe VALUES (DEFAULT,'" . $nome . "','Descrição', 'Vermelho', '" . $IDgestor . "' )";
 

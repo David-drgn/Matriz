@@ -11,6 +11,32 @@ table {
     padding: 30px 30px 30px 30px;
 }
 
+.table-funcionarios {
+    background-color: #a6a6a6;
+}
+
+#EXquali {
+    display: none;
+    grid-template-columns: auto auto;
+    width: 95%;
+    height: 75%;
+    overflow-y: auto;
+    margin-top: 15%;
+    margin-left: 3%;
+    border-radius: 10px;
+}
+
+#EXfunc {
+    display: none;
+    grid-template-columns: auto auto;
+    width: 95%;
+    height: 75%;
+    overflow-y: auto;
+    margin-top: 15%;
+    margin-left: 3%;
+    border-radius: 10px;
+}
+
 .card {
     background-color: #a6a6a6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -21,13 +47,20 @@ table {
     border-radius: 10px;
 }
 
+#card2 {
+    background-color: #a6a6a6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+
+}
+
 .grid-container {
     display: inline-grid;
     grid-template-columns: auto auto auto auto;
     padding: 10px;
     width: 100%;
-  }
-  
+}
+
 .grid-item {
     padding: 25px;
     font-size: 20px;
@@ -181,6 +214,7 @@ table {
     top: 10px;
     border-radius: 25px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #Txt {
@@ -189,26 +223,36 @@ table {
     top: 5px;
 }
 
-#Txt1 {
+#txtContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     position: absolute;
-    top: 60px;
-    left: 1%;
+    top: 40px;
+    left: 10px;
+    width: 100%;
+    text-align: center;
 }
 
-#Txt2 {
-    position: absolute;
-    top: 60px;
-    left: 18%;
+.container {
+    padding: 2px 16px;
 }
 
-#btnSalvarBD{
+.td-imagem {
+    width: 30%;
+}
+
+.table-funcionarios {
+    margin-left: 0px;
+}
+
+#btnSalvarBD {
     width: 50%;
 }
 
 #AdicionarFuncionario {
     display: none;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     height: 400px;
 }
 

@@ -35,11 +35,11 @@ if (isset($_GET["Salvar"])) {
 
     else {
         alert('Você selecionou Cancelar!');
-        window.location.href = '../Gestor.php';
+        window.location.href = 'ApagaSession.php';
     }</script>";
     } else if ($flag == false) {
-        echo "<script> window.alert('Todos os dados da equipe já foram salvos!!');
-                    window.location.href = 'CriaEquipes.php';
-                </script>";
+        echo "<script> window.alert('Acesso liberado!!');</script>";
+        echo "<script> window.alert('" . $_SESSION['IDequipe1'] . "!!');</script>";
+        echo "<script>window.location.href = 'EditaEquipes.php';</script>";
     }
 }

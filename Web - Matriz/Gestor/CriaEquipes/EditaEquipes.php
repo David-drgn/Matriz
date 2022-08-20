@@ -24,12 +24,14 @@ if ($conexao == false) {
     <script src="JavaScript/java-CriaEquipe.js"></script>
 
     <?php
-    include __DIR__ . '/../ponte.php';
-    $IDequipe = $_SESSION['IDequipe'];
+
+
+    $_SESSION['IDequipe'] = "";
+    $IDequipe = $_SESSION['IDequipe1'];
     $IDgestor = $_SESSION['IDcadastro'];
     ?>
 
-    <form action="CriaEquipes.php" method="GET">
+    <form action="EditaEquipes.php" method="GET">
 
         <section id="Menu-funcionarios">
 
@@ -170,7 +172,7 @@ if ($conexao == false) {
                     $resultadoBuscaCompetencias = mysqli_query($conexao, $busca);
                     while ($competencias = mysqli_fetch_array($resultadoBuscaCompetencias)) {
                         echo "<div class='grid-item'>
-                     <a href='AdicionaComp.php?id=" . $competencias['IDcompetencia'] . "'> " . $competencias['nome'] . " </a>
+                     <a href='AdicionaComp1.php?id=" . $competencias['IDcompetencia'] . "'> " . $competencias['nome'] . " </a>
                 </div>";
                     }
                     ?>

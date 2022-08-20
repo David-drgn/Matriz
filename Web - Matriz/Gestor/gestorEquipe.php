@@ -70,7 +70,7 @@
     <div id="Equipes">
         <center>
             <br><a href="gestor.php">Todas as equipes</a> <br><br>
-            <a href="CriaEquipes/CriandoEquipeBD.php">Criar nova equipe</a> <br><br>
+            <a href="CriaEquipes/ConfirmaSenha.php">Criar nova equipe</a> <br><br>
             <?php
 
             $pegaEquipes = "SELECT * from equipe WHERE gestor = '" . $IDgestor . " ' ORDER BY nome";
@@ -95,7 +95,7 @@
                 $resultado = mysqli_query($conexao, $pegaEquipes);
 
                 while ($dados = mysqli_fetch_array($resultado)) {
-                    echo "<a href='CriaEquipes/PegaDados.php?id=" . $dados['IDequipe'] . "'>" . $dados['nome'] . "</a> <br><br>";
+                    echo "<a href='CriaEquipes/ConfirmaSenha2.php?id=" . $dados['IDequipe'] . "'>" . $dados['nome'] . "</a> <br><br>";
                 }
 
                 ?>
@@ -108,9 +108,11 @@
         <div id="div-button">
             <table id="table-button">
                 <tr>
-                    <td class="btn"><input type="button" class="button" onclick="Semaforo()" value="Semaforo" id="button1" /></td>
+                    <td class="btn"><input type="button" class="button" onclick="Semaforo()" value="Semaforo"
+                            id="button1" /></td>
                     <td id="space"></td>
-                    <td class="btn"><input type="button" class="button" onclick="EditarEqp()" value="Editar equipes" id="button2" /></td>
+                    <td class="btn"><input type="button" class="button" onclick="EditarEqp()" value="Editar equipes"
+                            id="button2" /></td>
                 </tr>
             </table>
         </div>
