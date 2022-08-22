@@ -42,6 +42,7 @@ create table equipe
 	IDequipe			INT				auto_increment		PRIMARY KEY,
     nome				VARCHAR(100)	not null,
     descricao			VARCHAR(45),
+    semaforo			VARCHAR(45),
     
     gestor 				int				not null,
     
