@@ -47,6 +47,7 @@ if ($resultado == 5){
 	$sql = mysqli_query($conexao,$atualiza);
 	if (!$atualiza){echo "<script>alert('Erro ao atualizar');
 		window.location.href = 'semaforo.php';</script>";}
+		echo "<script>window.location.href = 'semaforo.php';</script>";
 }
 
 else if ($resultado == 4){
@@ -58,6 +59,7 @@ else if ($resultado == 4){
 	$sql = mysqli_query($conexao,$atualiza);
 	if (!$atualiza){echo "<script>alert('Erro ao atualizar');
 		window.location.href = 'semaforo.php';</script></script>";}
+		echo "<script>window.location.href = 'semaforo.php';</script>";
 }
 
 else if ($resultado == 3){
@@ -69,6 +71,7 @@ else if ($resultado == 3){
 	$sql = mysqli_query($conexao,$atualiza);
 	if (!$atualiza){echo "<script>alert('Erro ao atualizar');
 		window.location.href = 'semaforo.php';</script></script>";}
+		echo "<script>window.location.href = 'semaforo.php';</script>";
 }
 
 else if ($resultado == 2){
@@ -80,6 +83,7 @@ else if ($resultado == 2){
 	$sql = mysqli_query($conexao,$atualiza);
 	if (!$atualiza){echo "<script>alert('Erro ao atualizar');
 		window.location.href = 'semaforo.php';</script></script>";}
+		echo "<script>window.location.href = 'semaforo.php';</script>";
 }
 
 else if ($resultado == 1){
@@ -91,6 +95,7 @@ else if ($resultado == 1){
 	$sql = mysqli_query($conexao,$atualiza);
 	if (!$atualiza){echo "<script>alert('Erro ao atualizar');
 		window.location.href = 'semaforo.php';</script></script>";}
+		echo "<script>window.location.href = 'semaforo.php';</script>";
 }
 
 ?>

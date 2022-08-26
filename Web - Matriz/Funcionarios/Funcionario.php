@@ -26,6 +26,14 @@
     <section id="Menu-funcionarios">
 
         <table id="item-tabela">
+        <tr>
+                <td></td>
+                <td style="width: 16%; height:30px;">0</td>
+                <td style="width: 16%; height:30px;">1</td>
+                <td style="width: 16%; height:30px;">2</td>
+                <td style="width: 16%; height:30px;">3</td>
+                <td style="width: 16%; height:30px;">4</td>
+            </tr>
 
             <?php
 
@@ -35,121 +43,106 @@ $Selecionando = mysqli_query($conexao,$Sql);
 while ($qualidades = mysqli_fetch_array($Selecionando)){
 
 
-if($qualidades['nivelRecomendado'] == 4){
-echo "<tr>
-<td class='tamanho'><a> " . $qualidades['descricao'] . " </a></td>
-<td colspan='5' class='tdTama'>
-<div class='tdDado4'>"; 
-if ($qualidades['nivelAtual'] == 0){
-echo "<div class='tdNivel'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 1){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 2){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 3){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div><div class='tdNivel3'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 4){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div><div class='tdNivel3'></div><div class='tdNivel4'></div></div></td></tr>";
-}
-}
+    while ($qualidades = mysqli_fetch_array($Selecionando)){
+        echo "<tr><td class='tamanho'><a href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a></td>";
+        if($qualidades['nivelRecomendado'] == 5){
+            echo "<td colspan='5' class='tdTama'>";
+            if ($qualidades['nivelAtual'] == 1){
+                echo "<div class='nivelAtual' style='width: 20%'></div>";
+            }
+            if ($qualidades['nivelAtual'] == 2){
+                echo "<div class='nivelAtual' style='width: 40%'></div>";
+            }
+            if ($qualidades['nivelAtual'] == 3){
+                echo "<div class='nivelAtual' style='width: 60%'></div>";
+            }
+            if ($qualidades['nivelAtual'] == 4){
+                echo "<div class='nivelAtual' style='width: 80%'></div>";
+            }
+            if ($qualidades['nivelAtual'] == 5){
+                echo "<div class='nivelAtual' style='width: 100%'></div>";
+            }
+        }
+    
+        if($qualidades['nivelRecomendado'] == 4){
+            echo "<td colspan='4' class='tdTama'>";
+            if ($qualidades['nivelAtual'] == 1){
+                echo "<div class='nivelAtual' style='width:25%'></div></div></td><td colspan='1'>";
+            }
+            if ($qualidades['nivelAtual'] == 2){
+                echo "<div class='nivelAtual' style='width:50%'></div></div></td><td colspan='1'>";
+            }
+            if ($qualidades['nivelAtual'] == 3){
+                echo "<div class='nivelAtual' style='width:75%'></div></div></td><td colspan='1'>";
+            }
+            if ($qualidades['nivelAtual'] == 4){
+                echo "<div class='nivelAtual' style='width:100%'></div></div></td><td colspan='1'>";
+            }
+            if ($qualidades['nivelAtual'] == 5){
+                echo "<div class='nivelAtual' style='width125%'></div></div></td><td colspan='1'>";
+            }
+        }
+    
+        if($qualidades['nivelRecomendado'] == 3){
+            echo "<td colspan='3' class='tdTama'>";
+            if ($qualidades['nivelAtual'] == 1){
+                echo "<div class='nivelAtual' style='width:33.3%'></div></div></td><td colspan='2'>";
+            }
+            if ($qualidades['nivelAtual'] == 2){
+                echo "<div class='nivelAtual' style='width:66.6%'></div></div></td><td colspan='2'>";
+            }
+            if ($qualidades['nivelAtual'] == 3){
+                echo "<div class='nivelAtual' style='width:100%'></div></div></td><td colspan='2'>";
+            }
+            if ($qualidades['nivelAtual'] == 4){
+                echo "<div class='nivelAtual' style='width:133.3%'></div></div></td><td colspan='2'>";
+            }
+            if ($qualidades['nivelAtual'] == 5){
+                echo "<div class='nivelAtual' style='width:166.6%'></div></div></td><td colspan='2'>";
+            }
+        }
+    
+        if($qualidades['nivelRecomendado'] == 2){
+            echo "<td colspan='2' class='tdTama'>";
+            if ($qualidades['nivelAtual'] == 1){
+                echo "<div class='nivelAtual' style='width:50%'></div></div></td><td colspan='3'>";
+            }
+            if ($qualidades['nivelAtual'] == 2){
+                echo "<div class='nivelAtual' style='width:100%'></div></div></td><td colspan='3'>";
+            }
+            if ($qualidades['nivelAtual'] == 3){
+                echo "<div class='nivelAtual' style='width:150%'></div></div></td><td colspan='3'>";
+            }
+            if ($qualidades['nivelAtual'] == 4){
+                echo "<div class='nivelAtual' style='width:200%'></div></div></td><td colspan='3'>";
+            }
+            if ($qualidades['nivelAtual'] == 5){
+                echo "<div class='nivelAtual' style='width:250%'></div></div></td><td colspan='3'>";
+            }
+        }
+    
+        if($qualidades['nivelRecomendado'] == 1){
+            echo "<td colspan='1' class='tdTama'>";
+            if ($qualidades['nivelAtual'] == 1){
+                echo "<div class='nivelAtual' style='width:100%'></div></div></td><td colspan='4'>";
+            }
+            if ($qualidades['nivelAtual'] == 2){
+                echo "<div class='nivelAtual' style='width:200%'></div></div></td><td colspan='4'>";
+            }
+            if ($qualidades['nivelAtual'] == 3){
+                echo "<div class='nivelAtual' style='width:300%'></div></div></td><td colspan='4'>";
+            }
+            if ($qualidades['nivelAtual'] == 4){
+                echo "<div class='nivelAtual' style='width:400%'></div></div></td><td colspan='4'>";
+            }
+            if ($qualidades['nivelAtual'] == 5){
+                echo "<div class='nivelAtual' style='width:500%'></div></div></td><td colspan='4'>";
+            }
+        }
+    
+        echo "</td></tr>";
 
-
-else if($qualidades['nivelRecomendado'] == 3){
-echo "<tr>
-<td class='tamanho'><a> " . $qualidades['descricao'] . " </a></td>
-<td colspan='4' class='tdTama'>
-<div class='tdDado3'>";
-if ($qualidades['nivelAtual'] == 0){
-echo "<div class='tdNivel'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 1){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 2){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 3){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div><div class='tdNivel3'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 4){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div><div class='tdNivel3'></div></div></td><td colspan='1' class='tdAd'><div class='tdNivel4'></div></div></td></tr>";
-}
-}
-
-
-else if($qualidades['nivelRecomendado'] == 2){
-echo "<tr>
-<td class='tamanho'><a> " . $qualidades['descricao'] . " </a></td>
-<td colspan='3' class='tdTama'>
-<div class='tdDado2'>";
-if ($qualidades['nivelAtual'] == 0){
-echo "<div class='tdNivel'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 1){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div>";
-}
-else if ($qualidades['nivelAtual'] == 2){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div>";
-}
-else if ($qualidades['nivelAtual'] == 3){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div></div></td><td colspan='2' class='tdAd'><div class='tdNivel3'></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 4){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div><div class='tdNivel2'></div></div></td><td colspan='2' class='tdAd'><div class='tdNivel3'></div><div class='tdNivel4'></div></div></td></tr>";
-}
-}
-
-
-else if($qualidades['nivelRecomendado'] == 1){
-echo "<tr>
-<td class='tamanho'><a> " . $qualidades['descricao'] . " </a></td>
-<td colspan='2' class='tdTama'>
-<div class='tdDado1'>";
-if ($qualidades['nivelAtual'] == 0){
-echo "<div class='tdNivel'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 1){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 2){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div></div></td><td colspan='3' class='tdAd'><div class='tdNivel2'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 3){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div></div></td><td colspan='3' class='tdAd'><div class='tdNivel2'></div><div class='tdNivel3'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 4){
-echo "<div class='tdNivel'></div><div class='tdNivel1'></div></div></td><td colspan='3' class='tdAd'><div class='tdNivel2'></div><div class='tdNivel3'></div><div class='tdNivel4'></div></div></td></tr>";
-}
-}
-
-
-else if($qualidades['nivelRecomendado'] == 0){
-echo "<tr>
-<td class='tamanho'><a> " . $qualidades['descricao'] . " </a></td>
-<td colspan='1' class='tdTama'>
-<div class='tdDado'>";
-if ($qualidades['nivelAtual'] == 0){
-echo "<div class='tdNivel'></div></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 1){
-echo "<div class='tdNivel'></div></div></td><td colspan='4' class='tdAd'><div class='tdNivel1'></div></td></td></tr></div></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 2){
-echo "<div class='tdNivel'></div></div></td><td colspan='4' class='tdAd'><div class='tdNivel1'></div><div class='tdNivel2'></div></td></td></tr></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 3){
-echo "<div class='tdNivel'></div></div></td><td colspan='4' class='tdAd'><div class='tdNivel1'></div><div class='tdNivel2'></div><div class='tdNivel3'></div></td></td></tr>";
-}
-else if ($qualidades['nivelAtual'] == 4){
-echo "<div class='tdNivel'></div></div></td><td colspan='4' class='tdAd'><div class='tdNivel1'></div><div class='tdNivel2'></div><div class='tdNivel3'></div><div class='tdNivel4'></div></td></td></tr>";
-}
-}
-
-}
+}}
 
 
 ?>

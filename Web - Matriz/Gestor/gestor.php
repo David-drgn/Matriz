@@ -14,6 +14,8 @@
 
     <?php
     include "ponte.php";
+
+    $_SESSION['IDequipe'] = "";
     ?>
 
     <section id="Menu-funcionarios">

@@ -53,7 +53,6 @@
     $id = $_SESSION['IDequipe'];
     if (empty($id)){
         $_SESSION['IDequipe'] = $_GET['id'];
-        $_SESSION['IDequipe1'] = $_GET['id'];
     }
     else{
     }

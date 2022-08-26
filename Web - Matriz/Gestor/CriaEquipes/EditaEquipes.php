@@ -25,9 +25,9 @@ if ($conexao == false) {
 
     <?php
 
+    include __DIR__ . '/../ponte.php';
 
-    $_SESSION['IDequipe'] = "";
-    $IDequipe = $_SESSION['IDequipe1'];
+    $IDequipe = $_SESSION['IDequipe'];
     $IDgestor = $_SESSION['IDcadastro'];
     ?>
 
