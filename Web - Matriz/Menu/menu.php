@@ -25,8 +25,8 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 0%;
-        left: 0%;
+        top: 0px;
+        left: 0px;
         background-color: #d9d9d9;
         border-top-right-radius: 20px;
     }
@@ -42,16 +42,13 @@
 
     #tamanho-dados {
         position: absolute;
-        top: 50%;
+        bottom: 0%;
         left: 0%;
         width: 100%;
-        height: 100%;
+        height: 50%;
     }
 
     #Progresso {
-        position: absolute;
-        bottom: 0%;
-        left: 0%;
         width: 100%;
         height: 100%;
         background-color: #a6a6a6;
@@ -60,36 +57,15 @@
     }
 
     .index-dado {
-        margin-left: 60px;
+        margin-left: 20px;
     }
 
     .progressbar {
         background-color: black;
         border-radius: 13px;
         padding: 3px;
-        width: 50%;
-        margin-left: 70px;
-    }
-
-    #dado>div {
-        background-color: #6ce5e8;
-        width: 40%;
-        height: 20px;
-        border-radius: 10px;
-    }
-
-    #dado2>div {
-        background-color: #6ce5e8;
-        width: 52%;
-        height: 20px;
-        border-radius: 10px;
-    }
-
-    #dado3>div {
-        background-color: #6ce5e8;
         width: 80%;
-        height: 20px;
-        border-radius: 10px;
+        margin-left: 20px;
     }
 
     #Botao {
@@ -103,6 +79,10 @@
         border-radius: 10px;
     }
 
+    .tdDado {
+        width: 80%;
+    }
+
     b {
         font-size: 30px;
     }
@@ -113,72 +93,130 @@
 
     <?php
 
+    $conexao = mysqli_connect("localhost", "root", "", "matriz");
+
+    if ($conexao == false) {
+        echo "Erro.";
+    }
+
     session_start();
     $Nome = $_SESSION['nome'];
     $Cargo = $_SESSION['cargo'];
     $Foto = $_SESSION['foto'];
+    $IDdados = $_SESSION['IDcadastro'];
 
     echo "
     <section id='Menu-gestor'>
         <div id='alinhar-centro'>
             <center>
-                <img src='Foto/".$Foto."' id='imagem-usuario'> <br>
+                <img src='Foto/" . $Foto . "' id='imagem-usuario'> <br>
                 <b>
                     <p>" . $Nome . "</p>
                 </b>
                     <p>" . $Cargo . "</p>
             </center>
+            </div>
             <div id='tamanho-dados'>
-                <table id='Progresso'>
-                    <tr>
-                        <td colspan='2'>
-                            <h4 class='index-dado'>Dado</h4>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class='progressbar' id='dado'>
-                                <div></div>
-                            </div>
-                        </td>
-                        <td>
-                            <h4>40%</h4>
-                        </td>
-                    </tr>
+                <table id='Progresso'>";
+    $pegandoDados = "SELECT * FROM equipe WHERE gestor = '" . $IDdados . "' ORDER BY nome";
+    $SQL = mysqli_query($conexao, $pegandoDados);
 
-                    <tr>
+    while ($resultado = mysqli_fetch_array($SQL)) {
+        if ($resultado['semaforo'] == "Vermelho") {
+            echo "
+                            <tr>
                         <td colspan='2'>
-                            <h4 class='index-dado'>Dado</h4>
+                            <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <div class='progressbar' id='dado2'>
-                                <div></div>
-                            </div>
-                        </td>
-                        <td>
-                            <h4>53%</h4>
-                        </td>
-                    </tr>
-
-                    <tr>
+                            <tr>
+                            <td  class='tdDado'>
+                                <div class='progressbar' class='dado'>
+                                    <div style='border-radius: 10px;height: 30px;width: 20%;background-color: red;'></div>
+                                </div>
+                            </td>
+                            <td>
+                                <h4>20%</h4>
+                            </td>
+                            </tr>";
+        }
+        if ($resultado['semaforo'] == "VermelhoLaranja") {
+            echo "
+            <tr>
                         <td colspan='2'>
-                            <h4 class='index-dado'>Dado</h4>
+                            <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <div class='progressbar' id='dado3'>
-                                <div></div>
-                            </div>
-                        </td>
-                        <td>
-                            <h4>80%</h4>
+                            <tr>
+                            <td>
+                                <div class='progressbar' class='dado'>
+                                    <div style='border-radius: 10px;height: 30px; width: 40%;background-color: orangered;'></div>
+                                </div>
+                            </td>
+                            <td>
+                                <h4>40%</h4>
+                            </td>
+                            </tr>";
+        }
+        if ($resultado['semaforo'] == "Laranja") {
+            echo "
+            <tr>
+                        <td colspan='2'>
+                            <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
                         </td>
                     </tr>
+                            <tr>
+                            <td>
+                                <div class='progressbar' class='dado'>
+                                    <div style='border-radius: 10px;height: 30px;width: 60%;background-color: orange;'></div>
+                                </div>
+                            </td>
+                            <td>
+                                <h4>60%</h4>
+                            </td>
+                            </tr>";
+        }
+        if ($resultado['semaforo'] == "VerdeAmarelo") {
+            echo "
+            <tr>
+                        <td colspan='2'>
+                            <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
+                        </td>
+                    </tr>
+                            <tr>
+                            <td>
+                                <div class='progressbar' class='dado'>
+                                    <div style='border-radius: 10px;height: 30px;width: 80%;background-color: greenyellow;'></div>
+                                </div>
+                            </td>
+                            <td>
+                                <h4>80%</h4>
+                            </td>
+                            </tr>";
+        }
+        if ($resultado['semaforo'] == "Verde") {
+            echo "
+            <tr>
+                        <td colspan='2'>
+                            <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
+                        </td>
+                    </tr>
+                            <tr>
+                            <td>
+                                <div class='progressbar' class='dado'>
+                                    <div style='border-radius: 10px;height: 30px;width: 100%;background-color: green;'></div>
+                                </div>
+                            </td>
+                            <td>
+                                <h4>100%</h4>
+                            </td>
+                            </tr>";
+        }
+    }
+    echo "
                     <tr>
                         <td id='Botao' colspan='2'>
+                        <br>
                             <script src='JavaScript/java-back.js'></script>
                             <button onclick='BackHistory()''>Sair</button>
                         </td>
