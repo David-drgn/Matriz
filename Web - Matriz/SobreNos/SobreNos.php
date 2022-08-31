@@ -20,56 +20,72 @@
             </tr>
             <tr>
                 <td>
-                    <article class="card">
-                        <a class="bruna"><img src="../Imagens/SobreNos/Bruna.jpg"></a>
-                    </article>
-                    <p>Bruna Rodrigues</p>
+                    <center>
+                        <article class="card">
+                            <a class="bruna"><img src="../Imagens/SobreNos/Bruna.jpg"></a>
+                        </article>
+                        <p>Bruna Rodrigues</p>
+                    </center>
                 </td>
                 <td>
-                    <article class="card">
-                        <img src="../Imagens/SobreNos/carioca.jpg">
-                    </article>
-                    <p>David Raphael</p>
+                    <center>
+                        <article class="card">
+                            <img src="../Imagens/SobreNos/carioca.jpg">
+                        </article>
+                        <p>David Raphael</p>
+                    </center>
                 </td>
                 <td>
-                    <article class="card">
-                        <img src="../Imagens/SobreNos/eduardo.jpg">
-                    </article>
-                    <p>Eduardo Pielich</p>
+                    <center>
+                        <article class="card">
+                            <img src="../Imagens/SobreNos/eduardo.jpg">
+                        </article>
+                        <p>Eduardo Pielich</p>
+                    </center>
                 </td>
                 <td>
-                    <article class="card">
-                        <img src="../Imagens/SobreNos/Filipe.jpg">
-                    </article>
-                    <p>Filipe Bezerra</p>
+                    <center>
+                        <article class="card">
+                            <img src="../Imagens/SobreNos/Filipe.jpg">
+                        </article>
+                        <p>Filipe Bezerra</p>
+                    </center>
                 </td>
             </tr>
         </table>
         <table class="area">
             <tr>
-            <td>
-                    <article class="card">
-                        <img src="../Imagens/SobreNos/giulia.jpg">
-                    </article>
-                    <p>Giulia Carmona</p>
+                <td>
+                    <center>
+                        <article class="card">
+                            <img src="../Imagens/SobreNos/giulia.jpg">
+                        </article>
+                        <p>Giulia Carmona</p>
+                    </center>
                 </td>
                 <td>
-                    <article class="card">
-                        <img src="../Imagens/SobreNos/Kaue.jpg">
-                    </article>
-                    <p>Kaue Catto</p>
+                    <center>
+                        <article class="card">
+                            <img src="../Imagens/SobreNos/Kaue.jpg">
+                        </article>
+                        <p>Kaue Catto</p>
+                    </center>
                 </td>
                 <td>
-                    <article class="card">
-                        <img src="../Imagens/SobreNos/MariaLuiza.jpg">
-                    </article>
-                    <p>Maria Luiza</p>
+                    <center>
+                        <article class="card">
+                            <img src="../Imagens/SobreNos/MariaLuiza.jpg">
+                        </article>
+                        <p>Maria Luiza</p>
+                    </center>
                 </td>
                 <td>
-                    <article class="card">
-                        <img src="../Imagens/SobreNos/MariaLemos.jpg">
-                    </article>
-                    <p>Maria Lemos</p>
+                    <center>
+                        <article class="card">
+                            <img src="../Imagens/SobreNos/MariaLemos.jpg">
+                        </article>
+                        <p>Maria Lemos</p>
+                    </center>
                 </td>
             </tr>
         </table>
@@ -77,13 +93,13 @@
     <div class="brunaInfo">
         <div class="head"></div>
         <center>
-        <p>
-Nome: Bruna Marques Rodrigues <br>
-Data de nascimento: 19/01/2005 <br>
-Função no projeto: Gerente de projetos <br>
-Escolaridade: ETEC Jorge Street <br>
-Mais informações: <a href="">VER MAIS</a>
-        </p>
+            <p>
+                Nome: Bruna Marques Rodrigues <br>
+                Data de nascimento: 19/01/2005 <br>
+                Função no projeto: Gerente de projetos <br>
+                Escolaridade: ETEC Jorge Street <br>
+                Mais informações: <a href="">VER MAIS</a>
+            </p>
         </center>
     </div>
 </body>
