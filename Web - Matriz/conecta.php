@@ -26,13 +26,13 @@
 
 				if ($cargo == "Gestor"){
 					echo "<script> window.alert('Bem vindo gestor!!');
-					  window.location.href='Gestor/gestor.php';
+					  window.location.href='HomePage/HomePage.php';
 					  </script>";	
 					$flag=true;
 				}
 				else {
 					echo "<script> window.alert('Bem vindo!!');
-					  window.location.href='Funcionarios/Funcionario.php';
+					  window.location.href='HomePage/HomePage.php';
 					  </script>";	
 					$flag=true;
 				}
@@ -65,4 +65,3 @@
 					</script>";
 		}
 	}
-?>
