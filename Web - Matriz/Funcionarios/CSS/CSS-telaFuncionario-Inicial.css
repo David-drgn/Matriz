@@ -1,469 +1,95 @@
-body{
-    background-color: #113159;
-}
-
-b {
-    font-size: 30px;
-}
-
-.nivelAtual{
-    border-radius: 10px;
-    height: 50px;
+#background{
+    position: absolute;
+    left: 0px;
+    top: 0px;
     width: 100%;
-    background-color: gray;
-}
-
-.tdTama{
-    border-style: solid;
-    border-color: black;
-    border: 1;
-    height: 10px;
-    border-radius: 15px;
-}
-
-.card {
-    position: absolute;
-    top: 40%;
-    right: 15px;
-    background-color: #a6a6a6;
-    width: 20%;
-    height: 15%;
-    border-radius: 20%;
-    display: inline-table;
-}
-
-.card-nivel {
-    width: 20px;
-    height: 20px;
-}
-
-#seu {
-    background-color: #2d8bba;
-    position: absolute;
-    top: 20%;
-    left: 10%;
-}
-
-#seuB {
-    position: absolute;
-    left: 30%;
-    top: 20%;
-}
-
-#recomendado {
-    background-color: #6ce5e8;
-    position: absolute;
-    left: 10%;
-    top: 50%;
-}
-
-#recomendadoB {
-    position: absolute;
-    left: 30%;
-    top: 50%;
-}
-
-.text-card-nivel {
-    font-size: 15px;
-}
-
-#item-tabela {
-    margin-top: 13px;
-    margin-left: 10px;
-    width: 97%;
-    height: 90%;
-    font-size: large;
-}
-
-#gridContainer{
-    display: grid;
-    margin-top: 13px;
-    margin-left: 5%;
-    grid-template-columns: auto auto auto auto;
     height: 100%;
+    background-image: linear-gradient(#0b2545, black);
+    background-repeat: no-repeat;
+}
+
+#Menu-gestor {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 28vw;
+    top: 0%;
+    width: 40%;
+    height: 100%;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#alinhar-centro {
     width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #d9d9d9;
+    border-top-right-radius: 20px;
 }
 
-.tdAd{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    height: 30px;
-    width: 400%;
-    margin-top: 12px;
+table {
+    overflow-y: scroll;
 }
 
-.tdDado{
-    display: grid;
-    grid-template-columns: auto;
-    border-style: solid;
-    border-color: black;
-    border: 1;
+#imagem-usuario {
+    margin-top: 10px;
+    width: 48%;
+    height: 48%;
+}
+
+#tamanho-dados {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
     width: 100%;
-    height: 30px;
-    border-radius: 15px;
+    height: 50%;
 }
 
-.tdDado1{
-    display: grid;
-    grid-template-columns: auto auto;
-    border-style: solid;
-    border-color: black;
-    border: 1;
-    width: 100%;
-    height: 30px;
-    border-radius: 15px;
-}
-
-.tdDado2{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-style: solid;
-    border-color: black;
-    border: 1;
-    width: 100%;
-    height: 30px;
-    border-radius: 15px;
-}
-
-.tdDado3{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    border-style: solid;
-    border-color: black;
-    border: 1;
-    width: 100%;
-    height: 30px;
-    border-radius: 15px;
-}
-
-.tdDado4{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    border-style: solid;
-    border-color: black;
-    border: 1;
-    width: 100%;
-    height: 30px;
-    border-radius: 15px;
-}
-
-.tdNivel{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    height: 30px;
-    width: 100%;
-    background-color: red;
-}
-.tdNivel1{
-    height: 30px;
-    width: 100%;
-    background-color: orangered;
-}
-.tdNivel2{
-    height: 30px;
-    width: 100%;
-    background-color: orange;
-}
-.tdNivel3{
-    height: 30px;
-    width: 100%;
-    background-color: greenyellow;
-}
-.tdNivel4{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    height: 30px;
-    width: 100%;
-    background-color: green;
-}
-
-#tdDado {
-    background-color: #6ce5e8;
-    width: 12%;
-    height: 20px;
-}
-
-#tdDado2 {
-    background-color: #41b8d5;
-    width: 5%;
-    height: 20px;
-}
-
-#tdDado3 {
-    background-color: #2d8bba;
-    width: 90%;
-    height: 20px;
-}
-
-#tdDado4 {
-    background-color: #6ce5e8;
-    width: 79%;
-    height: 20px;
-}
-
-#tdDado5 {
-    background-color: #41b8d5;
-    width: 14%;
-    height: 20px;
-}
-
-#tdDado6 {
-    background-color: #2d8bba;
-    width: 11%;
-    height: 20px;
-}
-
-#tdDado7 {
-    background-color: #6ce5e8;
-    width: 53%;
-    height: 20px;
-}
-
-#tdDado8 {
-    background-color: #41b8d5;
-    width: 22%;
-    height: 20px;
-}
-
-#tdDado9 {
-    background-color: #2d8bba;
+#Progresso {
     width: 60%;
-    height: 20px;
+    height: 50%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-.container {
-    padding: 2px 16px;
-}
-
-.td-imagem {
-    width: 30%;
+.index-dado {
+    margin-left: 20px;
 }
 
 .progressbar {
     background-color: black;
     border-radius: 13px;
     padding: 3px;
-    width: 50%;
-    margin-left: 70px;
-}
-
-.progressbar-circular {
-    position: absolute;
-    left: 3%;
-    top: 45%;
-    background-color: black;
-    border-radius: 13px;
-    padding: 3px;
-    width: 20%;
-}
-
-.progressbar-circular2 {
-    position: absolute;
-    right: 3%;
-    top: 45%;
-    background-color: black;
-    border-radius: 13px;
-    padding: 3px;
-    width: 20%;
-}
-
-#dado-circular>div {
-    background-color: #6ce5e8;
-    width: 40%;
-    height: 20px;
-    border-radius: 13px;
-}
-
-#dado-circular2>div {
-    background-color: #6ce5e8;
-    width: 60%;
-    height: 20px;
-    border-radius: 13px;
-}
-
-#dado>div {
-    background-color: #6ce5e8;
-    width: 40%;
-    height: 20px;
-    border-radius: 10px;
-}
-
-#dado2>div {
-    background-color: #6ce5e8;
-    width: 52%;
-    height: 20px;
-    border-radius: 10px;
-}
-
-#dado3>div {
-    background-color: #6ce5e8;
     width: 80%;
-    height: 20px;
-    border-radius: 10px;
-}
-
-#Menu-funcionario {
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    width: 30%;
-    height: 100%;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
-    overflow-y: scroll;
-}
-
-.cor {
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
-}
-
-#verde {
-    background-color: green;
-}
-
-#vermelho {
-    background-color: red;
-}
-
-#amarelo {
-    background-color: yellow;
-}
-
-#alinhar-centro {
-    width: 100%;
-    height: 80%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-color: #d9d9d9;
-    border-top-right-radius: 5%;
-}
-
-#Menu-dados {
-    position: absolute;
-    top: 10px;
-    left: 31%;
-    width: 68%;
-    height: 30%;
-    background-color: #d9d9d9;
-    border-radius: 5%;
-}
-
-#funcao {
-    width: 100%;
-    height: 100%;
-    border: 0px;
-    cursor: pointer;
-    font-size: large;
-}
-
-#div-button {
-    display: inline-block;
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width: 50%;
-    height: 17%;
-}
-
-#table-button {
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    width: 60%;
-    height: 45%;
-}
-
-td.btn {
-    align-items: center;
-    text-align: center;
-}
-
-.button {
-    width: 100%;
-    height: 100%;
-    font-size: large;
-    border-radius: 5%;
-    border: 0px;
-    background-color: #d9d9d9;
-}
-
-#space {
-    width: 50px;
-}
-
-#tamanho-dados {
-    position: absolute;
-    top: 61%;
-    left: 0%;
-    width: 100%;
-    height: 60%;
-}
-
-#Progresso {
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: #a6a6a6;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
-}
-
-.apresenta-porc {
-    position: absolute;
-    right: 10px;
-}
-
-.index-dado {
-    margin-left: 60px;
+    margin-left: 20px;
 }
 
 #Botao {
+    position: absolute;
+    left: 5%;
+    top: -330px;
     text-align: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
 }
 
-#Botao-input {
+button {
     font-size: 20px;
     background-color: #d9d9d9;
     width: 60%;
+    border-radius: 10px;
 }
 
-.tamanho {
-    width: 80px;
-    height: 30px;
+.tdDado {
+    width: 80%;
 }
 
-.tdTama{
-    height: 50px;
-}
-
-#imagem-usuario {
-    width: 60%;
-    height: 60%;
-}
-
-#Menu-funcionarios {
-    width: 68%;
-    height: 68%;
-    background-color: #d9d9d9;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 5%;
-    overflow-y: scroll;
-    overflow-x:hidden;
-}
-
-#dados {
-    position: absolute;
-    top: 10px;
-    left: 27%;
-    background-color: #a6a6a6;
-    width: 45%;
-    height: 90%;
-    border-radius: 5%;
+b {
+    font-size: 30px;
 }

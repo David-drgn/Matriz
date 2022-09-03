@@ -21,6 +21,8 @@
 				$_SESSION['nome']   	= $registro['nome'];
 				$_SESSION['cargo']		= $registro['cargo'];
 				$_SESSION['foto']		= $registro['foto'];
+				$_SESSION['senha']		= $registro['senha'];
+				$_SESSION['email']		= $registro['email'];
 
 				$cargo = $registro['cargo'];
 

@@ -10,25 +10,46 @@
 </head>
 
 <body>
-    <img src="../Imagens/pc-telaFundo-index.jpg" id="imgFundo">
-    <section id="header">
-        <center>
-            <img id="img" src="../Imagens/LogoTipo.png">
-            <h2 id="nome">Matriz de conhecimento</h2>
-        </center>
-    </section>
+    <form action="../Gestor/Funcionario-dados/perfilDados.php" method="GET">
+        <img src="../Imagens/pc-telaFundo-index.jpg" id="imgFundo">
+        <section id="header">
+            <center>
+                <img id="img" src="../Imagens/LogoTipo.png">
+                <h2 id="nome">Matriz de conhecimento</h2>
+            </center>
+        </section>
 
-    <section id="body">
-        <article id="taskBar">
+        <section id="body">
+            <article id="taskBar">
 
-        </article>
-        <article>
-            <h1>Dica:<br>
-                As habilidades interpessoais são tão importantes quanto as habilidades técnicas. Portanto, não se equeça
-                de<br>
-                desenvolvê-las!</h1>
-        </article>
-    </section>
+                <a href="../Funcionarios/Funcionario.php">Perfil</a>
+                <?php
+                session_start();
+                echo "<a href='../Gestor/Funcionario-dados/perfilDados.php?id=" . $_SESSION['IDcadastro'] . "'>Competências</a>";
+                if ($_SESSION['cargo'] == "Gestor") {
+                    echo "<a href='../Gestor/gestor.php'>Equipes</a>";
+                } else {
+                    echo "<a style='pointer-events:none; cursor:default; color:gray;'>Equipes</a>";
+                }
+                ?>
+                <a>Perguntas Frequentes</a>
+                <a href="confirma.php">Sair</a>
+
+            </article>
+            <article id="dica">
+                <div></div>
+                <div>
+                    <center>
+                        <h1 id="dicaTexto">Dica:<br>
+                            As habilidades interpessoais são tão importantes quanto as habilidades técnicas. Portanto, não se esqueça
+                            de<br>
+                            desenvolvê-las!</h1>
+                    </center>
+                </div>
+                <div></div>
+            </article>
+        </section>
+    </form>
 </body>
 
 </html>
