@@ -11,72 +11,86 @@
 
 <body>
     <form action="BotController.php" method="GET">
-    <table>
-        <thead>
-            <tr>
-                <td class="oliver">
-                    <h1 align="left">Oliver</h1> 
-                </td>    
-                <td>
-                    <h1 align="right">Dúvidas Comuns</h1>
-                </td>
-            </tr>
-        </thead>
+        <div id="complete"></div>
+        <article class="head">
+            <h1 align="left" id="oliver">Oliver</h1>
+            <h1 align="right" id="duvidas">Dúvidas Comuns</h1>
+        </article>
 
-        <tbody id="tbody">
+        <table>
+            <table>
 
-            <tr class="perguntas">
-                <td colspan="2" align="right">
-                    <img>
-                    <div class="card-pessoa">
-                        <h2>5</h2>
-                    </div>
-                </td>
-            </tr>
+                <thead>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </thead>
 
-            <tr class="body">
-                <td colspan="2">
-                    <img>
-                    <div class="card">
-                        <h2>Ok, a pergunta será outra...</h2>
-                        <h2>Por favor mande sua pergunta para nossa ouvidoria: volks.matrizouvidoria@volks.com.br</h2>
-                    </div>
-                </td>
-            </tr>
+                <tbody id="tbody">
 
-            <tr class="body">
-                <td colspan="2">
-                    <img>
-                    <div class="card">
-                        <h2>Me conta: do que mais você precisa hoje? É só escolher o assunto e responder um número. </h2>
-                    </div>
-                </td>
-            </tr>
+                    <tr>
+                        <td colspan="2" align="right" class="resposta">
 
-            <tr class="body">
-                <td colspan="2">
-                    <img>
-                    <div class="card" id="respostas">
-                        <br>
-                        <input class="button" type="submit" name="1" value="1 - Como alterar minha senha?"/><br>
-                        <input class="button" type="submit" name="2" value="2 - Minhas atualizações de treinamento não foram realizadas"/><br>
-                        <input class="button" type="submit" name="3" value="3 - Não concordo com minha matriz atual"/><br>
-                        <input class="button" type="submit" name="4" value="4 - Como visualizar o nível recomendado de cada área? "/><br>
-                        <input class="button" type="submit" name="5" value="5 - Outro"/><br>
-                    </div>
-                </td>
-            </tr>
+                            <div class="card-pessoa">
+                                <h2 id="nro">5</h2>
+                            </div>
+                            <img src="../Imagens/user.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
 
-        </tbody>
+                    <tr class="body">
+                        <td colspan="2" class="mensagem">
+                            <img>
+                            <div class="card">
+                                <h2>Ok, a pergunta será outra...</h2>
+                                <h2>Por favor mande sua pergunta para nossa ouvidoria:
+                                    volks.matrizouvidoria@volks.com.br</h2>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
 
-        <tfoot>
-            <tr class="responder" align="center">
-                <td colspan="2"><input type="number" name="resposta" id="resposta" max="5" min="1" /> <input type="submit" value="Enviar" name="enviar"/></td>
-            </tr>
-        </tfoot>
+                    <tr class="body">
+                        <td colspan="2" class="mensagem">
+                            <img>
+                            <div class="card">
+                                <h2>Me conta: do que mais você precisa hoje? É só escolher o assunto e responder um
+                                    número. </h2>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
 
-    </table>
-</form>
+                    <tr class="body">
+                        <td colspan="2" class="mensagem">
+                            <img>
+                            <div class="card" id="respostas">
+                                <br>
+                                <input class="button" type="submit" name="1"
+                                    value="1 - Como alterar minha senha?" /><br>
+                                <input class="button" type="submit" name="2"
+                                    value="2 - Minhas atualizações de treinamento não foram realizadas" /><br>
+                                <input class="button" type="submit" name="3"
+                                    value="3 - Não concordo com minha matriz atual" /><br>
+                                <input class="button" type="submit" name="4"
+                                    value="4 - Como visualizar o nível recomendado de cada área? " /><br>
+                                <input class="button" type="submit" name="5" value="5 - Outro" /><br>
+                                <input class="button" type="submit" name="sair" value="Deseja sair?" /><br>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+    </form>
 </body>
 
 </html>

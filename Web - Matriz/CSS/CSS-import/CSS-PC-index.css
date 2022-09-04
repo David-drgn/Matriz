@@ -12,7 +12,7 @@ section {
 body {
     color: white;
     background-color: #0b2545;
-	background-image: src="Imagens/android-telaFundo-index.jpg";
+    background-image: src="Imagens/android-telaFundo-index.jpg";
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -166,7 +166,7 @@ td.menu {
 .menu-cnt {
     display: none;
     position: absolute;
-    left: 0%;
+    left: 10px;
     top: 100px;
     background-color: #0b2545;
     min-width: 500px;
@@ -179,6 +179,12 @@ td.menu {
     text-decoration: none;
     display: block;
     text-align: left;
+    transition: all 1s;
+}
+
+.menu-cnt a:hover {
+    background-color: #f1f1f1;
+    color: #0b2545;
 }
 
 .a:hover {

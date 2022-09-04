@@ -1,82 +1,159 @@
-body{
-    overflow: hidden;
+body {
+    overflow-y: auto;
 }
-table{
+
+h1 {
+    margin: 10px;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 50px;
+}
+
+img {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#oliver {
+    margin-top: 29px;
+}
+
+#duvidas {
+    margin-top: -68px;
+}
+
+.head {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 98%;
+    height: 125px;
+    background-color: #113159;
+    border-radius: 25px;
+    z-index: 1000;
+}
+
+table {
+    overflow-y: auto;
     border-collapse: collapse;
     overflow-y: auto;
     position: absolute;
-    top: 10px;
+    top: 45px;
     bottom: 10px;
     left: 10px;
     right: 10px;
 
     width: 98%;
-    height: 98%;;
+    height: auto;
+    background-color: #D9D9D9;
+    border-radius: 30px;
+}
+
+#complete {
+    width: 98%;
+    height: 40%;
+    background-color: #D9D9D9;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 30px;
+}
+
+#nro {
+    margin: auto;
+}
+
+.space {
+    height: 60px;
+}
+
+thead {
+    height: 140px;
+}
+
+td {
+    width: 50%;
+    height: auto;
+}
+
+.body {
+    height: 30%;
+    background-color: #D9D9D9;
+}
+
+.card-pessoa {
+    margin-left: 77%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: auto;
     background-color: #113159;
     border-radius: 30px;
 }
 
-td{
-    width: 50%;
+h2 {
+    margin: 10px;
 }
 
-.body{
-    height: 30%;
-    background-color: #D9D9D9;
+.mensagem {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    width: 100%;
 }
 
-.perguntas{
-    width: 30%;
-    height: 30%;
-    background-color: #D9D9D9;
-}
-
-.card-pessoa{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 30%;
-    background-color: #A6A6A6;
-    border-radius: 30px;
-}
-
-.card{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 40%;
-    background-color: #A6A6A6;
-    border-radius: 30px;
-}
-
-h1{
+.resposta {
     color: white;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    width: 100%;
 }
 
-#respostas{
+.card {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    height: 210px;
+    width: 50%;
+    height: 100%;
+    background-color: #A6A6A6;
+    border-radius: 30px;
+    transition: all 1s;
 }
 
-.button{
+.card:hover {
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
+}
+
+.button {
+    border-color: #c4c4c400;
+    background-color: #c4c4c4;
     width: 80%;
     height: 30px;
     border-radius: 5px;
+    transition: background 1s;
 }
 
-.responder{
+.button:hover,
+.button:focus {
+    background-color: #113159;
+    color: white;
+    cursor: pointer;
+}
+
+.responder {
     height: 5%;
 }
 
-#envia{
+#envia {
     width: 10%;
 }
-#resposta{
+
+#resposta {
     width: 70%;
 }
 
-.oliver{
+.oliver {
     display: flex;
     justify-content: space-between;
 }

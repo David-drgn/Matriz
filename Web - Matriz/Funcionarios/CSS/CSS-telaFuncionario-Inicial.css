@@ -1,4 +1,4 @@
-#background{
+#background {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -12,14 +12,58 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 28vw;
+    left: 24vw;
     top: 0%;
-    width: 40%;
+    width: 50%;
     height: 100%;
     background-color: #d9d9d9;
     border-radius: 20px;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+#nomeFunc {
+    font-size: 30px;
+}
+
+#sair {
+    position: absolute;
+    left: 26vw;
+    top: 20px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    z-index: 100000;
+    border: #d9d9d9;
+    font-size: xx-large;
+    color: #d9d9d9;
+    background-color: whitesmoke;
+}
+
+#sair:hover {
+    background-color: rgb(185, 185, 185);
+    cursor: pointer;
+}
+
+#perguntas {
+    position: absolute;
+    right: 9vw;
+    bottom: 50px;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    z-index: 100000;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    font-size: 50px;
+    color: #d9d9d9;
+    background-color: #0b2545;
+}
+
+#perguntas:hover {
+    background-color: rgb(185, 185, 185);
+    cursor: pointer;
 }
 
 #alinhar-centro {
@@ -42,6 +86,30 @@ table {
     height: 48%;
 }
 
+.tamanho {
+    width: 110px;
+}
+
+.nivelAtual {
+    border-radius: 15px;
+    height: 100%;
+    background-color: gray;
+}
+
+.tdTama {
+    border-style: solid;
+    border-color: black;
+    border: 1;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.desc {
+    margin-left: 20px;
+    font-size: large;
+    margin-bottom: 5px;
+}
+
 #tamanho-dados {
     position: absolute;
     bottom: 0%;
@@ -50,11 +118,15 @@ table {
     height: 50%;
 }
 
+.txt {
+    width: 50px;
+}
+
 #Progresso {
+    margin-top: 10px;
+    margin-left: 20px;
     width: 60%;
-    height: 50%;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    height: auto;
 }
 
 .index-dado {
