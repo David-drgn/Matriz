@@ -258,6 +258,7 @@ if (isset($_GET["SalvarFuncionario"])) {
     $Nome = $_GET['Nome'];
     $Email = $_GET['Email'];
     $Funcao = $_GET['Cargo'];
+    $flag = false;
 
     if (empty($Nome) or empty($Email) or empty($Funcao)) {
         echo "<script> window.alert('Erro ao adicionar integrante, dados incompletos!!');
@@ -270,6 +271,22 @@ if (isset($_GET["SalvarFuncionario"])) {
 
     while ($registro = mysqli_fetch_array($resultado)) {
         $IDcadastro = $registro['IDcadastro'];
+        $flag = true;
+    }
+
+    if ($flag == false) {
+        echo "<script> window.alert('Cadastro não encontrado');
+    </script>";
+        exit();
+    }
+
+    $verifica = "SELECT * FROM integrantes WHERE IDcadastro = '" . $IDcadastro . "' and IDequipe = '" . $IDequipe . "'";
+    $resultado = mysqli_query($conexao, $verifica);
+
+    while ($registro = mysqli_fetch_array($resultado)) {
+        echo "<script> window.alert('Funcionário já existe!!');
+    </script>";
+        exit();
     }
 
     $AdicionaFuncao = "INSERT INTO funcao VALUES (DEFAULT, '" . $Funcao . "', '" . $IDequipe . "' , '" . $IDcadastro . "')";

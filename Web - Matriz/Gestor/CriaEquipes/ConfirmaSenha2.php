@@ -17,8 +17,8 @@
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 30%;
-        left: 28%;
+        top: 30vh;
+        left: 30vw;
         height: 200px;
         width: 500px;
         background-color: lightgray;
@@ -51,19 +51,18 @@
     <?php
     session_start();
     $id = $_SESSION['IDequipe'];
-    if (empty($id)){
+    if ($id == "") {
         $_SESSION['IDequipe'] = $_GET['id'];
+    } else {
     }
-    else{
-    }
-    
+
     ?>
 
     <form action="Confere.php" method="GET">
         <div id="dadosCompetenciaNova">
             <div class="head"></div>
             <h1>Confirmar senha:</h1>
-            <input type="text" name="senha" id="senha" size="50" />
+            <input type="password" name="senha" id="senha" size="50" />
             <br>
             <div>
                 <input type="submit" name="Salvar" id="Salvar" value="Confirmar senha" />

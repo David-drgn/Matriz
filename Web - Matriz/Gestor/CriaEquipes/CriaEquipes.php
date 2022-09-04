@@ -270,6 +270,15 @@ if (isset($_GET["SalvarFuncionario"])) {
         $IDcadastro = $registro['IDcadastro'];
     }
 
+    $verifica = "SELECT * FROM integrantes WHERE nome = '" . $Nome . "' and email = '" . $Email . "' and IDcadastro = '" . $IDcadastro . "' and gestor = '" . $IDgestor . "'";
+    $resultado = mysqli_query($conexao, $verifica);
+
+    while ($registro = mysqli_fetch_array($resultado)) {
+        echo "<script> window.alert('Funcionário já existe!!');
+    </script>";
+        exit();
+    }
+
     $AdicionaFuncao = "INSERT INTO funcao VALUES (DEFAULT, '" . $Funcao . "', '" . $IDequipe . "' , '" . $IDcadastro . "')";
     $resultadoFuncao = mysqli_query($conexao, $AdicionaFuncao);
 

@@ -39,7 +39,7 @@ if (isset($_GET["Salvar"])) {
     }</script>";
     } else if ($flag == false) {
         echo "<script> window.alert('Acesso liberado!!');</script>";
-        echo "<script> window.alert('" . $_SESSION['IDequipe1'] . "!!');</script>";
+        echo "<script> window.alert('" . $_SESSION['IDequipe'] . "!!');</script>";
         echo "<script>window.location.href = 'EditaEquipes.php';</script>";
     }
 }
