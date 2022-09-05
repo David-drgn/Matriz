@@ -7,85 +7,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix conhecimento</title>
     <style>
-    #Menu-gestor {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        left: 0%;
-        top: 0%;
-        width: 30%;
-        height: 100%;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
+        .nivelAtual {
+            border-radius: 15px;
+            height: 100%;
+            background-color: gray;
+        }
 
-    #alinhar-centro {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-color: #d9d9d9;
-        border-top-right-radius: 20px;
-    }
+        #Menu-gestor {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            width: 30%;
+            height: 100%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
 
-    table {
-        overflow-y: scroll;
-    }
+        .desc {
+            margin-left: 20px;
+            font-size: large;
+            margin-bottom: 5px;
+        }
 
-    #imagem-usuario {
-        width: 60%;
-        height: 60%;
-    }
+        .tamanho {
+            width: 110px;
+        }
 
-    #tamanho-dados {
-        position: absolute;
-        bottom: 0%;
-        left: 0%;
-        width: 100%;
-        height: 50%;
-    }
+        #alinhar-centro {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: #d9d9d9;
+            border-top-right-radius: 20px;
+        }
 
-    #Progresso {
-        width: 100%;
-        height: 100%;
-        background-color: #a6a6a6;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
+        table {
+            overflow-y: scroll;
+        }
 
-    .index-dado {
-        margin-left: 20px;
-    }
+        #imagem-usuario {
+            width: 60%;
+            height: 60%;
+        }
 
-    .progressbar {
-        background-color: black;
-        border-radius: 13px;
-        padding: 3px;
-        width: 80%;
-        margin-left: 20px;
-    }
+        #tamanho-dados {
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            width: 100%;
+            height: 50%;
+        }
 
-    #Botao {
-        text-align: center;
-    }
+        #Progresso {
+            width: 100%;
+            height: 100%;
+            background-color: #a6a6a6;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
 
-    button {
-        font-size: 20px;
-        background-color: #d9d9d9;
-        width: 60%;
-        border-radius: 10px;
-    }
+        .index-dado {
+            margin-left: 20px;
+        }
 
-    .tdDado {
-        width: 80%;
-    }
+        .progressbar {
+            background-color: black;
+            border-radius: 13px;
+            padding: 3px;
+            width: 80%;
+            margin-left: 20px;
+        }
 
-    b {
-        font-size: 30px;
-    }
+        #Botao {
+            text-align: center;
+        }
+
+        button {
+            font-size: 20px;
+            background-color: #d9d9d9;
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        .tdDado {
+            width: 80%;
+        }
+
+        b {
+            font-size: 30px;
+        }
     </style>
 </head>
 
@@ -115,15 +131,17 @@
                 </b>
                     <p>" . $Cargo . "</p>
             </center>
-            </div>
-            <div id='tamanho-dados'>
-                <table id='Progresso'>";
-    $pegandoDados = "SELECT * FROM equipe WHERE gestor = '" . $IDdados . "' ORDER BY nome";
-    $SQL = mysqli_query($conexao, $pegandoDados);
+            </div>";
 
-    while ($resultado = mysqli_fetch_array($SQL)) {
-        if ($resultado['semaforo'] == "Vermelho") {
-            echo "
+    if ($Cargo == "Gestor") {
+        echo "<div id='tamanho-dados'>
+                <table id='Progresso'>";
+        $pegandoDados = "SELECT * FROM equipe WHERE gestor = '" . $IDdados . "' ORDER BY nome";
+        $SQL = mysqli_query($conexao, $pegandoDados);
+
+        while ($resultado = mysqli_fetch_array($SQL)) {
+            if ($resultado['semaforo'] == "Vermelho") {
+                echo "
                             <tr>
                         <td colspan='2'>
                             <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
@@ -139,9 +157,9 @@
                                 <h4>20%</h4>
                             </td>
                             </tr>";
-        }
-        if ($resultado['semaforo'] == "VermelhoLaranja") {
-            echo "
+            }
+            if ($resultado['semaforo'] == "VermelhoLaranja") {
+                echo "
             <tr>
                         <td colspan='2'>
                             <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
@@ -157,9 +175,9 @@
                                 <h4>40%</h4>
                             </td>
                             </tr>";
-        }
-        if ($resultado['semaforo'] == "Laranja") {
-            echo "
+            }
+            if ($resultado['semaforo'] == "Laranja") {
+                echo "
             <tr>
                         <td colspan='2'>
                             <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
@@ -175,9 +193,9 @@
                                 <h4>60%</h4>
                             </td>
                             </tr>";
-        }
-        if ($resultado['semaforo'] == "VerdeAmarelo") {
-            echo "
+            }
+            if ($resultado['semaforo'] == "VerdeAmarelo") {
+                echo "
             <tr>
                         <td colspan='2'>
                             <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
@@ -193,9 +211,9 @@
                                 <h4>80%</h4>
                             </td>
                             </tr>";
-        }
-        if ($resultado['semaforo'] == "Verde") {
-            echo "
+            }
+            if ($resultado['semaforo'] == "Verde") {
+                echo "
             <tr>
                         <td colspan='2'>
                             <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
@@ -211,9 +229,9 @@
                                 <h4>100%</h4>
                             </td>
                             </tr>";
+            }
         }
-    }
-    echo "
+        echo "
                     <tr>
                         <td id='Botao' colspan='2'>
                         <br>
@@ -225,7 +243,49 @@
             </div>
         </div>
     </section>
-    "
+    ";
+    } else {
+
+        if ($Cargo == "Funcionario") {
+            echo "<div id='tamanho-dados'>
+                <table id='Progresso'>";
+            $pegandoDados = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDdados . "' ORDER BY nome";
+            $SQL = mysqli_query($conexao, $pegandoDados);
+
+            while ($qualidades = mysqli_fetch_array($Selecionando)) {
+                echo "<tr><td class='tamanho'><p class='desc'> " . $qualidades['descricao'] . " </p></td></tr>";
+                echo "<tr><td class='tdTama'>";
+                if ($qualidades['nivelAtual'] == 1) {
+                    echo "<div class='nivelAtual' style='width: 20%'></div></td><td class='txt'> 20%</td>";
+                }
+                if ($qualidades['nivelAtual'] == 2) {
+                    echo "<div class='nivelAtual' style='width: 40%'></div></td><td class='txt'> 40%</td>";
+                }
+                if ($qualidades['nivelAtual'] == 3) {
+                    echo "<div class='nivelAtual' style='width: 60%'></div></td><td class='txt'> 60%</td>";
+                }
+                if ($qualidades['nivelAtual'] == 4) {
+                    echo "<div class='nivelAtual' style='width: 80%'></div></td><td class='txt'> 80%</td>";
+                }
+                if ($qualidades['nivelAtual'] == 5) {
+                    echo "<div class='nivelAtual' style='width: 100%'></div></td><td class='txt'> 100%</td>";
+                }
+            }
+            echo "
+                    <tr>
+                        <td id='Botao' colspan='2'>
+                        <br>
+                            <script src='JavaScript/java-back.js'></script>
+                            <button onclick='BackHistory()''>Sair</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    ";
+        }
+    }
     ?>
 </body>
 

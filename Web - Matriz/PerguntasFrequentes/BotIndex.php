@@ -27,7 +27,7 @@
             <tbody id="tbody">
                 <tr class="body">
                     <td colspan="2" class="mensagem">
-                        <img src="../Imagens/user.png">
+                        <img src="../Imagens/Oliver.jpg">
                         <div class="card">
                             <h2>Vamos lá, eu sou o Oliver, e vou te ajudar a utilizar a matriz de conhecimento.</h2>
                             <h2>Me conta: do que você precisa hoje? É só escolher o assunto e responder um número. </h2>
@@ -41,7 +41,7 @@
 
                 <tr class="body">
                     <td colspan="2" class="mensagem">
-                        <img src="../Imagens/user.png">
+                        <img src="../Imagens/Oliver.jpg">
                         <div class="card" id="respostas">
                             <br>
                             <input class="button" type="submit" name="1" value="1 - Como alterar minha senha?" /><br>

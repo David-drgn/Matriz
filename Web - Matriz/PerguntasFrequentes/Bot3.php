@@ -40,7 +40,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card">
                                 <h2> Está faltando atualização sobre novos treinamentos? O prazo de atualização é de 1
                                     semana. Caso não seja esse o problema, entre em contato com a ouvidoria:
@@ -54,7 +54,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card">
                                 <h2>Me conta: do que mais você precisa hoje? É só escolher o assunto e responder um
                                     número. </h2>
@@ -67,7 +67,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card" id="respostas">
                                 <br>
                                 <input class="button" type="submit" name="1"

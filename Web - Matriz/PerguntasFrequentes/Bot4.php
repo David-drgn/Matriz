@@ -41,7 +41,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card">
                                 <h2>Realize o login na página inicial e assim que entrar, lá estará seu nível e o nível
                                     recomendado</h2>
@@ -54,7 +54,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card">
                                 <h2>Me conta: do que mais você precisa hoje? É só escolher o assunto e responder um
                                     número. </h2>
@@ -67,7 +67,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card" id="respostas">
                                 <br>
                                 <input class="button" type="submit" name="1"

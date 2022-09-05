@@ -163,8 +163,6 @@
                 $Sql = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDdados . "'";
                 $Selecionando = mysqli_query($conexao, $Sql);
 
-                while ($qualidades = mysqli_fetch_array($Selecionando)) {
-
                     while ($qualidades = mysqli_fetch_array($Selecionando)) {
                         echo "<tr><td class='tamanho'><p class='desc'> " . $qualidades['descricao'] . " </p></td></tr>";
                         echo "<tr><td class='tdTama'>";
@@ -186,7 +184,6 @@
                     }
 
                     echo "</tr>";
-                }
             }
 
             echo "

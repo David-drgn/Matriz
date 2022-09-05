@@ -32,7 +32,7 @@
                     echo "<a style='pointer-events:none; cursor:default; color:gray;'>Equipes</a>";
                 }
                 ?>
-                <a>Perguntas Frequentes</a>
+                <a href="../PerguntasFrequentesLogado/BotIndex.php">Perguntas Frequentes</a>
                 <a href="confirma.php">Sair</a>
 
             </article>

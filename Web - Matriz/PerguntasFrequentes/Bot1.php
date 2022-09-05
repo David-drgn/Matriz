@@ -40,7 +40,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card">
                                 <h2>Para alterar a sua senha volte na tela de acesso, clique em: "Esqueci minha senha"
                                 </h2>
@@ -53,7 +53,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card">
                                 <h2>Me conta: do que mais você precisa hoje? É só escolher o assunto e responder um
                                     número.
@@ -66,7 +66,7 @@
                     </tr>
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img>
+                            <img src="../Imagens/Oliver.jpg">
                             <div class="card" id="respostas">
                                 <br>
                                 <input class="button" type="submit" name="1"
