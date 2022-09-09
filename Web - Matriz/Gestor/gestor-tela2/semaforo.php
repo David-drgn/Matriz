@@ -14,7 +14,7 @@
     <script src="semaforo.js"></script>
 
     <?php
-    include __DIR__ . '/../ponte.php';
+    include __DIR__ . '/../../Menu/menu.php';
     $conexao = mysqli_connect("localhost", "root", "", "matriz");
 
     if ($conexao == false) {

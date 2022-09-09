@@ -67,7 +67,7 @@ b {
 #item-tabela {
     margin-top: 13px;
     margin-left: 10px;
-    width: 70%;
+    width: 100%;
     height: 90%;
     font-size: large;
 }
@@ -145,10 +145,10 @@ b {
 }
 
 .nivelAtual {
-    border-radius: 10px;
+    border-radius: 15px;
     height: 40px;
     width: 100%;
-    background-color: gray;
+    background-color: #113159;
 }
 
 .tdNivel {
@@ -322,6 +322,17 @@ b {
     scrollbar-color: #d6d6d6 #545454;
 }
 
+#Menu-funcionario2 {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 30%;
+    height: 100vh;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    overflow-y: hidden;
+}
+
 #Menu-funcionario::-webkit-scrollbar-thumb {
     background-color: #6ce5e8;
     border-radius: 10px;
@@ -358,6 +369,13 @@ b {
     position: absolute;
     top: 0%;
     left: 0%;
+    background-color: #d9d9d9;
+    border-top-right-radius: 5%;
+}
+
+#alinhar-centro2 {
+    width: 100%;
+    height: 100%;
     background-color: #d9d9d9;
     border-top-right-radius: 5%;
 }
@@ -423,17 +441,6 @@ td.btn {
     height: 60%;
 }
 
-#Progresso {
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: #a6a6a6;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
-}
-
 .apresenta-porc {
     position: absolute;
     right: 10px;
@@ -454,15 +461,21 @@ td.btn {
     border-radius: 20px;
 }
 
+#Progresso {
+    width: 100%;
+    height: 100%;
+    background-color: #a6a6a6;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 .tamanho {
     width: 80px;
     height: 30px;
 }
 
 .tdTama {
-    border-style: solid;
-    border-color: black;
-    border: 1;
+    background-color: #2d8bba;
     height: 30px;
     border-radius: 15px;
 }

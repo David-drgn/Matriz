@@ -1,4 +1,7 @@
+@import url(../../CSS/CSS-import/Fontes.css);
+
 body {
+    font-family: VWText_Regular;
     overflow: hidden;
 }
 
@@ -30,9 +33,15 @@ body {
 }
 
 #nome {
-    margin-left: 20px;
+    font-family: VWHead_Bold;
+    margin-left: 30px;
     margin-top: 55px;
     color: white;
+}
+
+#dicaTexto {
+    font-family: VWText_Bold;
+    font-size: larger;
 }
 
 #body {
@@ -47,21 +56,22 @@ body {
     border-radius: 20px;
 }
 
-a{
+a {
+    text-decoration: none;
     color: white;
-    font-size: large;
+    font-size: 125%;
 }
 
 h1 {
     color: white;
 }
 
-a:hover{
+a:hover {
     color: lightgray;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-#dica{
+#dica {
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;

@@ -1,6 +1,10 @@
+@import url(../../CSS/CSS-import/Fontes.css);
+
 body {
     background-color: #113159;
+    font-family: VWHead_Regular;
 }
+
 b {
     font-size: 30px;
 }
@@ -137,6 +141,16 @@ h4 {
     height: 30px;
 }
 
+a {
+    text-decoration: none;
+    font-size: large;
+    color: #113159;
+}
+
+a:hover {
+    color: aliceblue;
+}
+
 #funcao {
     width: 100%;
     height: 100%;
@@ -186,17 +200,6 @@ td.btn {
     left: 0%;
     width: 100%;
     height: 60%;
-}
-
-#Progresso {
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: #a6a6a6;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
 }
 
 .apresenta-porc {

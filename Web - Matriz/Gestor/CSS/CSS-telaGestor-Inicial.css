@@ -1,3 +1,5 @@
+@import url(../../CSS/CSS-import/Fontes.css);
+
 .card {
     background-color: #a6a6a6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -102,6 +104,12 @@ td.btn {
     text-align: center;
 }
 
+.button:hover {
+    cursor: pointer;
+    color: #0B2545;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.24);
+}
+
 .button {
     width: 100%;
     height: 100%;
@@ -109,6 +117,8 @@ td.btn {
     border-radius: 15px;
     border: 0px;
     background-color: #d9d9d9;
+    color: black;
+    transition: all 1s;
 }
 
 #space {
@@ -139,4 +149,34 @@ td.btn {
     bottom: 10px;
     border-radius: 15px;
     overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+}
+
+.linkFuncionario {
+    color: #0B2545;
+    transition: all 1s;
+}
+
+.linkFuncionario:hover {
+    color: #d9d9d9;
+}
+
+.linkEquipe {
+    width: 100px;
+    height: auto;
+    font-size: 20px;
+    color: #0B2545;
+    transition: all 1s;
+}
+
+.linkEquipe:hover {
+    color: gray;
+}
+
+body {
+    background-color: #0B2545;
+    font-family: VWHead_Regular;
 }

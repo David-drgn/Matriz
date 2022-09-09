@@ -32,72 +32,20 @@
 
             $_SESSION['IDfuncionario'] = $resultado['IDcadastro'];
 
-            echo "<section id='Menu-funcionario'>
-        <div id='alinhar-centro'>
+            echo "<section id='Menu-funcionario2'>
+        <div id='alinhar-centro2'>
             <center>
+            <br>
+            <br>
                 <img src='CSS/Imagens/usuario.png' id='imagem-usuario'> <br>
                 <b>
                     <p>" . $resultado['nome'] . "</p>
                 </b>
                 <p> " . $resultado['cargo'] . " </p>
-            </center>
-        </div>
-        <div id='tamanho-dados'>
-            <table id='Progresso'>
-                <tr>
-                <td colspan='2'>
-                <h4 class='index-dado'>Dado</h4>
-            </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class='progressbar' id='dado'>
-                            <div></div>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>40%</h4>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan='2'>
-                        <h4 class='index-dado'>Dado</h4>
-                    </td
-                </tr>
-                <tr>
-                    <td>
-                        <div class='progressbar' id='dado2'>
-                            <div></div>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>53%</h4>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan='2'>
-                        <h4 class='index-dado'>Dado</h4>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class='progressbar' id='dado3'>
-                            <div></div>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>80%</h4>
-                    </td>
-                </tr>
-                <tr>
-                    <td id='Botao' colspan='2'>
-                    <script src='../../Funcionarios/JavaScript/javaFuncionario.js'></script>
+                <br>
+                <script src='../../Funcionarios/JavaScript/javaFuncionario.js'></script>
                         <button id='Botao-input' onclick='Back()'>Voltar</button>
-                    </td>
-                </tr>
-            </table>
+            </center>
         </div>
     </section>";
         }
@@ -198,19 +146,19 @@
                         if ($qualidades['nivelRecomendado'] == 1) {
                             echo "<td colspan='1' class='tdTama'><td>";
                             if ($qualidades['nivelAtual'] == 1) {
-                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
                             }
                             if ($qualidades['nivelAtual'] == 2) {
-                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 200%'></div><td><tr>";
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 200%'></div><td><tr>";
                             }
                             if ($qualidades['nivelAtual'] == 3) {
-                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 300%'></div><td><tr>";
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 300%'></div><td><tr>";
                             }
                             if ($qualidades['nivelAtual'] == 4) {
-                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 400%'></div><td><tr>";
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 400%'></div><td><tr>";
                             }
                             if ($qualidades['nivelAtual'] == 5) {
-                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 500%'></div><td><tr>";
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 500%'></div><td><tr>";
                             }
                         }
 

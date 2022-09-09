@@ -52,14 +52,6 @@
         height: 60%;
     }
 
-    #tamanho-dados {
-        position: absolute;
-        bottom: 0%;
-        left: 0%;
-        width: 100%;
-        height: 50%;
-    }
-
     #Progresso {
         width: 100%;
         height: 100%;
@@ -111,13 +103,22 @@
         echo "Erro.";
     }
 
-    session_start();
-    $Nome = $_SESSION['nome'];
-    $Cargo = $_SESSION['cargo'];
-    $Foto = $_SESSION['foto'];
-    $IDdados = $_SESSION['IDcadastro'];
+    $IDdados = $_SESSION['IDfuncionario'];
 
-    echo "
+    $pegandoDados = "SELECT * FROM cadastro WHERE IDcadastro = '" . $IDdados . "' ORDER BY nome";
+    $SQL = mysqli_query($conexao, $pegandoDados);
+
+    while ($resultado = mysqli_fetch_array($SQL)) {
+        $Cargo = $resultado['cargo'];
+        $Nome = $resultado['nome'];
+        $Foto = $resultado['foto'];
+    }
+
+    $IDequipe = $_SESSION['IDequipe'];
+    $IDgestor = $_SESSION['IDcadastro'];
+
+    if ($Cargo == "Gestor") {
+        echo "
     <section id='Menu-gestor'>
         <div id='alinhar-centro'>
             <center>
@@ -128,8 +129,6 @@
                     <p>" . $Cargo . "</p>
             </center>
             </div>";
-
-    if ($Cargo == "Gestor") {
         echo "<div id='tamanho-dados'>
                 <table id='Progresso'>";
         $pegandoDados = "SELECT * FROM equipe WHERE gestor = '" . $IDdados . "' ORDER BY nome";
@@ -243,6 +242,17 @@
     } else {
 
         if ($Cargo == "Funcionario") {
+            echo "
+    <section id='Menu-gestor'>
+        <div id='alinhar-centro'>
+            <center>
+                <img src='Foto/" . $Foto . "' id='imagem-usuario'> <br>
+                <b>
+                    <p>" . $Nome . "</p>
+                </b>
+                    <p>" . $Cargo . "</p>
+            </center>
+            </div>";
             echo "<div id='tamanho-dados'>
                 <table id='Progresso'>";
             $Sql = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDdados . "'";

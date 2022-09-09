@@ -13,31 +13,29 @@
 
     <?php
 
-$conexao = mysqli_connect ("localhost","root","","matriz");
+    $conexao = mysqli_connect("localhost", "root", "", "matriz");
 
-if ($conexao == false){
-    echo "Erro.";
-}
-session_start();
+    if ($conexao == false) {
+        echo "Erro.";
+    }
+    session_start();
 
     $IDfuncionario = $_SESSION['IDfuncionario'];
     $IDequipe = $_SESSION['IDequipe'];
     $IDgestor = $_SESSION['IDcadastro'];
 
-$dadosFuncionario = "SELECT * FROM cadastro WHERE IDcadastro = ' " . $IDfuncionario . " '";
-$buscando = mysqli_query($conexao,$dadosFuncionario);
+    $dadosFuncionario = "SELECT * FROM cadastro WHERE IDcadastro = ' " . $IDfuncionario . " '";
+    $buscando = mysqli_query($conexao, $dadosFuncionario);
 
-if(!$buscando){
-    echo"Erro";
-}
+    if (!$buscando) {
+        echo "Erro";
+    } else {
+        while ($resultado = mysqli_fetch_array($buscando)) {
 
-else{
-    while($resultado = mysqli_fetch_array($buscando)){
-        
-        $_SESSION['IDfuncionario'] = $resultado['IDcadastro'];
-        $_SESSION['IDequipe'] = $IDequipe;
+            $_SESSION['IDfuncionario'] = $resultado['IDcadastro'];
+            $_SESSION['IDequipe'] = $IDequipe;
 
-        echo "<section id='Menu-funcionario'>
+            echo "<section id='Menu-funcionario'>
         <div id='alinhar-centro'>
             <center>
                 <img src='CSS/Imagens/usuario.png' id='imagem-usuario'> <br>
@@ -104,123 +102,123 @@ else{
             </table>
         </div>
     </section>";
+        }
     }
-}
 
-?>
+    ?>
 
     <section id="Menu-funcionarios">
 
         <form action="EditandoDados.php" method="GET">
-        <table id="item-tabela">
+            <table id="item-tabela">
                 <?php
 
-$Sql = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
-$Selecionando = mysqli_query($conexao,$Sql);
+                $Sql = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
+                $Selecionando = mysqli_query($conexao, $Sql);
 
-while ($qualidades = mysqli_fetch_array($Selecionando)){
+                while ($qualidades = mysqli_fetch_array($Selecionando)) {
 
-    while ($qualidades = mysqli_fetch_array($Selecionando)){
+                    while ($qualidades = mysqli_fetch_array($Selecionando)) {
 
-        echo "<tr><td class='tamanho' rowspan='2'><a href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a></td>";
-        if($qualidades['nivelRecomendado'] == 5){
-            echo "<td colspan='5' class='tdTama'><td>";
-            if ($qualidades['nivelAtual'] == 1){
-                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 20%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 2){
-                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 40%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 3){
-                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 60%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 4){
-                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 80%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 5){
-                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
-            }
-        }
-    
-        if($qualidades['nivelRecomendado'] == 4){
-            echo "<td colspan='4' class='tdTama'><td>";
-            if ($qualidades['nivelAtual'] == 1){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 25%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 2){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 50%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 3){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 75%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 4){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 5){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 125%'></div><td><tr>";
-            }
-        }
-    
-        if($qualidades['nivelRecomendado'] == 3){
-            echo "<td colspan='3' class='tdTama'><td>";
-            if ($qualidades['nivelAtual'] == 1){
-                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 33.3%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 2){
-                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 66.6%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 3){
-                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 4){
-                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 133.3%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 5){
-                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 166.6%'></div><td><tr>";
-            }
-        }
-    
-        if($qualidades['nivelRecomendado'] == 2){
-            echo "<td colspan='2' class='tdTama'><td>";
-            if ($qualidades['nivelAtual'] == 1){
-                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 50%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 2){
-                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 3){
-                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 150%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 4){
-                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 200%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 5){
-                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 250%'></div><td><tr>";
-            }
-        }
-    
-        if($qualidades['nivelRecomendado'] == 1){
-            echo "<td colspan='1' class='tdTama'><td>";
-            if ($qualidades['nivelAtual'] == 1){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 2){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 200%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 3){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 300%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 4){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 400%'></div><td><tr>";
-            }
-            if ($qualidades['nivelAtual'] == 5){
-                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 500%'></div><td><tr>";
-            }
-        }
-    
-        echo "</td></tr><tr><td></td></tr>";
+                        echo "<tr><td class='tamanho' rowspan='2'><a href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a></td>";
+                        if ($qualidades['nivelRecomendado'] == 5) {
+                            echo "<td colspan='5' class='tdTama'><td>";
+                            if ($qualidades['nivelAtual'] == 1) {
+                                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 20%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 2) {
+                                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 40%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 3) {
+                                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 60%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 4) {
+                                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 80%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 5) {
+                                echo "<tr><td colspan='5'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
+                            }
+                        }
 
-        /*
+                        if ($qualidades['nivelRecomendado'] == 4) {
+                            echo "<td colspan='4' class='tdTama'><td>";
+                            if ($qualidades['nivelAtual'] == 1) {
+                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 25%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 2) {
+                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 50%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 3) {
+                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 75%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 4) {
+                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 5) {
+                                echo "<tr><td colspan='4'><div class='nivelAtual' style='width: 125%'></div><td><tr>";
+                            }
+                        }
+
+                        if ($qualidades['nivelRecomendado'] == 3) {
+                            echo "<td colspan='3' class='tdTama'><td>";
+                            if ($qualidades['nivelAtual'] == 1) {
+                                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 33.3%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 2) {
+                                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 66.6%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 3) {
+                                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 4) {
+                                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 133.3%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 5) {
+                                echo "<tr><td colspan='3'><div class='nivelAtual' style='width: 166.6%'></div><td><tr>";
+                            }
+                        }
+
+                        if ($qualidades['nivelRecomendado'] == 2) {
+                            echo "<td colspan='2' class='tdTama'><td>";
+                            if ($qualidades['nivelAtual'] == 1) {
+                                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 50%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 2) {
+                                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 3) {
+                                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 150%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 4) {
+                                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 200%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 5) {
+                                echo "<tr><td colspan='2'><div class='nivelAtual' style='width: 250%'></div><td><tr>";
+                            }
+                        }
+
+                        if ($qualidades['nivelRecomendado'] == 1) {
+                            echo "<td colspan='1' class='tdTama'><td>";
+                            if ($qualidades['nivelAtual'] == 1) {
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 100%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 2) {
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 200%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 3) {
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 300%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 4) {
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 400%'></div><td><tr>";
+                            }
+                            if ($qualidades['nivelAtual'] == 5) {
+                                echo "<tr><td colspan='1'><div class='nivelAtual' style='width: 500%'></div><td><tr>";
+                            }
+                        }
+
+                        echo "</td></tr><tr><td></td></tr>";
+
+                        /*
         echo "<tr><td class='tamanho'><a href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a></td>";
         if($qualidades['nivelRecomendado'] == 5){
             echo "<td colspan='5' class='tdTama'>";
@@ -317,11 +315,12 @@ while ($qualidades = mysqli_fetch_array($Selecionando)){
             }
         }
     
-        echo "</td></tr>";*/ } 
-    }
+        echo "</td></tr>";*/
+                    }
+                }
 
 
-?>
+                ?>
 
                 <tr>
                     <td></td>
@@ -330,6 +329,7 @@ while ($qualidades = mysqli_fetch_array($Selecionando)){
                     <td style="width: 16%; height:30px;">2</td>
                     <td style="width: 16%; height:30px;">3</td>
                     <td style="width: 16%; height:30px;">4</td>
+                    <td style="width: 16%; height:30px;">5</td>
                 </tr>
             </table>
 
@@ -343,14 +343,14 @@ while ($qualidades = mysqli_fetch_array($Selecionando)){
 
                 <?php
 
-$buscandoComp = "SELECT * from qualificacaoEqp WHERE IDequipe = '" . $IDequipe . "' ";
-$Verifica = mysqli_query($conexao,$buscandoComp);
+                $buscandoComp = "SELECT * from qualificacaoEqp WHERE IDequipe = '" . $IDequipe . "' ";
+                $Verifica = mysqli_query($conexao, $buscandoComp);
 
-while ($resultado = mysqli_fetch_array($Verifica)){
-    echo "<a href='AdicionaDados.php?desc=" . $resultado['descricao'] . "'>" . $resultado['descricao'] . "</a>";
-}
+                while ($resultado = mysqli_fetch_array($Verifica)) {
+                    echo "<a href='AdicionaDados.php?desc=" . $resultado['descricao'] . "'>" . $resultado['descricao'] . "</a>";
+                }
 
-?>
+                ?>
             </div>
 
         </form>
@@ -361,21 +361,20 @@ while ($resultado = mysqli_fetch_array($Verifica)){
 
 <?php
 
-    if(isset($_GET["vermelhoAtual"])){
+if (isset($_GET["vermelhoAtual"])) {
 
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelAtual ='1' 
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
-        else {
-            echo "<script>
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
+    } else {
+        echo "<script>
             var confirmacao = confirm('Deseja atualizar o nivél recomendado também?');
 
             if (confirmacao == true) {
@@ -386,24 +385,23 @@ while ($resultado = mysqli_fetch_array($Verifica)){
                alert('Ok, nível atual foi atualizado!!');
             }
             </script>";
-        }
     }
+}
 
-    if(isset($_GET["laranjaAtual"])){
+if (isset($_GET["laranjaAtual"])) {
 
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelAtual ='2'
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
-        else {
-            echo "<script>
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
+    } else {
+        echo "<script>
             var confirmacao = confirm('Deseja atualizar o nivél recomendado também?');
 
             if (confirmacao == true) {
@@ -414,25 +412,23 @@ while ($resultado = mysqli_fetch_array($Verifica)){
                alert('Ok, nível atual foi atualizado!!');
             }
             </script>";
-        }
-
     }
+}
 
-    if(isset($_GET["laranjaAmareloAtual"])){
+if (isset($_GET["laranjaAmareloAtual"])) {
 
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelAtual ='3'
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
-        else {
-            echo "<script>
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
+    } else {
+        echo "<script>
             var confirmacao = confirm('Deseja atualizar o nivél recomendado também?');
 
             if (confirmacao == true) {
@@ -443,24 +439,23 @@ while ($resultado = mysqli_fetch_array($Verifica)){
                alert('Ok, nível atual foi atualizado!!');
             }
             </script>";
-        }
     }
-    
-    if(isset($_GET["amareloAtual"])){
-    
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+}
+
+if (isset($_GET["amareloAtual"])) {
+
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelAtual ='4'
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
-        else {
-            echo "<script>
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
+    } else {
+        echo "<script>
             var confirmacao = confirm('Deseja atualizar o nivél recomendado também?');
 
             if (confirmacao == true) {
@@ -471,25 +466,23 @@ while ($resultado = mysqli_fetch_array($Verifica)){
                alert('Ok, nível atual foi atualizado!!');
             }
             </script>";
-        }
-    
     }
+}
 
-    if(isset($_GET["verdeAtual"])){
+if (isset($_GET["verdeAtual"])) {
 
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelAtual ='5'
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
-        else {
-            echo "<script>
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
+    } else {
+        echo "<script>
             var confirmacao = confirm('Deseja atualizar o nivél recomendado também?');
 
             if (confirmacao == true) {
@@ -500,218 +493,206 @@ while ($resultado = mysqli_fetch_array($Verifica)){
                alert('Ok, nível atual foi atualizado!!');
             }
             </script>";
-        }
-
     }
+}
 
-    if(isset($_GET["vermelhoRecomendado"])){
+if (isset($_GET["vermelhoRecomendado"])) {
 
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelRecomendado ='1' 
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
     }
+}
 
-    if(isset($_GET["laranjaRecomendado"])){
+if (isset($_GET["laranjaRecomendado"])) {
 
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelRecomendado ='2'
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
-
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
     }
+}
 
-    if(isset($_GET["laranjaAmareloRecomendado"])){
+if (isset($_GET["laranjaAmareloRecomendado"])) {
 
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelRecomendado ='3'
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
     }
-    
-    if(isset($_GET["amareloRecomendado"])){
-    
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+}
+
+if (isset($_GET["amareloRecomendado"])) {
+
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelRecomendado ='4'
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
     }
+}
 
-    if(isset($_GET["verdeRecomendado"])){
+if (isset($_GET["verdeRecomendado"])) {
 
-        $IDqFunc = $_SESSION['IDqFunc'];
-        $atualizaNivel = 
+    $IDqFunc = $_SESSION['IDqFunc'];
+    $atualizaNivel =
         "update qualificacaoFunc
         set nivelRecomendado ='5'
         where IDqualificacaoFunc ='" . $IDqFunc . "';";
 
-        $resultado = mysqli_query($conexao,$atualizaNivel);
-        if (!$resultado){
-            echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
-            echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-        }
-    
+    $resultado = mysqli_query($conexao, $atualizaNivel);
+    if (!$resultado) {
+        echo "<script> window.alert('Erro ao atualizar nivel recomendado da competencia!!');</script>";
+        echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
     }
-    if(isset($_GET["vermelhoCria"])){
+}
+if (isset($_GET["vermelhoCria"])) {
 
-        $descricao = $_SESSION['nomeComp'];
-        $atual = $_SESSION['nivelAtual'];
-        $flag = true;
+    $descricao = $_SESSION['nomeComp'];
+    $atual = $_SESSION['nivelAtual'];
+    $flag = true;
 
-        $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
-        $resultado = mysqli_query($conexao,$Verifica);
-        while ($pegando = mysqli_fetch_array($resultado)){
-            echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
-            $flag = false;
-        }
-
-        if (!$flag){
-            echo "<script> window.alert('Competência não foi adicionada!!');</script>";
-        }
-        else{
-            $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '1', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
-            $confirma = mysqli_query($conexao,$adiciona);
-
-            if (!$confirma){
-                echo "<script> window.alert('Erro ao adicionar dados');</script>";
-            }
-        }
-        
+    $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
+    $resultado = mysqli_query($conexao, $Verifica);
+    while ($pegando = mysqli_fetch_array($resultado)) {
+        echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
+        $flag = false;
     }
 
-    if(isset($_GET["laranjaCria"])){
+    if (!$flag) {
+        echo "<script> window.alert('Competência não foi adicionada!!');</script>";
+    } else {
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '1', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
+        $confirma = mysqli_query($conexao, $adiciona);
 
-        $descricao = $_SESSION['nomeComp'];
-        $atual = $_SESSION['nivelAtual'];
-        $flag = true;
-
-        $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
-        $resultado = mysqli_query($conexao,$Verifica);
-        while ($pegando = mysqli_fetch_array($resultado)){
-            echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
-            $flag = false;
-        }
-
-        if (!$flag){
-            echo "<script> window.alert('Competência não foi adicionada!!');</script>";
-        }
-        else{
-            $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '2', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
-            $confirma = mysqli_query($conexao,$adiciona);
-
-            if (!$confirma){
-                echo "<script> window.alert('Erro ao adicionar dados');</script>";
-            }
-        }
-
-    }
-
-    if(isset($_GET["laranjaAmareloCria"])){
-
-        $descricao = $_SESSION['nomeComp'];
-        $atual = $_SESSION['nivelAtual'];
-        $flag = true;
-
-        $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
-        $resultado = mysqli_query($conexao,$Verifica);
-        while ($pegando = mysqli_fetch_array($resultado)){
-            echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
-            $flag = false;
-        }
-
-        if (!$flag){
-            echo "<script> window.alert('Competência não foi adicionada!!');</script>";
-        }
-        else{
-            $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '3', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
-            $confirma = mysqli_query($conexao,$adiciona);
-
-            if (!$confirma){
-                echo "<script> window.alert('Erro ao adicionar dados');</script>";
-            }
+        if (!$confirma) {
+            echo "<script> window.alert('Erro ao adicionar dados');</script>";
         }
     }
-    
-    if(isset($_GET["amareloCria"])){
-    
-        $descricao = $_SESSION['nomeComp'];
-        $atual = $_SESSION['nivelAtual'];
-        $flag = true;
+}
 
-        $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
-        $resultado = mysqli_query($conexao,$Verifica);
-        while ($pegando = mysqli_fetch_array($resultado)){
-            echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
-            $flag = false;
-        }
+if (isset($_GET["laranjaCria"])) {
 
-        if (!$flag){
-            echo "<script> window.alert('Competência não foi adicionada!!');</script>";
-        }
-        else{
-            $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '4', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
-            $confirma = mysqli_query($conexao,$adiciona);
+    $descricao = $_SESSION['nomeComp'];
+    $atual = $_SESSION['nivelAtual'];
+    $flag = true;
 
-            if (!$confirma){
-                echo "<script> window.alert('Erro ao adicionar dados');</script>";
-            }
-        }
+    $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
+    $resultado = mysqli_query($conexao, $Verifica);
+    while ($pegando = mysqli_fetch_array($resultado)) {
+        echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
+        $flag = false;
     }
 
-    if(isset($_GET["verdeCria"])){
+    if (!$flag) {
+        echo "<script> window.alert('Competência não foi adicionada!!');</script>";
+    } else {
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '2', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
+        $confirma = mysqli_query($conexao, $adiciona);
 
-        $descricao = $_SESSION['nomeComp'];
-        $atual = $_SESSION['nivelAtual'];
-        $flag = true;
-
-        $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
-        $resultado = mysqli_query($conexao,$Verifica);
-        while ($pegando = mysqli_fetch_array($resultado)){
-            echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
-            $flag = false;
+        if (!$confirma) {
+            echo "<script> window.alert('Erro ao adicionar dados');</script>";
         }
-
-        if (!$flag){
-            echo "<script> window.alert('Competência não foi adicionada!!');</script>";
-        }
-        
-        else{
-            $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '5', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
-            $confirma = mysqli_query($conexao,$adiciona);
-
-            if (!$confirma){
-                echo "<script> window.alert('Erro ao adicionar dados');</script>";
-            }
-        }
-    
     }
+}
+
+if (isset($_GET["laranjaAmareloCria"])) {
+
+    $descricao = $_SESSION['nomeComp'];
+    $atual = $_SESSION['nivelAtual'];
+    $flag = true;
+
+    $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
+    $resultado = mysqli_query($conexao, $Verifica);
+    while ($pegando = mysqli_fetch_array($resultado)) {
+        echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
+        $flag = false;
+    }
+
+    if (!$flag) {
+        echo "<script> window.alert('Competência não foi adicionada!!');</script>";
+    } else {
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '3', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
+        $confirma = mysqli_query($conexao, $adiciona);
+
+        if (!$confirma) {
+            echo "<script> window.alert('Erro ao adicionar dados');</script>";
+        }
+    }
+}
+
+if (isset($_GET["amareloCria"])) {
+
+    $descricao = $_SESSION['nomeComp'];
+    $atual = $_SESSION['nivelAtual'];
+    $flag = true;
+
+    $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
+    $resultado = mysqli_query($conexao, $Verifica);
+    while ($pegando = mysqli_fetch_array($resultado)) {
+        echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
+        $flag = false;
+    }
+
+    if (!$flag) {
+        echo "<script> window.alert('Competência não foi adicionada!!');</script>";
+    } else {
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '4', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
+        $confirma = mysqli_query($conexao, $adiciona);
+
+        if (!$confirma) {
+            echo "<script> window.alert('Erro ao adicionar dados');</script>";
+        }
+    }
+}
+
+if (isset($_GET["verdeCria"])) {
+
+    $descricao = $_SESSION['nomeComp'];
+    $atual = $_SESSION['nivelAtual'];
+    $flag = true;
+
+    $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
+    $resultado = mysqli_query($conexao, $Verifica);
+    while ($pegando = mysqli_fetch_array($resultado)) {
+        echo "<script> window.alert('A competência já foi cadastrada!!');</script>";
+        $flag = false;
+    }
+
+    if (!$flag) {
+        echo "<script> window.alert('Competência não foi adicionada!!');</script>";
+    } else {
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '5', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "')";
+        $confirma = mysqli_query($conexao, $adiciona);
+
+        if (!$confirma) {
+            echo "<script> window.alert('Erro ao adicionar dados');</script>";
+        }
+    }
+}
 
 ?>

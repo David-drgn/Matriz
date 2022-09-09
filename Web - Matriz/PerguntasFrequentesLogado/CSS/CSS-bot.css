@@ -1,7 +1,6 @@
 @import url(../../CSS/CSS-import/Fontes.css);
 
-#bot{
-    border-radius: 20px;
+#bot {
     overflow-y: scroll;
     position: absolute;
     right: 10px;
@@ -24,11 +23,16 @@ h1 {
     font-size: 50px;
 }
 
+#usuario {
+    margin-left: -25%;
+}
+
 img {
     border-radius: 100%;
     margin: 5px;
     width: 100px;
     height: 100px;
+    margin-right: 20px;
 }
 
 #oliver {
@@ -97,7 +101,7 @@ td {
 }
 
 .card-pessoa {
-    margin-left: 77%;
+    margin-left: 75%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -133,6 +137,7 @@ h2 {
     background-color: #A6A6A6;
     border-radius: 30px;
     transition: all 1s;
+    margin-left: 30px;
 }
 
 .card:hover {

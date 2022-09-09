@@ -11,12 +11,12 @@
 
 <body>
 
-    <script src="../JavaScript/java-back.js"></script>
+    <script src="JavaScript/javaFuncionario.js"></script>
 
     <button id="sair" onclick="Back()">
         < </button>
 
-            <button id="perguntas">?</button>
+            <button onclick="Perguntas()" id="perguntas">?</button>
 
             <section id="background"></section>
 
@@ -163,27 +163,27 @@
                 $Sql = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDdados . "'";
                 $Selecionando = mysqli_query($conexao, $Sql);
 
-                    while ($qualidades = mysqli_fetch_array($Selecionando)) {
-                        echo "<tr><td class='tamanho'><p class='desc'> " . $qualidades['descricao'] . " </p></td></tr>";
-                        echo "<tr><td class='tdTama'>";
-                        if ($qualidades['nivelAtual'] == 1) {
-                            echo "<div class='nivelAtual' style='width: 20%'></div></td><td class='txt'> 20%</td>";
-                        }
-                        if ($qualidades['nivelAtual'] == 2) {
-                            echo "<div class='nivelAtual' style='width: 40%'></div></td><td class='txt'> 40%</td>";
-                        }
-                        if ($qualidades['nivelAtual'] == 3) {
-                            echo "<div class='nivelAtual' style='width: 60%'></div></td><td class='txt'> 60%</td>";
-                        }
-                        if ($qualidades['nivelAtual'] == 4) {
-                            echo "<div class='nivelAtual' style='width: 80%'></div></td><td class='txt'> 80%</td>";
-                        }
-                        if ($qualidades['nivelAtual'] == 5) {
-                            echo "<div class='nivelAtual' style='width: 100%'></div></td><td class='txt'> 100%</td>";
-                        }
+                while ($qualidades = mysqli_fetch_array($Selecionando)) {
+                    echo "<tr><td class='tamanho'><p class='desc'> " . $qualidades['descricao'] . " </p></td></tr>";
+                    echo "<tr><td class='tdTama'>";
+                    if ($qualidades['nivelAtual'] == 1) {
+                        echo "<div class='nivelAtual' style='width: 20%'></div></td><td class='txt'> 20%</td>";
                     }
+                    if ($qualidades['nivelAtual'] == 2) {
+                        echo "<div class='nivelAtual' style='width: 40%'></div></td><td class='txt'> 40%</td>";
+                    }
+                    if ($qualidades['nivelAtual'] == 3) {
+                        echo "<div class='nivelAtual' style='width: 60%'></div></td><td class='txt'> 60%</td>";
+                    }
+                    if ($qualidades['nivelAtual'] == 4) {
+                        echo "<div class='nivelAtual' style='width: 80%'></div></td><td class='txt'> 80%</td>";
+                    }
+                    if ($qualidades['nivelAtual'] == 5) {
+                        echo "<div class='nivelAtual' style='width: 100%'></div></td><td class='txt'> 100%</td>";
+                    }
+                }
 
-                    echo "</tr>";
+                echo "</tr>";
             }
 
             echo "

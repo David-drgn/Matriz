@@ -47,7 +47,7 @@
             </td>
             <td>
                 <div class='container'>
-                    <h4><b><a href='funcionario-dados/RecebeID.php?id=" . $buscando['IDcadastro'] . "&idEquipe=" . $buscando['IDequipe'] . "'>" . $buscando['nome'] . "</a></b></h4>
+                    <h4><b><a class='linkFuncionario' href='funcionario-dados/RecebeID.php?id=" . $buscando['IDcadastro'] . "&idEquipe=" . $buscando['IDequipe'] . "'>" . $buscando['nome'] . "</a></b></h4>
                     <p>" . $buscando['funcao'] . "</p>
                 </div>
             </td>
@@ -61,7 +61,7 @@
     </section>
 
     <section id="Menu-equipe">
-        <button name="equipe" id="equipe" onclick="Equipes()">Escolha a equipe</button>
+        <button name="equipe" class="button" id="equipe" onclick="Equipes()">Escolha a equipe</button>
         <br>
         <br>
 
@@ -69,8 +69,8 @@
 
     <div id="Equipes">
         <center>
-            <br><a href="gestor.php">Todas as equipes</a> <br><br>
-            <a href="CriaEquipes/ConfirmaSenha.php">Criar nova equipe</a> <br><br>
+            <br><a class="linkEquipe" href="gestor.php">Todas as equipes</a> <br><br>
+            <a class="linkEquipe" href="CriaEquipes/ConfirmaSenha.php">Criar nova equipe</a> <br><br>
             <?php
 
             $pegaEquipes = "SELECT * from equipe WHERE gestor = '" . $IDgestor . " ' ORDER BY nome";
@@ -78,7 +78,7 @@
             $flag = false;
 
             while ($dados = mysqli_fetch_array($resultado)) {
-                echo "<a href='gestorEquipe.php?id=" . $dados['IDequipe'] . "'>" . $dados['nome'] . "</a> <br><br>";
+                echo "<a class='linkEquipe' href='gestorEquipe.php?id=" . $dados['IDequipe'] . "'>" . $dados['nome'] . "</a> <br><br>";
             }
 
             ?>
@@ -95,7 +95,7 @@
                 $resultado = mysqli_query($conexao, $pegaEquipes);
 
                 while ($dados = mysqli_fetch_array($resultado)) {
-                    echo "<a href='CriaEquipes/ConfirmaSenha2.php?id=" . $dados['IDequipe'] . "'>" . $dados['nome'] . "</a> <br><br>";
+                    echo "<a class='linkEquipe' href='CriaEquipes/ConfirmaSenha2.php?id=" . $dados['IDequipe'] . "'>" . $dados['nome'] . "</a> <br><br>";
                 }
 
                 ?>
