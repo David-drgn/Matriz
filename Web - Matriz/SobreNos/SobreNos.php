@@ -18,179 +18,175 @@
             </div>
         </article>
         <section class="area">
-            <article class="bruna">
+            <article id="bruna">
                 <center>
                     <div class="card">
                         <img src="../Imagens/SobreNos/Bruna.jpg">
                     </div>
                     <p>Bruna Rodrigues</p>
                 </center>
+                <span id="brunaInfo">
+                    <div class="head"></div>
+                    <center>
+                        <p>
+                            Nome: Bruna Marques Rodrigues <br>
+                            Data de nascimento: 19/01/2005 <br>
+                            Função no projeto: Gerente de projetos <br>
+                            Escolaridade: ETEC Jorge Street <br>
+                            Mais informações: <a href="">VER MAIS</a>
+                        </p>
+                    </center>
+                </span>
             </article>
-            <article>
-                <center class="david">
+
+            <article id="david">
+                <center>
                     <div class="card">
                         <img img src="../Imagens/SobreNos/carioca.jpg">
                     </div>
                     <p>David Raphael</p>
                 </center>
+                <span id="davidInfo">
+                    <div class="head"></div>
+                    <center>
+                        <p>
+                            Nome: David Raphael Gustavo Neves <br>
+                            Data de nascimento: 19/01/2005 <br>
+                            Função no projeto: Gerente de projetos <br>
+                            Escolaridade: ETEC Jorge Street <br>
+                            Mais informações: <a href="">VER MAIS</a>
+                        </p>
+                    </center>
+                </span>
+
             </article>
-            <article>
-                <center class="eduardo">
+            <article id="eduardo">
+                <center>
                     <div class="card">
                         <img src="../Imagens/SobreNos/eduardo.jpg">
                     </div>
                     <p>Eduardo Pielich</p>
                 </center>
+                <span id="eduardoInfo">
+                    <div class="head"></div>
+                    <center>
+                        <p>
+                            Nome: Eduardo Pelich Sanchez <br>
+                            Data de nascimento: 19/01/2005 <br>
+                            Função no projeto: Gerente de projetos <br>
+                            Escolaridade: ETEC Jorge Street <br>
+                            Mais informações: <a href="">VER MAIS</a>
+                        </p>
+                    </center>
+                </span>
             </article>
-            <article>
-                <center class="filipe">
+            <article id="filipe">
+                <center>
                     <div class="card">
                         <img src="../Imagens/SobreNos/Filipe.jpg">
                     </div>
                     <p>Filipe Bezerra</p>
                 </center>
+                <span id="filipeInfo">
+                    <div class="head"></div>
+                    <center>
+                        <p>
+                            Nome: Filipe Bezerra <br>
+                            Data de nascimento: 19/01/2005 <br>
+                            Função no projeto: Gerente de projetos <br>
+                            Escolaridade: ETEC Jorge Street <br>
+                            Mais informações: <a href="">VER MAIS</a>
+                        </p>
+                    </center>
+                </span>
             </article>
         </section>
-        <br>
         <section class="area">
-            <article>
-                <center class="giu">
+            <article id="giu">
+                <center>
                     <div class="card">
                         <img src="../Imagens/SobreNos/giulia.jpg">
                     </div>
                     <p>Giulia Carmona</p>
                 </center>
+                <span id="giuliaInfo">
+                    <div class="head"></div>
+                    <center>
+                        <p>
+                            Nome: Giulia Carmona <br>
+                            Data de nascimento: 19/01/2005 <br>
+                            Função no projeto: Gerente de projetos <br>
+                            Escolaridade: ETEC Jorge Street <br>
+                            Mais informações: <a href="">VER MAIS</a>
+                        </p>
+                    </center>
+                </span>
             </article>
-            <article>
-                <center class="kaue">
+            <article id="kaue">
+                <center>
                     <div class="card">
                         <img src="../Imagens/SobreNos/Kaue.jpg">
                     </div>
                     <p>Kaue Catto</p>
                 </center>
+                <span id="kaueInfo">
+                    <div class="head"></div>
+                    <center>
+                        <p>
+                            Nome: Kauê Catto <br>
+                            Data de nascimento: 19/01/2005 <br>
+                            Função no projeto: Gerente de projetos <br>
+                            Escolaridade: ETEC Jorge Street <br>
+                            Mais informações: <a href="">VER MAIS</a>
+                        </p>
+                    </center>
+                </span>
             </article>
-            <article>
-                <center class="luiza">
+            <article id="luiza">
+                <center>
                     <div class="card">
                         <img src="../Imagens/SobreNos/MariaLuiza.jpg">
                     </div>
                     <p>Maria Luiza</p>
                 </center>
+                <span id="luizaInfo">
+                    <div class="head"></div>
+                    <center>
+                        <p>
+                            Nome: Maria Luiza <br>
+                            Data de nascimento: 19/01/2005 <br>
+                            Função no projeto: Gerente de projetos <br>
+                            Escolaridade: ETEC Jorge Street <br>
+                            Mais informações: <a href="">VER MAIS</a>
+                        </p>
+                    </center>
+                </span>
             </article>
-            <article>
-                <center class="lemos">
+            <article id="lemos">
+                <center>
                     <div class="card">
                         <img src="../Imagens/SobreNos/MariaLemos.jpg">
                     </div>
                     <p>Maria Lemos</p>
                 </center>
+                <span id="lemosInfo">
+                    <div class="head"></div>
+                    <center>
+                        <p>
+                            Nome: Maria Lemos <br>
+                            Data de nascimento: 19/01/2005 <br>
+                            Função no projeto: Gerente de projetos <br>
+                            Escolaridade: ETEC Jorge Street <br>
+                            Mais informações: <a href="">VER MAIS</a>
+                        </p>
+                    </center>
+                </span>
             </article>
         </section>
 
 
-        <article class="brunaInfo">
-            <div class="head"></div>
-            <center>
-                <p>
-                    Nome: Bruna Marques Rodrigues <br>
-                    Data de nascimento: 19/01/2005 <br>
-                    Função no projeto: Gerente de projetos <br>
-                    Escolaridade: ETEC Jorge Street <br>
-                    Mais informações: <a href="">VER MAIS</a>
-                </p>
-            </center>
-        </article>
 
-        <article class="davidInfo">
-            <div class="head"></div>
-            <center>
-                <p>
-                    Nome: David Raphael Gustavo Neves <br>
-                    Data de nascimento: 19/01/2005 <br>
-                    Função no projeto: Gerente de projetos <br>
-                    Escolaridade: ETEC Jorge Street <br>
-                    Mais informações: <a href="">VER MAIS</a>
-                </p>
-            </center>
-        </article>
 
-        <article class="eduardoInfo">
-            <div class="head"></div>
-            <center>
-                <p>
-                    Nome: Eduardo Pelich Sanchez <br>
-                    Data de nascimento: 19/01/2005 <br>
-                    Função no projeto: Gerente de projetos <br>
-                    Escolaridade: ETEC Jorge Street <br>
-                    Mais informações: <a href="">VER MAIS</a>
-                </p>
-            </center>
-        </article>
-
-        <article class="filipeInfo">
-            <div class="head"></div>
-            <center>
-                <p>
-                    Nome: Filipe Bezerra <br>
-                    Data de nascimento: 19/01/2005 <br>
-                    Função no projeto: Gerente de projetos <br>
-                    Escolaridade: ETEC Jorge Street <br>
-                    Mais informações: <a href="">VER MAIS</a>
-                </p>
-            </center>
-        </article>
-
-        <article class="giuliaInfo">
-            <div class="head"></div>
-            <center>
-                <p>
-                    Nome: Giulia Carmona <br>
-                    Data de nascimento: 19/01/2005 <br>
-                    Função no projeto: Gerente de projetos <br>
-                    Escolaridade: ETEC Jorge Street <br>
-                    Mais informações: <a href="">VER MAIS</a>
-                </p>
-            </center>
-        </article>
-
-        <article class="kaueInfo">
-            <div class="head"></div>
-            <center>
-                <p>
-                    Nome: Kauê Catto <br>
-                    Data de nascimento: 19/01/2005 <br>
-                    Função no projeto: Gerente de projetos <br>
-                    Escolaridade: ETEC Jorge Street <br>
-                    Mais informações: <a href="">VER MAIS</a>
-                </p>
-            </center>
-        </article>
-
-        <article class="luizaInfo">
-            <div class="head"></div>
-            <center>
-                <p>
-                    Nome: Maria Luiza <br>
-                    Data de nascimento: 19/01/2005 <br>
-                    Função no projeto: Gerente de projetos <br>
-                    Escolaridade: ETEC Jorge Street <br>
-                    Mais informações: <a href="">VER MAIS</a>
-                </p>
-            </center>
-        </article>
-
-        <article class="lemosInfo">
-            <div class="head"></div>
-            <center>
-                <p>
-                    Nome: Maria Lemos <br>
-                    Data de nascimento: 19/01/2005 <br>
-                    Função no projeto: Gerente de projetos <br>
-                    Escolaridade: ETEC Jorge Street <br>
-                    Mais informações: <a href="">VER MAIS</a>
-                </p>
-            </center>
-        </article>
 </body>
 
 </html>

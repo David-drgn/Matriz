@@ -40,7 +40,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img src="../Imagens/Oliver.jpg">
+                            <img src="../Imagens/Oliver.png">
                             <div class="card">
                                 <h2>Que pena! Mas não fique triste, seu treimanto está em análise. Existe um prazo de 1
                                     semana para a atualização, caso contrário, entre em contato com a ouvidoria da
@@ -54,7 +54,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img src="../Imagens/Oliver.jpg">
+                            <img src="../Imagens/Oliver.png">
                             <div class="card">
                                 <h2>Me conta: do que mais você precisa hoje? É só escolher o assunto e responder um
                                     número. </h2>
@@ -67,7 +67,7 @@
 
                     <tr class="body">
                         <td colspan="2" class="mensagem">
-                            <img src="../Imagens/Oliver.jpg">
+                            <img src="../Imagens/Oliver.png">
                             <div class="card" id="respostas">
                                 <br>
                                 <input class="button" type="submit" name="1"
