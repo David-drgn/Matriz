@@ -117,55 +117,55 @@ img {
 
 #bruna:hover #brunaInfo {
     cursor: pointer;
-    display:block;
+    display: block;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
 }
 
 
 #david:hover #davidInfo {
     cursor: pointer;
-    display:block;
+    display: block;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
 }
 
 
 #eduardo:hover #eduardoInfo {
     cursor: pointer;
-    display:block;
+    display: block;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
 }
 
 
 #filipe:hover #filipeInfo {
     cursor: pointer;
-    display:block;
+    display: block;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
 }
 
 
 #giu:hover #giuliaInfo {
     cursor: pointer;
-    display:block;
+    display: block;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
 }
 
 
 #kaue:hover #kaueInfo {
     cursor: pointer;
-    display:block;
+    display: block;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
 }
 
 
 #luiza:hover #luizaInfo {
     cursor: pointer;
-    display:block;
+    display: block;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
 }
 
 #lemos:hover #lemosInfo {
     cursor: pointer;
-    display:block;
+    display: block;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.096);
 }
 
@@ -197,7 +197,7 @@ img {
     position: absolute;
     top: 10px;
     left: 10px;
-    font-size: auto;
+    font-size: 200%;
     height: 10%;
 }
 
