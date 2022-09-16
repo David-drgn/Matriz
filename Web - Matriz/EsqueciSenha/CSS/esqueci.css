@@ -11,8 +11,8 @@ section {
 
 body {
     color: white;
-    background-color: #0b2545;
-	background-image: src="Imagens/android-telaFundo-index.jpg";
+    background-color: white;
+    background-image: src="Imagens/android-telaFundo-index.jpg";
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -36,19 +36,32 @@ td a {
 }
 
 #cont-header {
+    background-color: #0b2545;
     width: 100%;
+    height: 15vh;
     position: absolute;
     left: 0px;
     top: 0px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+#enviar {
+    width: 35%;
+    height: 35px;
+    font-size: larger;
+    margin: auto;
+    border-radius: 10px;
 }
 
 #back {
     width: 100%;
-    height: 80%;
+    height: 90%;
     position: absolute;
-    top: 15%;
+    top: 12%;
     right: 0%;
     align-items: center;
+    z-index: -100;
 }
 
 #back-android {
@@ -58,10 +71,7 @@ td a {
 #inicial {
     width: 100%;
     height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100%;
+    opacity: 0.8;
 }
 
 #inicial-android {
@@ -70,15 +80,21 @@ td a {
 
 #loc {
 
+    display: grid;
+
+    grid-template-rows: auto auto auto auto auto;
+
     position: absolute;
-    right: 50px;
+    left: 47vh;
     bottom: 13vmin;
 
-    width: 400px;
-    height: 36vw;
+    background-color: #0b2545;
 
-    align-items: center;
+    width: 400px;
+    height: 40vw;
     text-align: center;
+    align-items: center;
+    border-radius: 30px;
 }
 
 #cria {
@@ -91,12 +107,7 @@ td a {
 }
 
 tr #alinhar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    letter-spacing: 1px;
-    list-style-position: inside;
+    margin-top: 0px;
 }
 
 #senha {
@@ -105,16 +116,23 @@ tr #alinhar {
 }
 
 #log {
-    width: 100px;
-    height: 100px;
+    margin-top: 1px;
+    width: 120px;
+    height: 120px;
 }
 
 #imagem-logo {
-    width: 1%;
+    width: 34vw;
+    text-align: right;
 }
 
 #texto-tabela {
     text-align: left;
+}
+
+#email-usuario {
+    margin-left: 4%;
+    width: 90%;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------*/
@@ -131,14 +149,11 @@ tr #alinhar {
 .tex {
     font-size: 20px;
     color: aliceblue;
-    position: absolute;
-    left: 70px;
 }
 
 .log {
-    font-size: 70px;
+    font-size: 30px;
     color: aliceblue;
-
 }
 
 .senha {
@@ -157,19 +172,18 @@ tr #alinhar {
 .menu-btn {
     display: inline-block;
     text-decoration: none;
-    width: 150px;
+    width: 100px;
     height: 90px;
 }
 
 td.menu {
-    text-align: left;
     width: 5%;
 }
 
 .menu-cnt {
     display: none;
     position: absolute;
-    left: 0%;
+    left: 10px;
     top: 100px;
     background-color: #0b2545;
     min-width: 500px;
@@ -182,9 +196,15 @@ td.menu {
     text-decoration: none;
     display: block;
     text-align: left;
+    transition: all 1s;
 }
 
 .menu-cnt a:hover {
+    background-color: #f1f1f1;
+    color: #0b2545;
+}
+
+.a:hover {
     background-color: #f1f1f1;
 }
 
@@ -200,15 +220,6 @@ td.menu {
     width: 60px;
     height: 60px;
     position: absolute;
-    left: 5px;
-    top: 25px;
-}
-
-tr .alinhar {
-    align-items: center;
-}
-
-td .alinhar {
-    align-items: center;
-    text-align: center;
+    left: 10px;
+    top: 25%;
 }

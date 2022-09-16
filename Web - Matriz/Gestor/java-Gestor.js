@@ -18,19 +18,16 @@ function CriaEquipe() {
     }
 
     else if (itemSelecionado == "Todas as equipes") { }
-    
-    else {location = this.value;}
+
+    else { location = this.value; }
 }
 
 function Equipes() {
-    var visivel = document.getElementById("Equipes").style.display; 
-    if (visivel == "none"){
+    if (document.getElementById("Equipes").style.display === "none") {
         document.getElementById("Equipes").style.display = "grid";
-        visivel = "block";
     }
     else {
         document.getElementById("Equipes").style.display = "none";
-        visivel = "none";
     }
 }
 
@@ -38,14 +35,11 @@ function Semaforo() {
     window.location.href = "gestor-tela2/semaforo.php";
 }
 
-function EditarEqp(){
-    var visivel2 = document.getElementById("EquipesEditar").style.display; 
-    if (visivel2 == "none"){
+function EditarEqp() {
+    if (document.getElementById("EquipesEditar").style.display === "none") {
         document.getElementById("EquipesEditar").style.display = "grid";
-        visivel2 = "block";
     }
     else {
         document.getElementById("EquipesEditar").style.display = "none";
-        visivel2 = "none";
     }
 }
