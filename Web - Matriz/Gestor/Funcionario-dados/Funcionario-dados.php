@@ -354,6 +354,9 @@
 
         </form>
     </section>
+    <div id="info">
+
+    </div>
 </body>
 
 </html>
@@ -574,6 +577,7 @@ if (isset($_GET["vermelhoCria"])) {
     $descricao = $_SESSION['nomeComp'];
     $atual = $_SESSION['nivelAtual'];
     $flag = true;
+    $hoje = date('Y/m/d');
 
     $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
     $resultado = mysqli_query($conexao, $Verifica);
@@ -585,7 +589,7 @@ if (isset($_GET["vermelhoCria"])) {
     if (!$flag) {
         echo "<script> window.alert('Competência não foi adicionada!!');</script>";
     } else {
-        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '1', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL)";
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '1', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL, '" . $hoje . "')";
         $confirma = mysqli_query($conexao, $adiciona);
 
         if (!$confirma) {
@@ -599,6 +603,7 @@ if (isset($_GET["laranjaCria"])) {
     $descricao = $_SESSION['nomeComp'];
     $atual = $_SESSION['nivelAtual'];
     $flag = true;
+    $hoje = date('Y/m/d');
 
     $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
     $resultado = mysqli_query($conexao, $Verifica);
@@ -610,7 +615,7 @@ if (isset($_GET["laranjaCria"])) {
     if (!$flag) {
         echo "<script> window.alert('Competência não foi adicionada!!');</script>";
     } else {
-        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '2', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL)";
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '2', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL, '" . $hoje . "')";
         $confirma = mysqli_query($conexao, $adiciona);
 
         if (!$confirma) {
@@ -624,6 +629,7 @@ if (isset($_GET["laranjaAmareloCria"])) {
     $descricao = $_SESSION['nomeComp'];
     $atual = $_SESSION['nivelAtual'];
     $flag = true;
+    $hoje = date('Y/m/d');
 
     $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
     $resultado = mysqli_query($conexao, $Verifica);
@@ -635,7 +641,7 @@ if (isset($_GET["laranjaAmareloCria"])) {
     if (!$flag) {
         echo "<script> window.alert('Competência não foi adicionada!!');</script>";
     } else {
-        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '3', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL)";
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '3', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL, '" . $hoje . "')";
         $confirma = mysqli_query($conexao, $adiciona);
 
         if (!$confirma) {
@@ -649,6 +655,7 @@ if (isset($_GET["amareloCria"])) {
     $descricao = $_SESSION['nomeComp'];
     $atual = $_SESSION['nivelAtual'];
     $flag = true;
+    $hoje = date('Y/m/d');
 
     $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
     $resultado = mysqli_query($conexao, $Verifica);
@@ -660,7 +667,7 @@ if (isset($_GET["amareloCria"])) {
     if (!$flag) {
         echo "<script> window.alert('Competência não foi adicionada!!');</script>";
     } else {
-        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '4', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL)";
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '4', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL, '" . $hoje . "')";
         $confirma = mysqli_query($conexao, $adiciona);
 
         if (!$confirma) {
@@ -674,6 +681,7 @@ if (isset($_GET["verdeCria"])) {
     $descricao = $_SESSION['nomeComp'];
     $atual = $_SESSION['nivelAtual'];
     $flag = true;
+    $hoje = date('Y/m/d');
 
     $Verifica = "SELECT * FROM qualificacaoFunc WHERE descricao = '" . $descricao . "' and IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
     $resultado = mysqli_query($conexao, $Verifica);
@@ -685,7 +693,7 @@ if (isset($_GET["verdeCria"])) {
     if (!$flag) {
         echo "<script> window.alert('Competência não foi adicionada!!');</script>";
     } else {
-        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '5', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL)";
+        $adiciona = "INSERT INTO qualificacaoFunc VALUES (DEFAULT, '5', '" . $atual . "', '" . $descricao . "', '" . $IDequipe . "', '" . $IDfuncionario . "', '" . $IDgestor . "', NULL, '" . $hoje . "')";
         $confirma = mysqli_query($conexao, $adiciona);
 
         if (!$confirma) {

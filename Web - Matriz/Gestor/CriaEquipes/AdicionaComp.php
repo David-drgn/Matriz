@@ -28,7 +28,7 @@ while ($dados = mysqli_fetch_array($verificando)){
             </script>";
 }
 
-$adicionandoComp = "INSERT INTO qualificacaoEqp VALUES (DEFAULT, '" . $NomeComp . "', '" . $IDequipe . "', '" . $IDgestor . "' )";
+$adicionandoComp = "INSERT INTO qualificacaoEqp VALUES (DEFAULT, '" . $NomeComp . "', '" . $IDequipe . "', '" . $IDgestor . "', 'Vermelho' )";
 $verificando = mysqli_query($conexao,$adicionandoComp);
 
 if (!$verificando){

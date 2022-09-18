@@ -6,6 +6,15 @@ b {
     font-size: 30px;
 }
 
+#info{
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: #113159;
+}
+
 .card {
     position: absolute;
     top: 40%;
