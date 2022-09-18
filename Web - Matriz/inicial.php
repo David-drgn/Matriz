@@ -50,7 +50,7 @@
                         <b class="tex">Senha:</b> <br> <br>
                         <input type="password" class="txt" id="senha-usuario" name="senha-usuario" /> <br> <br>
                         <input type="submit" value="Entrar" class="Botao" /> <br> <br>
-                        <p class="senha"><a href="EsqueciSenha/EsqueciSenha.php" id="senha">Esqueceu sua senha?</a></p>
+                        <p class="senha"><a href="EsqueciSenha/Requerimento.php" id="senha">Esqueceu sua senha?</a></p>
                     </td>
                 </tr>
             </table>

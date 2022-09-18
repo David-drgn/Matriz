@@ -33,7 +33,7 @@
                             Data de nascimento: 19/01/2005 <br>
                             Função no projeto: Gerente de projetos <br>
                             Escolaridade: ETEC Jorge Street <br>
-                            Mais informações: <a href="">VER MAIS</a>
+                            Mais informações: <a href="">VER LINKEDIN</a>
                         </p>
                     </center>
                 </span>
@@ -51,10 +51,10 @@
                     <center>
                         <p>
                             Nome: David Raphael Gustavo Neves <br>
-                            Data de nascimento: 19/01/2005 <br>
-                            Função no projeto: Gerente de projetos <br>
+                            Data de nascimento: 03/05/2005 <br>
+                            Função no projeto: Programador <br>
                             Escolaridade: ETEC Jorge Street <br>
-                            Mais informações: <a href="">VER MAIS</a>
+                            Mais informações: <a href="">VER LINKEDIN</a>
                         </p>
                     </center>
                 </span>
@@ -72,10 +72,10 @@
                     <center>
                         <p>
                             Nome: Eduardo Pelich Sanchez <br>
-                            Data de nascimento: 19/01/2005 <br>
-                            Função no projeto: Gerente de projetos <br>
+                            Data de nascimento: 30/01/2005 <br>
+                            Função no projeto: Analista de sistemas <br>
                             Escolaridade: ETEC Jorge Street <br>
-                            Mais informações: <a href="">VER MAIS</a>
+                            Mais informações: <a href="">VER LINKEDIN</a>
                         </p>
                     </center>
                 </span>
@@ -92,8 +92,8 @@
                     <center>
                         <p>
                             Nome: Filipe Bezerra <br>
-                            Data de nascimento: 19/01/2005 <br>
-                            Função no projeto: Gerente de projetos <br>
+                            Data de nascimento: 17/02/2005 <br>
+                            Função no projeto: Design <br>
                             Escolaridade: ETEC Jorge Street <br>
                             Mais informações: <a href="">VER MAIS</a>
                         </p>
@@ -113,9 +113,9 @@
                     <div class="head"></div>
                     <center>
                         <p>
-                            Nome: Giulia Carmona <br>
-                            Data de nascimento: 19/01/2005 <br>
-                            Função no projeto: Gerente de projetos <br>
+                            Nome: Giulia Carmona Ayres<br>
+                            Data de nascimento: 22/03/2005 <br>
+                            Função no projeto: Desenvolvedora de software<br>
                             Escolaridade: ETEC Jorge Street <br>
                             Mais informações: <a href="">VER MAIS</a>
                         </p>
@@ -133,11 +133,11 @@
                     <div class="head"></div>
                     <center>
                         <p>
-                            Nome: Kauê Catto <br>
-                            Data de nascimento: 19/01/2005 <br>
-                            Função no projeto: Gerente de projetos <br>
+                            Nome: Kauê da Luz Catto <br>
+                            Data de nascimento: 12/01/2005 <br>
+                            Função no projeto: Gerente banco de dados <br>
                             Escolaridade: ETEC Jorge Street <br>
-                            Mais informações: <a href="">VER MAIS</a>
+                            Mais informações: <a href="">VER LINKEDIN</a>
                         </p>
                     </center>
                 </span>
@@ -153,11 +153,11 @@
                     <div class="head"></div>
                     <center>
                         <p>
-                            Nome: Maria Luiza <br>
-                            Data de nascimento: 19/01/2005 <br>
-                            Função no projeto: Gerente de projetos <br>
+                            Nome: Maria Luiza Verdi Bonato <br>
+                            Data de nascimento:  <br>
+                            Função no projeto:  <br>
                             Escolaridade: ETEC Jorge Street <br>
-                            Mais informações: <a href="">VER MAIS</a>
+                            Mais informações: <a href="">VER LINKEDIN</a>
                         </p>
                     </center>
                 </span>
@@ -173,11 +173,11 @@
                     <div class="head"></div>
                     <center>
                         <p>
-                            Nome: Maria Lemos <br>
-                            Data de nascimento: 19/01/2005 <br>
-                            Função no projeto: Gerente de projetos <br>
+                            Nome: Maria Vitória Lemos Romano<br>
+                            Data de nascimento: 05/11/2004 <br>
+                            Função no projeto: Avaliadora de qualidade <br>
                             Escolaridade: ETEC Jorge Street <br>
-                            Mais informações: <a href="">VER MAIS</a>
+                            Mais informações: <a href="">VER LINKEDIN</a>
                         </p>
                     </center>
                 </span>

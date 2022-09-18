@@ -11,7 +11,7 @@
 
 <body>
     <script src="JavaScript/java-contagem.js"></script>
-    <form action="conecta.php" method="GET">
+    <form action="mudaSenha.php" method="GET">
         <header>
             <table id="cont-header">
                 <tr id="alinhar">
@@ -41,7 +41,7 @@
                 <input type="email" class="txt" id="email-usuario" name="email-usuario"
                     placeholder="Insira seu e-mail" />
                 <p>Será enviado um link de recuperação de senha para seu e-mail.</p>
-                <input type="submit" id="enviar" size="80" />
+                <input type="submit" id="enviar" size="80" value="Enviar"/>
             </div>
         </section>
     </form>
