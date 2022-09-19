@@ -131,7 +131,7 @@ if ($conexao == false) {
             <td>
                 <div class='container'>
                     <h4><b><a>" . $buscando['descricao'] . "</a></b></h4>
-                    <p><a href=''>Clique aqui para retirar a qualificação</a></p>
+                    <p><a href='ApagaComp2.php?id=" . $buscando['IDqualificacaoEqp'] . "'>Clique aqui para retirar a qualificação</a></p>
                 </div>
             </td>
         </tr>

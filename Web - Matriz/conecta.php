@@ -28,6 +28,7 @@
 
 				if ($cargo == "Gestor"){
 					echo "<script> window.alert('Bem vindo gestor!!');
+					  setTimeout(donothing,5000);
 					  window.location.href='HomePage/HomePage.php';
 					  </script>";	
 					$flag=true;

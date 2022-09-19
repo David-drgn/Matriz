@@ -282,7 +282,7 @@
                         <td id='Botao' colspan='2'>
                         <br>
                             <script src='JavaScript/java-back.js'></script>
-                            <button onclick='BackHistory()''>Sair</button>
+                            <button onclick='BackHistory()'>Sair</button>
                         </td>
                     </tr>
                 </table>

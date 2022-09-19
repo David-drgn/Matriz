@@ -11,14 +11,6 @@ $conexao = mysqli_connect ("localhost","root","","matriz");
 		echo "Erro ao conectar ao banco de dados.";
 	}
 
-$deletando = "DELETE FROM equipe WHERE IDequipe = '" . $IDequipe . "'";
-$verifica = mysqli_query($conexao,$deletando);
-if (!$verifica){
-    Echo "<script> window.alert('Não foi possível deletar equipe');
-    window.location.href = '../Gestor.php';
-                </script>";
-}
-
 $deletando = "DELETE FROM qualificacaoEqp WHERE IDequipe = '" . $IDequipe . "'";
 $verifica = mysqli_query($conexao,$deletando);
 if (!$verifica){
@@ -39,6 +31,14 @@ $deletando = "DELETE FROM integrantes WHERE IDequipe = '" . $IDequipe . "'";
 $verifica = mysqli_query($conexao,$deletando);
 if (!$verifica){
     Echo "<script> window.alert('Não foi possível deletar integrantes equipe');
+    window.location.href = '../Gestor.php';
+                </script>";
+}
+
+$deletando = "DELETE FROM equipe WHERE IDequipe = '" . $IDequipe . "'";
+$verifica = mysqli_query($conexao,$deletando);
+if (!$verifica){
+    Echo "<script> window.alert('Não foi possível deletar equipe, IDequipe: " . $IDequipe . "');
     window.location.href = '../Gestor.php';
                 </script>";
 }

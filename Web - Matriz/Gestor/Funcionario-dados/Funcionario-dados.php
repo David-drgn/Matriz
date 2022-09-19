@@ -113,14 +113,12 @@
             <table id="item-tabela">
                 <?php
 
-                $Sql = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "'";
+                $Sql = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDfuncionario . "' and IDequipe = '" . $IDequipe . "' ORDER BY descricao";
                 $Selecionando = mysqli_query($conexao, $Sql);
-
-                while ($qualidades = mysqli_fetch_array($Selecionando)) {
 
                     while ($qualidades = mysqli_fetch_array($Selecionando)) {
 
-                        echo "<tr><td class='tamanho' rowspan='2'><a href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a></td>";
+                        echo "<tr><td class='tamanho' rowspan='2' colspan='2'><a href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a></td>";
                         if ($qualidades['nivelRecomendado'] == 5) {
                             echo "<td colspan='5' class='tdTama'><td>";
                             if ($qualidades['nivelAtual'] == 1) {
@@ -317,12 +315,12 @@
     
         echo "</td></tr>";*/
                     }
-                }
 
 
                 ?>
 
                 <tr>
+                    <td style="width: 16%; height:30px;"></td>
                     <td></td>
                     <td style="width: 16%; height:30px;">0</td>
                     <td style="width: 16%; height:30px;">1</td>

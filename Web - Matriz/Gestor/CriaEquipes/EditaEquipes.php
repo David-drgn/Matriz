@@ -106,7 +106,7 @@ if ($conexao == false) {
                 <div class='container'>
                     <h4><b><a>" . $buscando['nome'] . "</a></b></h4>
                     <p>" . $buscando['funcao'] . "</p>
-                    <p><a href=''>Clique aqui para retirar o integrante</a></p>
+                    <p><a href='ApagaIntegrante2.php?id=" . $buscando['IDintegrantes'] . "'>Clique aqui para retirar o integrante</a></p>
                 </div>
             </td>
         </tr>
@@ -133,7 +133,7 @@ if ($conexao == false) {
             <td>
                 <div class='container'>
                     <h4><b><a>" . $buscando['descricao'] . "</a></b></h4>
-                    <p><a href=''>Clique aqui para retirar a qualificação</a></p>
+                    <p><a href='ApagaComp2.php?id=" . $buscando['IDqualificacaoEqp'] . "'>Clique aqui para retirar a qualificação</a></p>
                 </div>
             </td>
         </tr>
@@ -146,6 +146,7 @@ if ($conexao == false) {
             <div id=" mostraFuncionarios">
                 <br>
                 <div id="btn">
+                    <a href="ExcluirEquipe.php">Excluir equipe</a>
                     <input type="button" value="Voltar a tela inicial!" onclick="Volta()" />
                 </div>
             </div>

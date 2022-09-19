@@ -65,9 +65,9 @@ b {
 }
 
 #item-tabela {
-    margin-top: 13px;
-    margin-left: 10px;
-    width: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 70%;
     height: 90%;
     font-size: large;
 }
@@ -470,7 +470,7 @@ td.btn {
 }
 
 .tamanho {
-    width: 80px;
+    width: 100px;
     height: 30px;
 }
 
