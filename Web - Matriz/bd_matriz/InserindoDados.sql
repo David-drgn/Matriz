@@ -78,93 +78,93 @@ INSERT INTO qualificacaoEqp VALUES
 
 -- Carioca
 INSERT INTO qualificacaoFunc VALUES
-(default, 1, 5,'Liderança', 1, 1, 100),
-(default, 1, 5,'Trabalho em equipe', 1, 1, 100),
-(default, 1, 5,'Programação Web', 1, 1, 100),
-(default, 1, 5,'Banco de Dados', 1, 1, 100),
-(default, 1, 5,'Design', 1, 1, 100),
-(default, 1, 5,'Programação Mobile', 1, 1, 100),
-(default, 1, 5,'Redes', 1, 1, 100),
-(default, 1, 5,'Gestão de Projetos', 1, 1, 100),
-(default, 1, 5,'Ética', 1, 1, 100),
-(default, 1, 5,'RH', 1, 1, 100),
-(default, 1, 5,'Comunicação', 1, 1, 100),
-(default, 1, 5,'Marketing', 1, 1, 100);
+(default, 1, 5,'Liderança', 1, 1, 100, null),
+(default, 1, 5,'Trabalho em equipe', 1, 1, 100, null),
+(default, 1, 5,'Programação Web', 1, 1, 100, null),
+(default, 1, 5,'Banco de Dados', 1, 1, 100, null),
+(default, 1, 5,'Design', 1, 1, 100, null),
+(default, 1, 5,'Programação Mobile', 1, 1, 100, null),
+(default, 1, 5,'Redes', 1, 1, 100, null),
+(default, 1, 5,'Gestão de Projetos', 1, 1, 100, null),
+(default, 1, 5,'Ética', 1, 1, 100, null),
+(default, 1, 5,'RH', 1, 1, 100, null),
+(default, 1, 5,'Comunicação', 1, 1, 100, null),
+(default, 1, 5,'Marketing', 1, 1, 100, null);
 
  -- Filipe
 INSERT INTO qualificacaoFunc VALUES
-(default, 3, 1,'Liderança', 1, 2, 100),
-(default, 4, 3,'Trabalho em equipe', 1, 2, 100),
-(default, 4, 1,'Programação Web', 1, 2, 100),
-(default, 3, 1,'Banco de Dados', 1, 2, 100),
-(default, 3, 4,'Design', 1, 2, 100),
-(default, 1, 1,'Programação Mobile', 1, 2, 100),
-(default, 2, 3,'Redes', 1, 2, 100),
-(default, 4, 1,'Gestão de Projetos', 1, 2, 100),
-(default, 4, 3,'Ética', 1, 2, 100),
-(default, 1, 1,'RH', 1, 2, 100),
-(default, 4, 1,'Comunicação', 1, 2, 100),
-(default, 1, 1,'Marketing', 1, 2, 100);
+(default, 3, 1,'Liderança', 1, 2, 100, null),
+(default, 4, 3,'Trabalho em equipe', 1, 2, 100, null),
+(default, 4, 1,'Programação Web', 1, 2, 100, null),
+(default, 3, 1,'Banco de Dados', 1, 2, 100, null),
+(default, 3, 4,'Design', 1, 2, 100, null),
+(default, 1, 1,'Programação Mobile', 1, 2, 100, null),
+(default, 2, 3,'Redes', 1, 2, 100, null),
+(default, 4, 1,'Gestão de Projetos', 1, 2, 100, null),
+(default, 4, 3,'Ética', 1, 2, 100, null),
+(default, 1, 1,'RH', 1, 2, 100, null),
+(default, 4, 1,'Comunicação', 1, 2, 100, null),
+(default, 1, 1,'Marketing', 1, 2, 100, null);
 
 -- Eduardo
 INSERT INTO qualificacaoFunc VALUES
-(default, 3, 2,'Liderança', 1, 3, 100),
-(default, 4, 3,'Trabalho em equipe', 1, 3, 100),
-(default, 4, 3,'Programação Web', 1,3, 100),
-(default, 3, 3,'Banco de Dados', 1, 3, 100),
-(default, 3, 2,'Design', 1, 3, 100),
-(default, 1, 1,'Programação Mobile', 1, 3, 100),
-(default, 2, 1,'Redes', 1, 3, 100),
-(default, 4, 1,'Gestão de Projetos', 1, 3, 100),
-(default, 4, 3,'Ética', 1, 3, 100),
-(default, 1, 2,'RH', 1, 3, 100),
-(default, 4, 3,'Comunicação', 1, 3, 100),
-(default, 1, 1,'Marketing', 1, 3, 100);
+(default, 3, 2,'Liderança', 1, 3, 100, null),
+(default, 4, 3,'Trabalho em equipe', 1, 3, 100, null),
+(default, 4, 3,'Programação Web', 1,3, 100, null),
+(default, 3, 3,'Banco de Dados', 1, 3, 100, null),
+(default, 3, 2,'Design', 1, 3, 100, null),
+(default, 1, 1,'Programação Mobile', 1, 3, 100, null),
+(default, 2, 1,'Redes', 1, 3, 100, null),
+(default, 4, 1,'Gestão de Projetos', 1, 3, 100, null),
+(default, 4, 3,'Ética', 1, 3, 100, null),
+(default, 1, 2,'RH', 1, 3, 100, null),
+(default, 4, 3,'Comunicação', 1, 3, 100, null),
+(default, 1, 1,'Marketing', 1, 3, 100, null);
 
 -- Bruna
 INSERT INTO qualificacaoFunc VALUES
-(default, 3, 4,'Liderança', 1, 4, 100),
-(default, 4, 3,'Trabalho em equipe', 1, 4, 100),
-(default, 4, 2,'Programação Web', 1, 4, 100),
-(default, 3, 1,'Banco de Dados', 1, 4, 100),
-(default, 3, 3,'Design', 1, 4, 100),
-(default, 1, 1,'Programação Mobile', 1,4, 100),
-(default, 2, 2,'Redes', 1, 4, 100),
-(default, 4, 4,'Gestão de Projetos', 1, 4, 100),
-(default, 4, 3,'Ética', 1, 4, 100),
-(default, 1, 2,'RH', 1,4, 100),
-(default, 4, 4,'Comunicação', 1, 4, 100),
-(default, 1, 2,'Marketing', 1, 4, 100);
+(default, 3, 4,'Liderança', 1, 4, 100, null),
+(default, 4, 3,'Trabalho em equipe', 1, 4, 100, null),
+(default, 4, 2,'Programação Web', 1, 4, 100, null),
+(default, 3, 1,'Banco de Dados', 1, 4, 100, null),
+(default, 3, 3,'Design', 1, 4, 100, null),
+(default, 1, 1,'Programação Mobile', 1,4, 100, null),
+(default, 2, 2,'Redes', 1, 4, 100, null),
+(default, 4, 4,'Gestão de Projetos', 1, 4, 100, null),
+(default, 4, 3,'Ética', 1, 4, 100, null),
+(default, 1, 2,'RH', 1,4, 100, null),
+(default, 4, 4,'Comunicação', 1, 4, 100, null),
+(default, 1, 2,'Marketing', 1, 4, 100, null);
 
 -- Kauê
 INSERT INTO qualificacaoFunc VALUES
-(default, 3, 1,'Liderança', 1, 5, 100),
-(default, 4, 4,'Trabalho em equipe', 1, 5, 100),
-(default, 4, 2,'Programação Web', 1, 5, 100),
-(default, 3, 3,'Banco de Dados', 1, 5, 100),
-(default, 3, 2,'Design', 1,5, 100),
-(default, 1, 3,'Programação Mobile', 1, 5, 100),
-(default, 2, 1,'Redes', 1, 5, 100),
-(default, 4, 1,'Gestão de Projetos', 1, 5, 100),
-(default, 4, 4,'Ética', 1, 5, 100),
-(default, 1, 3,'RH', 1, 5, 100),
-(default, 4, 2,'Comunicação', 1, 5, 100),
-(default, 1, 4,'Marketing', 1,5, 100);
+(default, 3, 1,'Liderança', 1, 5, 100, null),
+(default, 4, 4,'Trabalho em equipe', 1, 5, 100, null),
+(default, 4, 2,'Programação Web', 1, 5, 100, null),
+(default, 3, 3,'Banco de Dados', 1, 5, 100, null),
+(default, 3, 2,'Design', 1,5, 100, null),
+(default, 1, 3,'Programação Mobile', 1, 5, 100, null),
+(default, 2, 1,'Redes', 1, 5, 100, null),
+(default, 4, 1,'Gestão de Projetos', 1, 5, 100, null),
+(default, 4, 4,'Ética', 1, 5, 100, null),
+(default, 1, 3,'RH', 1, 5, 100, null),
+(default, 4, 2,'Comunicação', 1, 5, 100, null),
+(default, 1, 4,'Marketing', 1,5, 100, null);
 
 -- Giulia
 INSERT INTO qualificacaoFunc VALUES
-(default, 3, 1,'Liderança', 1, 6, 100),
-(default, 4, 3,'Trabalho em equipe', 1, 6, 100),
-(default, 4, 3,'Programação Web', 1, 6, 100),
-(default, 3, 3,'Banco de Dados', 1, 6, 100),
-(default, 3, 1,'Design', 1, 6, 100),
-(default, 1, 1,'Programação Mobile', 1, 6, 100),
-(default, 2, 4,'Redes', 1, 6, 100),
-(default, 4, 1,'Gestão de Projetos', 1, 6, 100),
-(default, 4, 3,'Ética', 1, 6, 100),
-(default, 1, 1,'RH', 1, 6, 100),
-(default, 4, 2,'Comunicação', 1, 6, 100),
-(default, 1, 1,'Marketing', 1, 6, 100); 
+(default, 3, 1,'Liderança', 1, 6, 100, null),
+(default, 4, 3,'Trabalho em equipe', 1, 6, 100, null),
+(default, 4, 3,'Programação Web', 1, 6, 100, null),
+(default, 3, 3,'Banco de Dados', 1, 6, 100, null),
+(default, 3, 1,'Design', 1, 6, 100, null),
+(default, 1, 1,'Programação Mobile', 1, 6, 100, null),
+(default, 2, 4,'Redes', 1, 6, 100, null),
+(default, 4, 1,'Gestão de Projetos', 1, 6, 100, null),
+(default, 4, 3,'Ética', 1, 6, 100, null),
+(default, 1, 1,'RH', 1, 6, 100, null),
+(default, 4, 2,'Comunicação', 1, 6, 100, null),
+(default, 1, 1,'Marketing', 1, 6, 100, null); 
 
 /* -- Carioca
 INSERT INTO qualificacaoFunc VALUES

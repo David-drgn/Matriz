@@ -38,11 +38,11 @@
         background-color: green;
     }
 
-    #laranja{
+    #laranja {
         background-color: orange;
     }
 
-    #laranjaAmarelo{
+    #laranjaAmarelo {
         background-color: greenyellow;
     }
 
@@ -63,9 +63,9 @@
 
 <body>
 
-<?php
-session_start();
-?>
+    <?php
+    session_start();
+    ?>
     <form action="Funcionario-dados.php" method="GET">
         <div id="dadosCompetenciaNova">
             <div class="head"></div>
@@ -86,23 +86,23 @@ session_start();
 </html>
 
 <?php
-if(isset($_GET["vermelho"])){
+if (isset($_GET["vermelho"])) {
     $_SESSION['nivelAtual'] = 1;
 }
 
-if(isset($_GET["laranja"])){
+if (isset($_GET["laranja"])) {
     $_SESSION['nivelAtual'] = 2;
 }
 
-if(isset($_GET["laranjaAmarelo"])){
+if (isset($_GET["laranjaAmarelo"])) {
     $_SESSION['nivelAtual'] = 3;
 }
 
-if(isset($_GET["amarelo"])){
+if (isset($_GET["amarelo"])) {
     $_SESSION['nivelAtual'] = 4;
 }
 
-if(isset($_GET["verde"])){
+if (isset($_GET["verde"])) {
     $_SESSION['nivelAtual'] = 5;
 }
 ?>

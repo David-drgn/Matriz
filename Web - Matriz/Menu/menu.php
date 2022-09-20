@@ -13,6 +13,15 @@
         background-color: gray;
     }
 
+    #sair {
+        text-decoration: none;
+        background-color: #d9d9d9;
+        width: 90px;
+        height: 70px;
+        font-size: 25px;
+        border-radius: 20px;
+    }
+
     #Menu-gestor {
         display: flex;
         flex-direction: column;
@@ -231,8 +240,7 @@
                     <tr>
                         <td id='Botao' colspan='2'>
                         <br>
-                            <script src='JavaScript/java-back.js'></script>
-                            <button onclick='BackHistory()''>Sair</button>
+                            <a id='sair' href='../HomePage/homePage.php'>Sair</a>
                         </td>
                     </tr>
                 </table>
@@ -281,8 +289,7 @@
                     <tr>
                         <td id='Botao' colspan='2'>
                         <br>
-                            <script src='JavaScript/java-back.js'></script>
-                            <button onclick='BackHistory()'>Sair</button>
+                            <a id='sair' href='../HomePage/homePage.php'>Sair</a>
                         </td>
                     </tr>
                 </table>

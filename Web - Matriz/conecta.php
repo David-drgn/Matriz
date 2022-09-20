@@ -1,70 +1,64 @@
 <?php
 
-	session_start();
-	$conexao = mysqli_connect ("localhost","root","","matriz");
+session_start();
+$conexao = mysqli_connect("localhost", "root", "", "matriz");
 
-	if ($conexao == false){
-		echo "Erro.";
-	}
-	else{
-		$email = $_GET['email-usuario'];
-		$senha = $_GET['senha-usuario'];
-		$flag = false;
+if ($conexao == false) {
+	echo "Erro.";
+} else {
+	$email = $_GET['email-usuario'];
+	$senha = $_GET['senha-usuario'];
+	$flag = false;
 
-		$buscar = "select * from cadastro where email = '" . $email . "'and senha='". $senha ."'";
-		$resultado = mysqli_query($conexao,$buscar);
-	
-		while ($registro = mysqli_fetch_array($resultado))
-		{
+	$buscar = "select * from cadastro where email = '" . $email . "'and senha='" . $senha . "'";
+	$resultado = mysqli_query($conexao, $buscar);
 
-				$_SESSION['IDcadastro'] = $registro['IDcadastro'];
-				$_SESSION['nome']   	= $registro['nome'];
-				$_SESSION['cargo']		= $registro['cargo'];
-				$_SESSION['foto']		= $registro['foto'];
-				$_SESSION['senha']		= $registro['senha'];
-				$_SESSION['email']		= $registro['email'];
+	while ($registro = mysqli_fetch_array($resultado)) {
 
-				$cargo = $registro['cargo'];
+		$_SESSION['IDcadastro'] = $registro['IDcadastro'];
+		$_SESSION['nome']   	= $registro['nome'];
+		$_SESSION['cargo']		= $registro['cargo'];
+		$_SESSION['foto']		= $registro['foto'];
+		$_SESSION['senha']		= $registro['senha'];
+		$_SESSION['email']		= $registro['email'];
 
-				if ($cargo == "Gestor"){
-					echo "<script> window.alert('Bem vindo gestor!!');
-					  setTimeout(donothing,5000);
-					  window.location.href='HomePage/HomePage.php';
-					  </script>";	
-					$flag=true;
-				}
-				else {
-					echo "<script> window.alert('Bem vindo!!');
-					  window.location.href='HomePage/HomePage.php';
-					  </script>";	
-					$flag=true;
-				}
+		$cargo = $registro['cargo'];
+
+		if ($cargo == "Gestor") {
+			echo "<script>
+					  window.location.href='TelaEspera/Gestor.php';
+					  </script>";
+			$flag = true;
+		} else {
+			echo "<script>
+					  window.location.href='TelaEspera/Funcionario.php';
+					  </script>";
+			$flag = true;
 		}
-	
-		if ($flag==false) 
-		{
+	}
 
-			$IDcriado = $_SESSION['Criado'];
+	if ($flag == false) {
 
-			if ($IDcriado == 1){
-				$ID = $_SESSION['ID'];
-				
-			}
-			$ID = md5(uniqid(""));
+		$IDcriado = $_SESSION['Criado'];
 
-			$INSERT = "INSERT INTO testedecaixapreta VALUES (DEFAULT, '0', '" . $ID . "')";
-			$sql = mysqli_query($conexao,$INSERT);
+		if ($IDcriado == 1) {
+			$ID = $_SESSION['ID'];
+		}
+		$ID = md5(uniqid(""));
 
-			if(!$sql){
-				echo "<script> window.alert('ERRO AO REALIZAR CONTAGEM!!');
+		$INSERT = "INSERT INTO testedecaixapreta VALUES (DEFAULT, '0', '" . $ID . "')";
+		$sql = mysqli_query($conexao, $INSERT);
+
+		if (!$sql) {
+			echo "<script> window.alert('ERRO AO REALIZAR CONTAGEM!!');
 					  window.location.href='Gestor/gestor.php';
 					  </script>";
-			}
+		}
 
-			echo "<script> 
+		echo "<script> 
 						window.alert('Acesso negado...');
 						
 						window.history.back();
 					</script>";
-		}
 	}
+}

@@ -2,13 +2,6 @@ create database Matriz;
 -- drop database matriz;
 use matriz; 
 
-create table TesteDeCaixaPreta 
-(
-	IDteste		INT 	auto_increment		PRIMARY KEY,
-    CONT		INT,
-    ID			VARCHAR(45)
-);
-
 create table endereco
 (
 	IDendereco		INT				auto_increment		PRIMARY KEY,
@@ -109,6 +102,7 @@ create table qualificacaoFunc
     IDequipe 			INT,
     IDcadastro			INT,
     IDgestor			INT,
+    dataCon				DATE,
     
     FOREIGN KEY (IDgestor) REFERENCES cadastro(IDcadastro),
     
