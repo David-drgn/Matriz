@@ -54,13 +54,6 @@ create table funcao
     FOREIGN KEY (IDcadastro) REFERENCES cadastro(IDcadastro)
 );
 
-create table data1
-(
-	IDdata			INT		auto_increment		PRIMARY KEY,
-    dataEmissao		date,
-    dataRevissao	date
-);
-
 create table competencia
 (
 	IDcompetencia 		INT 			auto_increment		PRIMARY KEY,
@@ -88,6 +81,7 @@ create table qualificacaoEqp
     descricao			VARCHAR(45)		not null,
     IDequipe			INT,
     gestor				INT,
+    semaforo			VARCHAR(45)		not null,
     
     FOREIGN KEY (IDequipe) REFERENCES equipe(IDequipe),
     FOREIGN KEY (gestor) REFERENCES cadastro(IDcadastro)
@@ -103,6 +97,7 @@ create table qualificacaoFunc
     IDcadastro			INT,
     IDgestor			INT,
     dataCon				DATE,
+    dataEmi				DATE,
     
     FOREIGN KEY (IDgestor) REFERENCES cadastro(IDcadastro),
     
@@ -117,9 +112,6 @@ create table area
     diretoria		VARCHAR(45),
     centroDeCustos	VARCHAR(45),
     nome			VARCHAR(45),
-    IDdata			INT,
-    
-    FOREIGN KEY (IDdata) REFERENCES data1(IDdata),
     
     IDcadastro			INT,			
     

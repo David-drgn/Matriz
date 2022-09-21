@@ -38,23 +38,6 @@ if ($conexao == false) {
 	}
 
 	if ($flag == false) {
-
-		$IDcriado = $_SESSION['Criado'];
-
-		if ($IDcriado == 1) {
-			$ID = $_SESSION['ID'];
-		}
-		$ID = md5(uniqid(""));
-
-		$INSERT = "INSERT INTO testedecaixapreta VALUES (DEFAULT, '0', '" . $ID . "')";
-		$sql = mysqli_query($conexao, $INSERT);
-
-		if (!$sql) {
-			echo "<script> window.alert('ERRO AO REALIZAR CONTAGEM!!');
-					  window.location.href='Gestor/gestor.php';
-					  </script>";
-		}
-
 		echo "<script> 
 						window.alert('Acesso negado...');
 						

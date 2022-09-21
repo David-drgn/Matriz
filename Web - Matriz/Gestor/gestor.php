@@ -86,6 +86,13 @@
         </center>
     </div>
 
+    <div id="selecionar">
+        <center>
+            <br><a class="linkEquipe" href="gestor-tela2/semaforo.php">Ver equipes</a> <br><br>
+            <a class="linkEquipe" href="gestor-tela2/semaforoCompetencias.php">Ver competencias</a> <br><br>
+        </center>
+    </div>
+
     <section id="Menu-Editar">
         <div id="EquipesEditar">
             <center>
