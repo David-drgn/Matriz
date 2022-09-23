@@ -145,7 +145,7 @@ INSERT INTO qualificacaoFunc VALUES
 -- Giulia
 (default, 3, 1,'Liderança', 1, 6, 100, null, null),
 (default, 4, 3,'Trabalho em equipe', 1, 6, 100, null, null),
-(default, 4, 3,'Programação Web', 1, 6, 100, null),
+(default, 4, 3,'Programação Web', 1, 6, 100, null,null),
 (default, 3, 3,'Banco de Dados', 1, 6, 100, null, null),
 (default, 3, 1,'Design', 1, 6, 100, null, null),
 (default, 1, 1,'Programação Mobile', 1, 6, 100, null, null),
