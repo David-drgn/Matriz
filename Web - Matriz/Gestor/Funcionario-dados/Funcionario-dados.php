@@ -334,9 +334,8 @@
 
             <br>
             <br>
-            <center>
+
                 <h2>Para Adicionar novos dados:</h2>
-            </center>
 
             <div id="gridContainer">
 
@@ -355,7 +354,8 @@
         </form>
     </section>
     <div id="info">
-
+        <center><div id="atual"></div><h3>Nível atual</h3></center><br>
+        <div id="recomendado"></div><h3 id="recomendadoTXT">Nível recomendado</h3>
     </div>
 </body>
 

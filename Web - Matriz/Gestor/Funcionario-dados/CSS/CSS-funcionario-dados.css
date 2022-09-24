@@ -8,11 +8,29 @@ b {
 
 #info{
     position: absolute;
-    top: 10%;
+    top: 27.5%;
     right: 20px;
-    width: 300px;
+    width: 20%;
     height: 300px;
-    background-color: #113159;
+    background-color: #a6a6a6;
+    border-radius: 20px;
+}  
+
+h3{
+    margin-left: 15%;
+}
+
+#recomendadoTXT{
+    margin-left: 10%;
+}
+
+#atual{
+    position: absolute;
+    top: 20px;
+    left: 29%;
+    width: 20px;
+    height: 20px;
+    background-color: #0B2545;
 }
 
 .card {
@@ -73,6 +91,10 @@ b {
     top: 10px;
 }
 
+h2{
+    margin-left: 20%;
+}
+
 #item-tabela {
     margin-top: 20px;
     margin-left: 20px;
@@ -87,7 +109,7 @@ b {
     margin-left: 5%;
     grid-template-columns: auto auto auto auto;
     height: 100%;
-    width: 100%;
+    width: 60%;
 }
 
 .tdAd {
