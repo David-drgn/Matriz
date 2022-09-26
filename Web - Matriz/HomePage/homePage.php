@@ -15,7 +15,7 @@
         <section id="header">
             <center>
                 <img id="img" src="../Imagens/LogoTipo.png">
-                <h2 id="nome">Matriz de conhecimento</h2>
+                <h2 id="nome">Matriz de Conhecimento</h2>
             </center>
         </section>
 
