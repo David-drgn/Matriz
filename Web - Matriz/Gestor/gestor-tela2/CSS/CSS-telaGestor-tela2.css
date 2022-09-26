@@ -30,6 +30,7 @@ b {
     box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 45%;
+    height: 25%;
     display: inline-block;
     margin-top: 20px;
     margin-left: 20px;
@@ -166,6 +167,12 @@ a:hover {
     right: 0%;
     width: 50%;
     height: 17%;
+}
+
+table {
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #table-button {

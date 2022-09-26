@@ -196,3 +196,5 @@ DELETE FROM integrantes WHERE IDequipe = '3';
 SELECT COUNT(IDqualificacaoFunc) from qualificacaoFunc WHERE IDequipe = '1';
 SELECT SUM(nivelAtual) from qualificacaoFunc WHERE IDequipe = '1';
 SELECT SUM(nivelRecomendado) from qualificacaoFunc WHERE IDequipe = '1';
+
+SELECT descricao from qualificacaoEqp WHERE IDqualificacaoEqp = '3';

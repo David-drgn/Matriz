@@ -54,7 +54,7 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='vermelho'></div>
+                        <div class='cor' id='VermelhoLaranja'></div>
                     </td>
                     <td>
                         <div class='container'>

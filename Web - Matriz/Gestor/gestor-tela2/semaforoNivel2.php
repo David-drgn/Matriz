@@ -14,40 +14,39 @@
     <script src="semaforo.js"></script>
 
     <?php
-    include __DIR__ . '/../../Menu/menu.php';
+    include __DIR__ . '/../ponte.php';
     $conexao = mysqli_connect("localhost", "root", "", "matriz");
 
     if ($conexao == false) {
         echo "Erro ao conectar ao banco de dados.";
     }
     $IDgestor = $_SESSION['IDcadastro'];
+    $semaforo = $_GET['semaforo'];
     ?>
 
     <section id="Menu-funcionarios">
         <?php
-        $BuscaEqp = "SELECT * FROM qualificacaoeqp WHERE gestor = '" . $IDgestor . "' ORDER BY descricao";
+        $BuscaEqp = "SELECT * FROM qualificacaoeqp WHERE gestor = '" . $IDgestor . "' AND semaforo = '" . $semaforo . "' ORDER BY descricao";
         $sql = mysqli_query($conexao, $BuscaEqp);
         while ($resultado = mysqli_fetch_array($sql)) {
 
             if ($resultado['semaforo'] == "Vermelho") {
                 echo "
                 <div class='card'>
-                <center>
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='vermelho'></div>
+                        <div class='cor' id='vermelho'>.</div>
                     </td>
                     <td>
                         <div class='container'>
                             <h4><b>" . $resultado['descricao'] . "</b></h4>
                             <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
-                            <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Ver detalhes</a></p>
+                            <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
                 </tr>
                 </table>
-                </center>
                 </div>
                 ";
             } else if ($resultado['semaforo'] == "VermelhoLaranja") {
@@ -56,13 +55,13 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='VermelhoLaranja'></div>
+                        <div class='cor' id='VermelhoLaranja'>.</div>
                     </td>
                     <td>
                         <div class='container'>
                             <h4><b>" . $resultado['descricao'] . "</b></h4>
                             <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
-                            <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Ver detalhes</a></p>
+                            <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
                 </tr>
@@ -75,13 +74,13 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='laranja'></div>
+                        <div class='cor' id='laranja'>.</div>
                     </td>
                     <td>
                         <div class='container'>
                         <h4><b>" . $resultado['descricao'] . "</b></h4>
                         <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
-                        <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Ver detalhes</a></p>
+                        <p><a href='../ge../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
                 </tr>
@@ -94,13 +93,13 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='VerdeAmarelo'></div>
+                        <div class='cor' id='VerdeAmarelo'>.</div>
                     </td>
                     <td>
                         <div class='container'>
                         <h4><b>" . $resultado['descricao'] . "</b></h4>
                         <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
-                        <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Ver detalhes</a></p>
+                        <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
                 </tr>
@@ -119,7 +118,7 @@
                         <div class='container'>
                         <h4><b>" . $resultado['descricao'] . "</b></h4>
                         <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
-                        <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Ver detalhes</a></p>
+                        <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . " '>Ver detalhes</a></p>
                         </div>
                     </td>
                 </tr>
@@ -134,7 +133,7 @@
     </section>
 
     <section id="Menu-funcao">
-        <button id="funcao" onclick="semaforo()">Nível da competencia:</button>
+        <button id="funcao" onclick="semaforo()">Nível da equipe:</button>
     </section>
     <div id="nivel">
         <center>
