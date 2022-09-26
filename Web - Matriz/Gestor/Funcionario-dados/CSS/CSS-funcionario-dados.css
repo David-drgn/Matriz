@@ -16,6 +16,32 @@ b {
     border-radius: 20px;
 }  
 
+#Verde {
+    background-color: green;
+}
+
+#Vermelho {
+    background-color: red;
+}
+
+#VermelhoLaranja {
+    background-color: orangered;
+}
+
+#VerdeAmarelo {
+    background-color: greenyellow;
+}
+
+.cor {
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+}
+
+#Laranja {
+    background-color: orange;
+}
+
 h3{
     margin-left: 15%;
 }
@@ -374,12 +400,6 @@ h2{
     background-color: #d6d6d6;
     border-radius: 10px;
     width: 0.5vw;
-}
-
-.cor {
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
 }
 
 #verde {

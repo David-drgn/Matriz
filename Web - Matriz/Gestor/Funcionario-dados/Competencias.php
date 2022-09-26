@@ -23,12 +23,26 @@
     $IDqualificacao = $_GET['id'];
     $IDeqp = $_GET['IDeqp'];
 
-    $dadosFuncionario = "SELECT * FROM cadastro WHERE IDcadastro = ' " . $IDqualificacao . " '";
-    $buscando = mysqli_query($conexao, $dadosFuncionario);
-
-    if (!$buscando) {
-        echo "Erro";
-    } else {
+    $sql = "SELECT * FROM qualificacaoeqp WHERE IDqualificacaoEqp = '" . $IDqualificacao . "'";
+    $teste = mysqli_query($conexao, $sql);
+    if (!$teste) {
+        echo "<script>alert('Erro ao receber competencia');
+        window.location.href = '../gestor.php';</script>";
+    }
+    while ($desc = mysqli_fetch_array($teste)) {
+        $descricao = $desc['descricao'];
+        echo "<section id='Menu-funcionario'>
+        <div id='alinhar-centro2'>
+            <center>
+            <br>
+                <div class='cor' id='" . $desc['semaforo'] . "'></div> <br>
+                <b>
+                    <p>" . $desc['descricao'] . "</p>
+                </b>
+                <p> " . $desc['semaforo'] . " </p>
+            </center>
+        </div>
+    </section>";
     }
 
     ?>
@@ -38,16 +52,6 @@
         <form action="EditandoDados.php" method="GET">
             <table id="item-tabela">
                 <?php
-
-                $sql = "SELECT descricao FROM qualificacaoeqp WHERE IDqualificacaoEqp = '" . $IDqualificacao . "'";
-                $teste = mysqli_query($conexao, $sql);
-                if (!$teste) {
-                    echo "<script>alert('Erro ao receber competencia');
-	                window.location.href = '../gestor.php';</script>";
-                }
-                while ($desc = mysqli_fetch_array($teste)) {
-                    $descricao = $desc['descricao'];
-                }
 
                 $Sql = "SELECT * FROM qualificacaofunc WHERE IDequipe = '" . $IDeqp . "' and descricao = '" . $descricao . "'";
                 $Seleciona = mysqli_query($conexao, $Sql);

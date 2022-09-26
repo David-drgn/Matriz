@@ -108,7 +108,7 @@
         <div id="div-button">
             <table id="table-button">
                 <tr>
-                    <td class="btn"><input type="button" class="button" onclick="Semaforo()" value="Semaforo"
+                    <td class="btn"><input type="button" class="button" onclick="Semaforo()" value="Semáforo"
                             id="button1" /></td>
                     <td id="space"></td>
                     <td class="btn"><input type="button" class="button" onclick="EditarEqp()" value="Editar equipes"
