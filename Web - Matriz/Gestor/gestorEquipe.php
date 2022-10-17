@@ -67,7 +67,7 @@
 
     </section>
 
-    <div id="Equipes">
+    <div id="Equipes" class="Show">
         <center>
             <br><a class="linkEquipe" href="gestor.php">Todas as equipes</a> <br><br>
             <a class="linkEquipe" href="CriaEquipes/ConfirmaSenha.php">Criar nova equipe</a> <br><br>
@@ -85,7 +85,7 @@
         </center>
     </div>
 
-    <section id="Menu-Editar">
+    <section id="Menu-Editar" class="Show">
         <div id="EquipesEditar">
             <center>
                 <br><br>
@@ -103,6 +103,13 @@
         </div>
 
     </section>
+
+    <div id="selecionar" class="Show">
+        <center>
+            <br><a class="linkEquipe" href="gestor-tela2/semaforo.php">Ver equipes</a> <br><br>
+            <a class="linkEquipe" href="gestor-tela2/semaforoCompetencias.php">Ver competencias</a> <br><br>
+        </center>
+    </div>
 
     <section>
         <div id="div-button">

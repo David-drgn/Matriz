@@ -27,50 +27,65 @@
     }
 
     #vermelho {
-        background-color: red;
+        background-color: darkgrey;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
 
     #amarelo {
-        background-color: yellow;
+        background-color: darkgrey;
     }
 
     #verde {
-        background-color: green;
+        background-color: darkgrey;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
-    #laranja{
-        background-color: orange;
+    #laranja {
+        background-color: darkgrey;
     }
 
-    #laranjaAmarelo{
-        background-color: greenyellow;
+    #laranjaAmarelo {
+        background-color: darkgrey;
     }
 
     .head {
         width: 100%;
         height: 30px;
-        background-color: darkgray;
-        border-radius: 5px;
+        background-color: darkgrey;
+        border-radius: 10px;
+    }
+
+    #verde:hover,
+    #amarelo:hover,
+    #laranjaAmarelo:hover,
+    #vermelho:hover,
+    #laranja:hover,
+    #um {
+        background-color: lightgray;
+        cursor: pointer;
     }
 
     #Grid {
         width: 90%;
         display: grid;
         grid-template-columns: auto auto auto auto auto;
+        border-radius: 10px;
     }
     </style>
 </head>
 
 <body>
 
-<?php
+    <?php
 
-$desc = $_GET['desc'];
+    $desc = $_GET['desc'];
 
-session_start();
-$_SESSION['nomeComp'] = $desc;
+    session_start();
+    $_SESSION['nomeComp'] = $desc;
 
-?>
+    ?>
     <form action="AdicionaRecomendado.php" method="GET">
         <div id="dadosCompetenciaNova">
             <div class="head"></div>

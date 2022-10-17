@@ -113,7 +113,7 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='verde'>.</div>
+                        <div class='cor' id='verde'></div>
                     </td>
                     <td>
                         <div class='container'>
@@ -136,7 +136,7 @@
     <section id="Menu-funcao">
         <button id="funcao" onclick="semaforo()">Nível da competencia:</button>
     </section>
-    <div id="nivel">
+    <div id="nivel" class="show">
         <center>
             <br>
             <a href="semaforoCompetencias.php">Todos</a> <br><br>

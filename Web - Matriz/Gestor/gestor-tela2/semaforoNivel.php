@@ -36,7 +36,7 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='vermelho'>.</div>
+                        <div class='cor' id='vermelho'></div>
                     </td>
                     <td>
                         <div class='container'>
@@ -55,7 +55,7 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='VermelhoLaranja'>.</div>
+                        <div class='cor' id='VermelhoLaranja'></div>
                     </td>
                     <td>
                         <div class='container'>
@@ -74,7 +74,7 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='laranja'>.</div>
+                        <div class='cor' id='laranja'></div>
                     </td>
                     <td>
                         <div class='container'>
@@ -93,7 +93,7 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='VerdeAmarelo'>.</div>
+                        <div class='cor' id='VerdeAmarelo'></div>
                     </td>
                     <td>
                         <div class='container'>
@@ -112,7 +112,7 @@
                 <table>
                 <tr>
                     <td class='td-imagem'>
-                        <div class='cor' id='verde'>.</div>
+                        <div class='cor' id='verde'></div>
                     </td>
                     <td>
                         <div class='container'>
@@ -135,7 +135,7 @@
     <section id="Menu-funcao">
         <button id="funcao" onclick="semaforo()">Nível da equipe:</button>
     </section>
-    <div id="nivel">
+    <div id="nivel" class="show">
         <center>
             <br>
             <a href="semaforo.php">Todos</a> <br><br>

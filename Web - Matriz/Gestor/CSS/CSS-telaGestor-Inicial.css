@@ -1,4 +1,5 @@
 @import url(../../CSS/CSS-import/Fontes.css);
+
 .card {
     background-color: #a6a6a6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -24,13 +25,16 @@
     width: 30%;
 }
 
+.Show {
+    display: none;
+}
+
 #Equipes {
     position: absolute;
-    left: 32%;
-    top: 13vh;
+    left: 29.5%;
+    top: 12.5vh;
     background-color: #d9d9d9;
     align-items: center;
-    display: none;
     grid-template-columns: auto;
     width: 300px;
     height: 200px;
@@ -41,9 +45,8 @@
 }
 
 #selecionar {
-    display: none;
     position: absolute;
-    right: 17.5%;
+    right: 16%;
     top: 13vh;
     background-color: #d9d9d9;
     align-items: center;
@@ -57,7 +60,6 @@
 }
 
 #EquipesEditar {
-    display: none;
     grid-template-columns: auto;
     width: 400px;
     height: 160px;

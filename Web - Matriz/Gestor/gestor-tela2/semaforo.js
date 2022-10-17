@@ -1,8 +1,3 @@
-function semaforo(){
-    if (document.getElementById("nivel").style.display == "none"){
-        document.getElementById("nivel").style.display = "grid";
-    }
-    else {
-        document.getElementById("nivel").style.display = "none";
-    }
+function semaforo() {
+    document.getElementById("nivel").classList.toggle("show");
 }
