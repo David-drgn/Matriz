@@ -146,7 +146,7 @@ if ($conexao == false) {
             <div id=" mostraFuncionarios">
                 <br>
                 <div id="btn">
-                    <a href="ExcluirEquipe.php">Excluir equipe</a>
+                    <a href="Confirmar.php">Excluir equipe</a>
                     <input type="button" value="Voltar a tela inicial!" onclick="Volta()" />
                 </div>
             </div>
