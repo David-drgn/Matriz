@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/CSS-bot.css">
-    <title>Olá, Oliver!!</title>
+    <title>Perguntas frequentes!!</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <section id="bot">
             <div id="complete"></div>
             <article class="head">
-                <h1 align="left" id="oliver">Oliver</h1>
+                <h1 align="left" id="oliver">Wagner</h1>
                 <h1 align="right" id="duvidas">Dúvidas Comuns</h1>
             </article>
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/CSS-bot.css">
-    <title>Olá, Oliver!!</title>
+    <title>Perguntas frequentes!!</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <section id="bot">
             <div id="complete"></div>
             <article class="head">
-                <h1 align="left" id="oliver">Oliver</h1>
+                <h1 align="left" id="oliver">Wagner</h1>
                 <h1 align="right" id="duvidas">Dúvidas Comuns</h1>
             </article>
             <table>
@@ -34,7 +34,7 @@
                         <td colspan="2" class="mensagem">
                             <img src="../Imagens/Oliver.png">
                             <div class="card">
-                                <h2>Vamos lá, eu sou o Oliver, e vou te ajudar a utilizar a matriz de conhecimento.</h2>
+                                <h2>Vamos lá, eu sou o Wagner, e vou te ajudar a utilizar a matriz de conhecimento.</h2>
                                 <h2>Me conta: do que você precisa hoje? É só escolher o assunto e responder um número. </h2>
                             </div>
                         </td>
