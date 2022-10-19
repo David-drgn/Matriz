@@ -58,7 +58,20 @@
 
                 while ($qualidades = mysqli_fetch_array($Seleciona)) {
 
-                    echo "<tr><td class='tamanho' rowspan='2' colspan='2'><p href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </p></td>";
+                    $nome = "SELECT * FROM cadastro WHERE IDcadastro = " . $qualidades['IDcadastro'] . "";
+                    $testando = mysqli_query($conexao, $nome);
+                    while ($resultado = mysqli_fetch_array($testando)) {
+                        $nomeFunc = $resultado['nome'];
+                    }
+
+                    $nome = "SELECT * FROM equipe WHERE IDequipe = " . $qualidades['IDequipe'] . "";
+                    $testando = mysqli_query($conexao, $nome);
+                    while ($resultado = mysqli_fetch_array($testando)) {
+                        $nomeEqp = $resultado['nome'];
+                    }
+
+                    echo "<tr><td class='tamanho' rowspan='2' colspan='2'><a href='RecebeID.php?id=" . $qualidades['IDcadastro'] . "&idEquipe=" . $qualidades['IDequipe'] . "'> " . $nomeFunc . " </a><br>
+                    <a href='../gestorEquipe.php?id=" . $qualidades['IDequipe'] . "'> " . $nomeEqp . " </a></td>";
                     if ($qualidades['nivelRecomendado'] == 5) {
                         echo "<td colspan='5' class='tdTama'><td>";
                         if ($qualidades['nivelAtual'] == 1) {

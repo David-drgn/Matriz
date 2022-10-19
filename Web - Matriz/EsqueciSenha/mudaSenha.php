@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <?php
+
+    ?>
     <script src="JavaScript/java-contagem.js"></script>
     <form action="conecta.php" method="GET">
         <header>
@@ -37,10 +40,10 @@
                 <b class="tex">Nova senha:</b>
                 <input type="password" class="txt" id="email-usuario" name="email-usuario"
                     placeholder="Digite a senha nova" />
-                    <b class="tex">Confirme a senha:</b>
+                <b class="tex">Confirme a senha:</b>
                 <input type="password" class="txt" id="email-usuario" name="email-usuario"
                     placeholder="Confirme a nova senha" />
-                <input type="submit" id="enviar" size="80" value="Enviar"/>
+                <input type="submit" id="enviar" size="80" value="Enviar" />
             </div>
         </section>
     </form>

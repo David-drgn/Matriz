@@ -40,8 +40,10 @@
                 <b class="tex">Email:</b>
                 <input type="email" class="txt" id="email-usuario" name="email-usuario"
                     placeholder="Insira seu e-mail" />
+                <b class="tex">CPF:</b>
+                <input type="password" class="txt" id="cpf-usuario" name="cpf-usuario" placeholder="Insira seu CPF" />
                 <p>Será enviado um link de recuperação de senha para seu e-mail.</p>
-                <input type="submit" id="enviar" size="80" value="Enviar"/>
+                <input type="submit" id="enviar" size="80" value="Enviar" />
             </div>
         </section>
     </form>
