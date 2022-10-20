@@ -11,7 +11,7 @@
 
 <body>
     <script src="JavaScript/java-contagem.js"></script>
-    <form action="mudaSenha.php" method="GET">
+    <form action="Confere.php" method="GET">
         <header>
             <table id="cont-header">
                 <tr id="alinhar">
