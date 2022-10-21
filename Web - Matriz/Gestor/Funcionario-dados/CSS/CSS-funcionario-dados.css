@@ -6,7 +6,7 @@ b {
     font-size: 30px;
 }
 
-#info{
+#info {
     position: absolute;
     top: 27.5%;
     right: 20px;
@@ -14,7 +14,7 @@ b {
     height: 300px;
     background-color: #a6a6a6;
     border-radius: 20px;
-}  
+}
 
 #Verde {
     background-color: green;
@@ -42,15 +42,15 @@ b {
     background-color: orange;
 }
 
-h3{
+h3 {
     margin-left: 15%;
 }
 
-#recomendadoTXT{
+#recomendadoTXT {
     margin-left: 10%;
 }
 
-#atual{
+#atual {
     position: absolute;
     top: 20px;
     left: 29%;
@@ -117,7 +117,7 @@ h3{
     top: 10px;
 }
 
-h2{
+h2 {
     margin-left: 20%;
 }
 
@@ -388,6 +388,7 @@ h2{
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     overflow-y: hidden;
+    background-color: #d6d6d6;
 }
 
 #Menu-funcionario::-webkit-scrollbar-thumb {
@@ -425,10 +426,10 @@ h2{
 }
 
 #alinhar-centro2 {
+    margin-top: 17vh;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background-color: #d9d9d9;
-    border-top-right-radius: 5%;
 }
 
 #Menu-dados {
