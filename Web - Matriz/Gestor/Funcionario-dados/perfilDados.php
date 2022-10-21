@@ -44,7 +44,7 @@
                 <p> " . $resultado['cargo'] . " </p>
                 <br>
                 <script src='../../Funcionarios/JavaScript/javaFuncionario.js'></script>
-                        <button id='Botao-input' onclick='Back()'>Voltar</button>
+                        <button id='Botao-input' onclick='Back()'><</button>
             </center>
         </div>
     </section>";
