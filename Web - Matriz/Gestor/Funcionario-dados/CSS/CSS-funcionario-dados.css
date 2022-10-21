@@ -6,14 +6,36 @@ b {
     font-size: 30px;
 }
 
-#info {
+#eqp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a6a6a6;
     position: absolute;
-    top: 27.5%;
-    right: 20px;
-    width: 20%;
-    height: 300px;
+    bottom: 20.5%;
+    width: 40%;
+    left: 30%;
+    height: 25%;
+    border-radius: 20px;
+}
+
+#info {
+    font-size: larger;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    width: 40%;
+    height: 125px;
     background-color: #a6a6a6;
     border-radius: 20px;
+}
+
+.organiza{
+    display: flex;
+    flex-direction: row;
 }
 
 #Verde {
@@ -46,16 +68,29 @@ h3 {
     margin-left: 15%;
 }
 
+#txt1{
+    display: flex;
+    align-items: center;
+    height: 20%;
+    margin-top: 5px;
+    width: 90%;
+    background-color: #d6d6d6;
+    border-radius: 10px;    
+}
+
+#txt2{
+    margin: auto;
+    font-size: larger;
+}
+
 #recomendadoTXT {
     margin-left: 10%;
 }
 
 #atual {
-    position: absolute;
-    top: 20px;
-    left: 29%;
     width: 20px;
     height: 20px;
+    margin-right: 20px;
     background-color: #0B2545;
 }
 
@@ -89,10 +124,12 @@ h3 {
 }
 
 #recomendado {
+    margin-right: 10px;
     background-color: #6ce5e8;
-    position: absolute;
-    left: 10%;
-    top: 50%;
+    width: 20px;
+    height: 20px;
+    left: 29%;
+    top: 20%;
 }
 
 #recomendadoB {
@@ -426,7 +463,7 @@ h2 {
 }
 
 #alinhar-centro2 {
-    margin-top: 17vh;
+    margin-top: 1vh;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -511,6 +548,26 @@ td.btn {
     background-color: #d9d9d9;
     width: 60%;
     border-radius: 20px;
+}
+
+#Botao-input2 {
+    font-size: 10px;
+    background-color: white;
+    color: #a6a6a6;
+    width: 10%;
+    height: 5%;
+    border-radius: 100%;
+    position: absolute;
+    border: transparent;
+    top: 15px;
+    left: 15px;
+    transition: all 1s;
+}
+
+#Botao-input2:hover {
+    background-color: #a6a6a6;
+    color: white;
+    cursor: pointer;
 }
 
 #Progresso {

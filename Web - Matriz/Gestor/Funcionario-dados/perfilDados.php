@@ -44,8 +44,22 @@
                 <p> " . $resultado['cargo'] . " </p>
                 <br>
                 <script src='../../Funcionarios/JavaScript/javaFuncionario.js'></script>
-                        <button id='Botao-input' onclick='Back()'><</button>
+                        <button id='Botao-input2' onclick='Back()'><b><</b></button>
             </center>
+        </div>
+        <div id='eqp'>
+            <div id='txt1'><div id='txt2'>Trocar equipe</div></div>
+            <br>
+        </div>
+        <div id='info'>
+        <br>
+            <div class='organiza'>
+                <div id='atual'></div>  Nivel atual
+            </div>
+            <br>
+            <div class='organiza'>
+                <div id='recomendado'></div>  Nivel recomendado
+            </div>
         </div>
     </section>";
         }
