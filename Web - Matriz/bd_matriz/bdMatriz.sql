@@ -20,7 +20,7 @@ create table cadastro
     nome			VARCHAR(100)	not null,
     email			VARCHAR(45)		not null,
     senha			VARCHAR(100)	not null,
-    cpf				INT				not null,
+    cpf				VARCHAR(11)				not null,
     IDendereco		INT,
     IDtelefone 		INT,
     cargo			VARCHAR(45)		not null,

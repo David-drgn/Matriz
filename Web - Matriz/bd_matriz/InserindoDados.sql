@@ -18,13 +18,13 @@ insert into telefone values
 (default,12241224);
 
 insert into cadastro values
-(1, 'David Raphael', 'david.raphael@gmail.com', '54321', '123456789', 1, 1, 'Funcionario',null),
-(2, 'Filipe', 'filipe@gmail.com', '54321', '123456710', 2, 2, 'Funcionario',null),
-(3, 'Eduardo', 'eduardo@gmail.com', '54321', '123456710', 2, 2, 'Funcionario',null),
-(4, 'Bruna', 'bruna@gmail.com', '54321', '123456710', 2, 2, 'Funcionario',null),
-(5, 'Kauê', 'kaue@gmail.com', '54321', '123456710', 2, 2, 'Funcionario',null),
-(6, 'Giulia', 'giulia@gmail.com', '54321', '123456710', 2, 2, 'Funcionario',null),
-(100, 'GestorTop', 'GestorTop@gmail.com', '12345', '123456710', 2, 2, 'Gestor',null);
+(1, 'David Raphael', 'david.raphael@gmail.com', '54321', '54240682789',1, 1, 'Funcionario',null),
+(2, 'Filipe', 'filipe@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
+(3, 'Eduardo', 'eduardo@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
+(4, 'Bruna', 'bruna@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
+(5, 'Kauê', 'kaue@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
+(6, 'Giulia', 'giulia@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
+(100, 'GestorTop', 'GestorTop@gmail.com', '12345', '54240682789', 2, 2, 'Gestor',null);
 
 -- ALTER table cadastro 
 -- add column foto varchar(245);
@@ -40,7 +40,7 @@ insert into telefone values
 (default,123122);
 
 insert into cadastro values
-(default, 'BRUNA', 'Bruna.mqs@gmail', '12345', '123456789', 3, 3, 'Gestor',null);
+(default, 'BRUNA', 'Bruna.mqs@gmail', '12345', '54240682789', 3, 3, 'Gestor',null);
 
 INSERT INTO `qualificacaofunc` (`IDqualificacaoFunc`, `nivelRecomendado`, `nivelAtual`, `descricao`, `IDqualificacaoEqp`, `IDcadastro`) VALUES (NULL, '4', '4', 'PHP', '1', '2');
 */
