@@ -14,12 +14,23 @@
     }
 
     #sair {
-        text-decoration: none;
-        background-color: #d9d9d9;
-        width: 90px;
-        height: 70px;
-        font-size: 25px;
-        border-radius: 20px;
+        font-size: 10px;
+        background-color: white;
+        color: #a6a6a6;
+        width: 10%;
+        height: 5%;
+        border-radius: 100%;
+        position: absolute;
+        border: transparent;
+        top: 15px;
+        left: 15px;
+        transition: all 1s;
+    }
+
+    #sair:hover {
+        background-color: #a6a6a6;
+        color: white;
+        cursor: pointer;
     }
 
     #Menu-gestor {
@@ -67,11 +78,13 @@
         left: 0%;
         width: 100%;
         height: 50%;
+        background-color: #a6a6a6;
+        border-radius: 20px;
     }
 
     #Progresso {
         width: 100%;
-        height: 100%;
+        height: auto;
         background-color: #a6a6a6;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -238,14 +251,12 @@
         }
         echo "
                     <tr>
-                        <td id='Botao' colspan='2'>
-                        <br>
-                            <a id='sair' href='../HomePage/homePage.php'>Sair</a>
-                        </td>
                     </tr>
                 </table>
             </div>
         </div>
+        <script src='../Menu/JavaScript/java-back.js'></script>
+                        <button id='sair' onclick='TelaHome()'><b><</b></button>
     </section>
     ";
     } else {
@@ -286,15 +297,11 @@
                 }
             }
             echo "
-                    <tr>
-                        <td id='Botao' colspan='2'>
-                        <br>
-                            <a id='sair' href='../HomePage/homePage.php'>Sair</a>
-                        </td>
-                    </tr>
                 </table>
             </div>
         </div>
+        <script src='JavaScript/java-back.js'></script>
+                        <button id='sair' onclick='TelaHome()'><b><</b></button>
     </section>
     ";
         }

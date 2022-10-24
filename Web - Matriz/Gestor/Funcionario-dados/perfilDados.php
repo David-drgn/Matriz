@@ -80,7 +80,8 @@
 
                     while ($qualidades = mysqli_fetch_array($Selecionando)) {
 
-                        echo "<tr><td class='tamanho' rowspan='2' colspan='2'><p> " . $qualidades['descricao'] . " </p></td>";
+                        echo "<tr><td class='tamanho' rowspan='2' colspan='2'><p> " . $qualidades['descricao'] . " </p>
+                        <p>Data conclusão: " . $qualidades['dataCon'] . "</p></td>";
                         if ($qualidades['nivelRecomendado'] == 5) {
                             echo "<td colspan='5' class='tdTama'><td>";
                             if ($qualidades['nivelAtual'] == 1) {

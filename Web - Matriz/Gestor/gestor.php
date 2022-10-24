@@ -13,7 +13,7 @@
     <script src="java-Gestor.js"></script>
 
     <?php
-    include "ponte.php";
+    include __DIR__ . '/../Menu/menu.php';
 
     $_SESSION['IDequipe'] = "";
     ?>

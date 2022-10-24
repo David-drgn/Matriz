@@ -6,13 +6,13 @@ b {
     font-size: 30px;
 }
 
-#eqp{
+#eqp {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #a6a6a6;
     position: absolute;
-    bottom: 20.5%;
+    bottom: 24vh;
     width: 40%;
     left: 30%;
     height: 25%;
@@ -33,7 +33,7 @@ b {
     border-radius: 20px;
 }
 
-.organiza{
+.organiza {
     display: flex;
     flex-direction: row;
 }
@@ -68,17 +68,17 @@ h3 {
     margin-left: 15%;
 }
 
-#txt1{
+#txt1 {
     display: flex;
     align-items: center;
     height: 20%;
     margin-top: 5px;
     width: 90%;
     background-color: #d6d6d6;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
-#txt2{
+#txt2 {
     margin: auto;
     font-size: larger;
 }
@@ -125,10 +125,10 @@ h3 {
 
 #recomendado {
     margin-right: 10px;
-    background-color: #6ce5e8;
-    width: 20px;
+    margin-left: 15px;
+    background-color: #2d8bba;
+    width: 25px;
     height: 20px;
-    left: 29%;
     top: 20%;
 }
 
@@ -154,14 +154,22 @@ h3 {
     top: 10px;
 }
 
+.desc {
+    text-decoration: none;
+    padding: auto;
+    background-color: #0B2545;
+    color: white;
+    border-radius: 10px;
+}
+
 h2 {
-    margin-left: 20%;
+    margin-left: 23vw;
 }
 
 #item-tabela {
     margin-top: 20px;
-    margin-left: 20px;
-    width: 70%;
+    margin-left: 10px;
+    width: 90%;
     height: 90%;
     font-size: large;
 }
@@ -172,7 +180,7 @@ h2 {
     margin-left: 5%;
     grid-template-columns: auto auto auto auto;
     height: 100%;
-    width: 60%;
+    width: 100%;
 }
 
 .tdAd {
@@ -240,7 +248,7 @@ h2 {
 
 .nivelAtual {
     border-radius: 15px;
-    height: 40px;
+    height: 30px;
     width: 100%;
     background-color: #113159;
 }
@@ -428,18 +436,6 @@ h2 {
     background-color: #d6d6d6;
 }
 
-#Menu-funcionario::-webkit-scrollbar-thumb {
-    background-color: #6ce5e8;
-    border-radius: 10px;
-    width: 0.5vw;
-}
-
-#Menu-funcionario::-webkit-scrollbar {
-    background-color: #d6d6d6;
-    border-radius: 10px;
-    width: 0.5vw;
-}
-
 #verde {
     background-color: green;
 }
@@ -579,13 +575,14 @@ td.btn {
 }
 
 .tamanho {
+    text-align: center;
     width: 100px;
     height: 30px;
 }
 
 .tdTama {
     background-color: #2d8bba;
-    height: 30px;
+    height: 25px;
     border-radius: 15px;
 }
 
@@ -609,13 +606,13 @@ td.btn {
 }
 
 #Menu-funcionarios::-webkit-scrollbar-thumb {
-    background-color: #6ce5e8;
+    background-color: #6ce6e800;
     border-radius: 10px;
     width: 0.5vw;
 }
 
 #Menu-funcionarios::-webkit-scrollbar {
-    background-color: #d6d6d6;
+    background-color: #d6d6d600;
     border-radius: 10px;
     width: 0.5vw;
 }

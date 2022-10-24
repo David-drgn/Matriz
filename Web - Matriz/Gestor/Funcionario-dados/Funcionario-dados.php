@@ -35,71 +35,34 @@
             $_SESSION['IDfuncionario'] = $resultado['IDcadastro'];
             $_SESSION['IDequipe'] = $IDequipe;
 
-            echo "<section id='Menu-funcionario'>
-        <div id='alinhar-centro'>
+            echo "<section id='Menu-funcionario2'>
+        <div id='alinhar-centro2'>
             <center>
+            <br>
+            <br>
                 <img src='CSS/Imagens/usuario.png' id='imagem-usuario'> <br>
                 <b>
                     <p>" . $resultado['nome'] . "</p>
                 </b>
                 <p> " . $resultado['cargo'] . " </p>
+                <br>
+                <script src='../../Funcionarios/JavaScript/javaFuncionario.js'></script>
+                        <button id='Botao-input2' onclick='Back()'><b><</b></button>
             </center>
         </div>
-        <div id='tamanho-dados'>
-            <table id='Progresso'>
-                <tr>
-                <td colspan='2'>
-                <h4 class='index-dado'>Dado</h4>
-            </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class='progressbar' id='dado'>
-                            <div></div>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>40%</h4>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan='2'>
-                        <h4 class='index-dado'>Dado</h4>
-                    </td
-                </tr>
-                <tr>
-                    <td>
-                        <div class='progressbar' id='dado2'>
-                            <div></div>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>53%</h4>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan='2'>
-                        <h4 class='index-dado'>Dado</h4>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class='progressbar' id='dado3'>
-                            <div></div>
-                        </div>
-                    </td>
-                    <td>
-                        <h4>80%</h4>
-                    </td>
-                </tr>
-                <tr>
-                    <td id='Botao' colspan='2'>
-                        <button id='Botao-input'><a href='../gestor.php'>Voltar</a></button>
-                    </td>
-                </tr>
-            </table>
+        <div id='eqp'>
+            <div id='txt1'><div id='txt2'>Trocar equipe</div></div>
+            <br>
+        </div>
+        <div id='info'>
+        <br>
+            <div class='organiza'>
+                <div id='atual'></div>  Nivel atual
+            </div>
+            <br>
+            <div class='organiza'>
+                <div id='recomendado'></div>  Nivel recomendado
+            </div>
         </div>
     </section>";
         }
@@ -118,8 +81,8 @@
 
                 while ($qualidades = mysqli_fetch_array($Selecionando)) {
 
-                    echo "<tr><td class='tamanho' rowspan='2' colspan='2'><a href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a>
-                    <br><a href='AdicionaData.php?id=" . $qualidades["IDqualificacaoFunc"] . "'>Data de conclusão: " . $qualidades['dataCon'] . "</a></td>";
+                    echo "<tr><td class='tamanho' rowspan='2' colspan='2'><a class='desc' href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a>
+                    <br><a class='data' href='AdicionaData.php?id=" . $qualidades["IDqualificacaoFunc"] . "'>Data de conclusão: " . $qualidades['dataCon'] . "</a></td>";
                     if ($qualidades['nivelRecomendado'] == 5) {
                         echo "<td colspan='5' class='tdTama'><td>";
                         if ($qualidades['nivelAtual'] == 1) {
@@ -215,7 +178,7 @@
                         }
                     }
 
-                    echo "</td></tr><tr><td></td></tr>";
+                    echo "</td></tr><tr><td><br></td></tr>";
 
                     /*
         echo "<tr><td class='tamanho'><a href='EditandoDados.php?id=" . $qualidades['IDqualificacaoFunc'] . "'> " . $qualidades['descricao'] . " </a></td>";
@@ -335,7 +298,7 @@
             <br>
             <br>
 
-                <h2>Para Adicionar novos dados:</h2>
+            <h2>Para Adicionar novos dados:</h2>
 
             <div id="gridContainer">
 
@@ -350,13 +313,10 @@
 
                 ?>
             </div>
+            <br>
 
         </form>
     </section>
-    <div id="info">
-        <center><div id="atual"></div><h3>Nível atual</h3></center><br>
-        <div id="recomendado"></div><h3 id="recomendadoTXT">Nível recomendado</h3>
-    </div>
 </body>
 
 </html>

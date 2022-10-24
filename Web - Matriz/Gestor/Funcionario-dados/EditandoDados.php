@@ -82,8 +82,6 @@
 
     $IDqFunc = $_GET['id'];
 
-    echo "<script> window.alert('IDqualificação = " . $IDqFunc . " ');</script>";
-
     session_start();
     $_SESSION['IDqFunc'] = $IDqFunc;
 
