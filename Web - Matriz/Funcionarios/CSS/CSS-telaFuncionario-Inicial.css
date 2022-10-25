@@ -123,13 +123,14 @@ table {
 }
 
 #Progresso {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 28%;
-    width: 60%;
+    width: 80%;
     height: auto;
 }
 
 .index-dado {
+    font-size: 22px;
     margin-left: 20px;
 }
 

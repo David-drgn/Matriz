@@ -15,7 +15,7 @@
     <?php
 
     $IDequipe = $_GET['id'];
-    include "ponte.php";
+    include __DIR__ . '/../Menu/menu.php';
     ?>
 
     <section id="Menu-funcionarios">

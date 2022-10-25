@@ -4,3 +4,6 @@ function BackHistory() {
 function TelaHome() {
     window.location.href = "../HomePage/homePage.php";
 }
+function TelaGestor() {
+    window.location.href = "../gestor.php";
+}

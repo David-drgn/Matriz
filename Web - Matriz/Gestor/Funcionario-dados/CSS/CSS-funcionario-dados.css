@@ -398,6 +398,26 @@ h2 {
     border-radius: 10px;
 }
 
+#sair {
+    font-size: 10px;
+    background-color: white;
+    color: #a6a6a6;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    border: transparent;
+    top: 15px;
+    left: 15px;
+    transition: all 1s;
+}
+
+#sair:hover {
+    background-color: #a6a6a6;
+    color: white;
+    cursor: pointer;
+}
+
 #dado2>div {
     background-color: #6ce5e8;
     width: 52%;
@@ -420,8 +440,10 @@ h2 {
     height: 100%;
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
-    overflow-y: scroll;
-    scrollbar-color: #d6d6d6 #545454;
+    overflow-y: hidden;
+    background-color: #d6d6d6;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 #Menu-funcionario2 {
@@ -550,8 +572,8 @@ td.btn {
     font-size: 10px;
     background-color: white;
     color: #a6a6a6;
-    width: 10%;
-    height: 5%;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     position: absolute;
     border: transparent;

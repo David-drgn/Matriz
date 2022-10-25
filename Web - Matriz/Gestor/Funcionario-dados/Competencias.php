@@ -42,7 +42,20 @@
                 <p> " . $desc['semaforo'] . " </p>
             </center>
         </div>
+        <div id='info'>
+        <br>
+            <div class='organiza'>
+                <div id='atual'></div>  Nivel atual
+            </div>
+            <br>
+            <div class='organiza'>
+                <div id='recomendado'></div>  Nivel recomendado
+            </div>
+        </div>
     </section>";
+        echo "
+    <script src='../../Menu/JavaScript/java-back.js'></script>
+                        <button id='sair' onclick='BackHistory()'><b><</b></button>";
     }
 
     ?>

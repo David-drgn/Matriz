@@ -37,7 +37,7 @@
             <center>
             <br>
             <br>
-                <img src='CSS/Imagens/usuario.png' id='imagem-usuario'> <br>
+                <img src='../../Imagens/perfilFoto/" . $resultado['foto'] . "' id='imagem-usuario'> <br>
                 <b>
                     <p>" . $resultado['nome'] . "</p>
                 </b>

@@ -39,7 +39,7 @@
     <section id='Menu-gestor'>
         <div id='alinhar-centro'>
             <center>
-                <img src='CSS/Imagens/usuario.png' id='imagem-usuario'> <br>
+                <img src='../Imagens/perfilFoto/" . $Foto . "' id='imagem-usuario'> <br>
                 <p id='nomeFunc'>" . $Nome . "</p>
                 ";
             if ($IDdados >= 1000) {
@@ -72,7 +72,7 @@
                         echo "
                                     <tr>
                                 <td colspan='2'>
-                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
+                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h3>
                                 </td>
                             </tr>
                                     <tr>
@@ -90,7 +90,7 @@
                         echo "
                     <tr>
                                 <td colspan='2'>
-                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
+                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h3>
                                 </td>
                             </tr>
                                     <tr>
@@ -108,7 +108,7 @@
                         echo "
                     <tr>
                                 <td colspan='2'>
-                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
+                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h3>
                                 </td>
                             </tr>
                                     <tr>
@@ -126,7 +126,7 @@
                         echo "
                     <tr>
                                 <td colspan='2'>
-                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
+                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h3>
                                 </td>
                             </tr>
                                     <tr>
@@ -144,7 +144,7 @@
                         echo "
                     <tr>
                                 <td colspan='2'>
-                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
+                                    <h3 class='index-dado'>" . $resultado['nome'] . "</h3>
                                 </td>
                             </tr>
                                     <tr>

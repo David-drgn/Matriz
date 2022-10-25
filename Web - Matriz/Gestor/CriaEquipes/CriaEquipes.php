@@ -68,7 +68,7 @@ if ($conexao == false) {
 
                     <h3 id="TxtCargo">Função: <input id="Cargo" type="text" name="Cargo" /></h3>
 
-                    <h3>Escolher foto: <input type="file" id="foto" /></h3>
+                    <h3>Escolher foto: <input type="file" id="foto" name="foto" /></h3>
 
                     <br>
                     <br>
@@ -256,7 +256,44 @@ if (isset($_GET["SalvarFuncionario"])) {
     $Nome = $_GET['Nome'];
     $Email = $_GET['Email'];
     $Funcao = $_GET['Cargo'];
+    $foto = $_FILES["foto"];
+    $flagIMG = false;
     $flag = false;
+
+    if (!empty($foto["name"])) {
+
+
+        if (!preg_match("/^image\/(jpeg|png|gif|bmp)$/", $foto["type"])) {
+            echo "
+		        <script> 
+						window.alert('Isso não é uma imagem...');
+					</script>";
+            exit;
+        }
+
+        $conn = mysqli_connect("localhost", "root", "", "matriz");
+        if ($conn == false) {
+            echo "
+		        <script> 
+						window.alert('Erro ao se conectar ao banco de dados...');
+					</script>";
+            exit;
+        }
+        preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
+        $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
+        $caminho_imagem = "../../Imagens/perfilFoto/" . $nome_imagem;
+        // Faz o upload da imagem para seu respectivo caminho
+        move_uploaded_file($foto["tmp_name"], $caminho_imagem);
+
+        $buscar = "select * from cadastro where email = '" . $Email . "'and nome='" . $Nome . "'";
+        $resultado = mysqli_query($conn, $buscar);
+
+        while ($registro = mysqli_fetch_array($resultado)) {
+            $ID = $registro['IDcadastro'];
+        }
+    } else {
+        echo "<span  class = 'blinking' >Selecione um arquivo para cadastrar</span> <br>";
+    }
 
     if (empty($Nome) or empty($Email) or empty($Funcao)) {
         echo "<script> window.alert('Erro ao adicionar integrante, dados incompletos!!');
@@ -301,6 +338,18 @@ if (isset($_GET["SalvarFuncionario"])) {
     if (!$resultadoEquipe) {
         echo "<script> window.alert('Erro ao adicionar integrante a equipe!!');
     </script>";
+    }
+
+    $sql = "update integrantes
+                        set foto = '" . $nome_imagem . "'
+                        where IDcadastro='" . $ID . "';";
+    $resultado = mysqli_query($conn, $sql);
+
+    if ($resultado) {
+        echo "Você foi cadastrado com sucesso.<br> ";
+        $flag = true;
+    } else {
+        echo "Erro ao salvar os dados";
     }
 }
 

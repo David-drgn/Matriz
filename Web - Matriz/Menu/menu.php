@@ -17,8 +17,8 @@
         font-size: 10px;
         background-color: white;
         color: #a6a6a6;
-        width: 10%;
-        height: 5%;
+        width: 40px;
+        height: 40px;
         border-radius: 100%;
         position: absolute;
         border: transparent;
@@ -68,8 +68,10 @@
     }
 
     #imagem-usuario {
+        margin-top: 20px;
+        border-radius: 100%;
         width: 60%;
-        height: 60%;
+        height: 210px;
     }
 
     #tamanho-dados {
@@ -91,7 +93,7 @@
     }
 
     .index-dado {
-        margin-left: 30px;
+        margin-left: 7%;
     }
 
     .progressbar {
@@ -100,6 +102,10 @@
         padding: 3px;
         width: 80%;
         margin-left: 20px;
+    }
+
+    .tdDado {
+        width: 70%;
     }
 
     #Botao {
@@ -111,10 +117,6 @@
         background-color: #d9d9d9;
         width: 60%;
         border-radius: 10px;
-    }
-
-    .tdDado {
-        width: 80%;
     }
 
     b {
@@ -143,7 +145,7 @@
     <section id='Menu-gestor'>
         <div id='alinhar-centro'>
             <center>
-                <img src='Foto/" . $Foto . "' id='imagem-usuario'> <br>
+                <img src='../Imagens/perfilFoto/" . $Foto . "' id='imagem-usuario'> <br>
                 <b>
                     <p>" . $Nome . "</p>
                 </b>
@@ -164,11 +166,11 @@
                         <td colspan='2'>
                             <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
                         </td>
-                    </tr>
+                    </tr>   
                             <tr>
                             <td  class='tdDado'>
                                 <div class='progressbar' class='dado'>
-                                    <div style='border-radius: 10px;height: 30px;width: 20%;background-color: red;'></div>
+                                    <div style='border-radius: 10px;height: 20px;width: 20%;background-color: red;'></div>
                                 </div>
                             </td>
                             <td>
@@ -184,9 +186,9 @@
                         </td>
                     </tr>
                             <tr>
-                            <td>
+                            <td class='tdDado'>
                                 <div class='progressbar' class='dado'>
-                                    <div style='border-radius: 10px;height: 30px; width: 40%;background-color: orangered;'></div>
+                                    <div style='border-radius: 10px;height: 20px; width: 40%;background-color: orangered;'></div>
                                 </div>
                             </td>
                             <td>
@@ -202,9 +204,9 @@
                         </td>
                     </tr>
                             <tr>
-                            <td>
+                            <td class='tdDado'>
                                 <div class='progressbar' class='dado'>
-                                    <div style='border-radius: 10px;height: 30px;width: 60%;background-color: orange;'></div>
+                                    <div style='border-radius: 10px;height: 20px;width: 60%;background-color: orange;'></div>
                                 </div>
                             </td>
                             <td>
@@ -220,9 +222,9 @@
                         </td>
                     </tr>
                             <tr>
-                            <td>
+                            <td class='tdDado'>
                                 <div class='progressbar' class='dado'>
-                                    <div style='border-radius: 10px;height: 30px;width: 80%;background-color: greenyellow;'></div>
+                                    <div style='border-radius: 10px;height: 20px;width: 80%;background-color: greenyellow;'></div>
                                 </div>
                             </td>
                             <td>
@@ -238,9 +240,9 @@
                         </td>
                     </tr>
                             <tr>
-                            <td>
+                            <td class='tdDado'>
                                 <div class='progressbar' class='dado'>
-                                    <div style='border-radius: 10px;height: 30px;width: 100%;background-color: green;'></div>
+                                    <div style='border-radius: 10px;height: 20px;width: 100%;background-color: green;'></div>
                                 </div>
                             </td>
                             <td>
