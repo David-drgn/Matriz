@@ -43,7 +43,7 @@
     <table class='table-funcionarios'>
         <tr>
             <td class='td-imagem'>
-                <img src='CSS/Imagens/user.png' style='width:100%'>
+                <img src='../Imagens/perfilFoto/" . $buscando['foto'] . "' style='margin:10px; width:150px;height:150px;border-radius:100%'>
             </td>
             <td>
                 <div class='container'>

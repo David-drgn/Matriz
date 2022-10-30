@@ -45,21 +45,22 @@
                 <br>
                 <script src='../../Funcionarios/JavaScript/javaFuncionario.js'></script>
                         <button id='Botao-input2' onclick='Back()'><b><</b></button>
-            </center>
-        </div>
-        <div id='eqp'>
-            <div id='txt1'><div id='txt2'>Trocar equipe</div></div>
-            <br>
-        </div>
-        <div id='info'>
-        <br>
-            <div class='organiza'>
+            <div id='eqp'>
+                <div id='txt1'><div id='txt2'>Trocar equipe</div></div>
+                <br>
+                </div>
+                <br>
+                <div id='info'>
+                <br>
+                <div class='organiza'>
                 <div id='atual'></div>  Nivel atual
-            </div>
-            <br>
-            <div class='organiza'>
+                </div>
+                <br>
+                <div class='organiza'>
                 <div id='recomendado'></div>  Nivel recomendado
-            </div>
+                </div>
+                </center>
+        </div>
         </div>
     </section>";
         }

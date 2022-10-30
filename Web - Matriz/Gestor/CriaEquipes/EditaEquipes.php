@@ -25,7 +25,7 @@ if ($conexao == false) {
 
     <?php
 
-    include __DIR__ . '/../ponte.php';
+    include __DIR__ . '/../../Menu/menuEqp.php';
 
     $IDequipe = $_SESSION['IDequipe'];
     $IDgestor = $_SESSION['IDcadastro'];

@@ -11,11 +11,8 @@ b {
     flex-direction: column;
     align-items: center;
     background-color: #a6a6a6;
-    position: absolute;
-    bottom: 24vh;
     width: 40%;
-    left: 30%;
-    height: 25%;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -24,9 +21,6 @@ b {
     align-items: center;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    bottom: 5%;
-    left: 30%;
     width: 40%;
     height: 125px;
     background-color: #a6a6a6;
@@ -71,7 +65,7 @@ h3 {
 #txt1 {
     display: flex;
     align-items: center;
-    height: 20%;
+    height: auto;
     margin-top: 5px;
     width: 90%;
     background-color: #d6d6d6;
@@ -447,6 +441,9 @@ h2 {
 }
 
 #Menu-funcionario2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: absolute;
     left: 0%;
     top: 0%;
@@ -454,7 +451,7 @@ h2 {
     height: 100vh;
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
-    overflow-y: hidden;
+    overflow-y: scroll;
     background-color: #d6d6d6;
 }
 
@@ -609,8 +606,9 @@ td.btn {
 }
 
 #imagem-usuario {
-    width: 60%;
-    height: 60%;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
 }
 
 #Menu-funcionarios {

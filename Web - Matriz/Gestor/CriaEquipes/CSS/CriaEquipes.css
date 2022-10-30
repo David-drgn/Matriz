@@ -1,6 +1,7 @@
 body {
     overflow-y: hidden;
     overflow-x: hidden;
+    background-color: #0B2545;
 }
 
 b {
@@ -196,7 +197,7 @@ table {
 #Menu-funcionarios {
     width: 68%;
     height: 97%;
-    background-color: #d9d9d9;
+    background: #d9d9d9;
     position: absolute;
     right: 10px;
     bottom: 10px;

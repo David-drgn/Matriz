@@ -18,13 +18,13 @@ insert into telefone values
 (default,12241224);
 
 insert into cadastro values
-(1, 'David Raphael', 'david.raphael@gmail.com', '54321', '54240682789',1, 1, 'Funcionario',null),
-(2, 'Filipe', 'filipe@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
-(3, 'Eduardo', 'eduardo@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
-(4, 'Bruna', 'bruna@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
-(5, 'Kauê', 'kaue@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
-(6, 'Giulia', 'giulia@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario',null),
-(100, 'GestorTop', 'GestorTop@gmail.com', '12345', '54240682789', 2, 2, 'Gestor',null);
+(1, 'David Raphael', 'david.raphael@gmail.com', '54321', '54240682789',1, 1, 'Funcionario','carioca.jpg'),
+(2, 'Filipe', 'filipe@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Filipe.jpg'),
+(3, 'Eduardo', 'eduardo@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Eduardo.jpg'),
+(4, 'Bruna', 'bruna@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Bruna.jpg'),
+(5, 'Kauê', 'kaue@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Kaue.jpg'),
+(6, 'Giulia', 'giulia@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','giulia.jpg'),
+(100, 'GestorTop', 'GestorTop@gmail.com', '12345', '54240682789', 2, 2, 'Gestor','user.png');
 
 -- ALTER table cadastro 
 -- add column foto varchar(245);
@@ -172,12 +172,12 @@ INSERT INTO qualificacaoFunc VALUES
 (default, 1, 1,'Marketing', 1, 1); */
 
 INSERT INTO integrantes VALUES
-(default, 'David Raphael', 'Programador', 1, 100, 1),
-(default, 'Bruna', 'Gestor de projetos', 4, 100, 1),
-(default, 'Giulia', 'Programadora', 6, 100, 1),
-(default, 'Kauê', 'Marketing', 5, 100, 1),
-(default, 'Eduardo', 'Programador', 3, 100, 1),
-(default, 'Filipe', 'Designer', 2, 100, 1);
+(default, 'David Raphael', 'Programador', 1, 100, 1, 'carioca.jpg'),
+(default, 'Bruna', 'Gestor de projetos', 4, 100, 1, 'Bruna.jpg'),
+(default, 'Giulia', 'Programadora', 6, 100, 1, 'giulia.jpg'),
+(default, 'Kauê', 'Marketing', 5, 100, 1, 'Kaue.jpg'),
+(default, 'Eduardo', 'Programador', 3, 100, 1, 'eduardo.jpg'),
+(default, 'Filipe', 'Designer', 2, 100, 1, 'Filipe.jpg');
 
 update qualificacaoFunc 
 set nivelAtual = '2'

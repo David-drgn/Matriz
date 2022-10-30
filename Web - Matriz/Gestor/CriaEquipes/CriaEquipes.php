@@ -24,7 +24,7 @@ if ($conexao == false) {
     <script src="JavaScript/java-CriaEquipe.js"></script>
 
     <?php
-    include __DIR__ . '/../ponte.php';
+    include __DIR__ . '/../../Menu/menuEqp.php';
     $IDequipe = $_SESSION['IDequipe'];
     $IDgestor = $_SESSION['IDcadastro'];
     ?>

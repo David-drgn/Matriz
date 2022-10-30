@@ -82,8 +82,9 @@ table {
 
 #imagem-usuario {
     margin-top: 10px;
-    width: 48%;
-    height: 48%;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
 }
 
 .tamanho {
