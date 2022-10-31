@@ -12,12 +12,10 @@
 <body>
     <script src="JavaScript/java-back.js"></script>
     <section id="total">
-        <article id="Titulo">
-            <div colspan="4" style="text-align: left; height: 10px;">
+        <section class="area2">
+            <div id="titulo">
                 <h1 id="title">Sobre Nós:</h1>
             </div>
-        </article>
-        <section class="area">
             <article id="bruna">
                 <center>
                     <div class="card">
@@ -95,7 +93,7 @@
                             Data de nascimento: 17/02/2005 <br>
                             Função no projeto: Design <br>
                             Escolaridade: ETEC Jorge Street <br>
-                            Mais informações: <a href="">VER MAIS</a>
+                            Mais informações: <a href="">VER LINKEDIN</a>
                         </p>
                     </center>
                 </span>
@@ -117,7 +115,7 @@
                             Data de nascimento: 22/03/2005 <br>
                             Função no projeto: Desenvolvedora de software<br>
                             Escolaridade: ETEC Jorge Street <br>
-                            Mais informações: <a href="">VER MAIS</a>
+                            Mais informações: <a href="">VER LINKEDIN</a>
                         </p>
                     </center>
                 </span>
@@ -183,9 +181,12 @@
                 </span>
             </article>
         </section>
-
-
-
+        <script>
+            function Back(){
+                window.history.back()
+            }
+        </script>
+        <button id="btnSair" onclick="Back()"><</button>
 
 </body>
 

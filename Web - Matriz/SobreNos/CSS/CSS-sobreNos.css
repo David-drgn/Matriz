@@ -6,16 +6,83 @@ body {
     color: #0B2545;
 }
 
+a{
+    text-decoration:none;
+    background-color:#113159;
+    border-radius:20px;
+    color: white;
+    width: 40px;
+    height: 30PX;
+}
+
 .area {
     display: grid;
     grid-template-columns: auto auto auto auto;
     align-items: center;
-    margin-left: 1.5%;
-    margin-top: 1%;
+    margin-top: 2vh;
     width: 97vw;
     height: 47vh;
     background-color: lightgray;
     border-radius: 25px;
+}
+
+.area2 {
+    display: grid;
+    grid-template-areas: 
+    'titulo titulo titulo titulo'
+    'bruna david eduardo filipe';
+    align-items: center;
+    margin-top: 2vh;
+    width: 97vw;
+    height: 47vh;
+    background-color: lightgray;
+    border-radius: 25px;
+}
+
+#bruna{
+    grid-area: bruna; 
+}
+
+#btnSair{
+    position: absolute;
+    top: 3vh;
+    left: 2vw;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-color: #c4c4c4;
+    font-size: x-large;
+    border-color: transparent;
+    color: #113159;
+    transition: all 1s;
+}
+
+#btnSair:hover{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #113159;
+    font-size: xx-large;
+    color: #c4c4c4;
+}
+
+#titulo{
+    margin-top: -5vh;
+    height: 10vh;
+    align-items: center;
+    grid-area: titulo;
+}
+
+#david{
+    grid-area: david; 
+}
+
+#eduardo{
+    grid-area: eduardo;
+}
+
+#filipe{
+    grid-area: filipe;
 }
 
 img {
@@ -28,7 +95,7 @@ img {
     display: none;
     position: absolute;
     top: 10%;
-    background-color: gray;
+    background-color: white;
     left: 20%;
     width: 25%;
     height: auto;
@@ -40,7 +107,7 @@ img {
     display: none;
     position: absolute;
     top: 10%;
-    background-color: gray;
+    background-color: white;
     left: 40%;
     width: 25%;
     height: auto;
@@ -51,7 +118,7 @@ img {
     display: none;
     position: absolute;
     top: 10%;
-    background-color: gray;
+    background-color: white;
     left: 60%;
     width: 25%;
     height: auto;
@@ -62,7 +129,7 @@ img {
     display: none;
     position: absolute;
     top: 10%;
-    background-color: gray;
+    background-color: white;
     left: 60%;
     width: 25%;
     height: auto;
@@ -73,7 +140,7 @@ img {
     display: none;
     position: absolute;
     top: 60%;
-    background-color: gray;
+    background-color: white;
     left: 20%;
     width: 25%;
     height: auto;
@@ -85,7 +152,7 @@ img {
     display: none;
     position: absolute;
     top: 60%;
-    background-color: gray;
+    background-color: white;
     left: 40%;
     width: 25%;
     height: auto;
@@ -96,7 +163,7 @@ img {
     display: none;
     position: absolute;
     top: 60%;
-    background-color: gray;
+    background-color: white;
     left: 60%;
     width: 25%;
     height: auto;
@@ -107,13 +174,12 @@ img {
     display: none;
     position: absolute;
     top: 60%;
-    background-color: gray;
+    background-color: white;
     left: 60%;
     width: 25%;
     height: auto;
     border-radius: 15px;
 }
-
 
 #bruna:hover #brunaInfo {
     cursor: pointer;
@@ -178,6 +244,9 @@ img {
 }
 
 #total {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -189,21 +258,12 @@ img {
 .head {
     width: 100%;
     height: 30px;
-    background-color: darkgray;
+    background-color: #113159;
     border-radius: 5px;
 }
 
-#Titulo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 200%;
-    height: 10%;
-}
-
 #title {
-    margin-left: 20%;
-    margin-top: 3%;
     width: 100%;
+    text-align: center;
     font-size: 5vh;
 }
