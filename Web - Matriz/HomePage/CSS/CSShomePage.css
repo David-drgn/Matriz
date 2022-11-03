@@ -59,7 +59,8 @@ body {
 a {
     text-decoration: none;
     color: white;
-    font-size: 125%;
+    font-size: large;
+    transition: all 1s;
 }
 
 h1 {
@@ -67,8 +68,9 @@ h1 {
 }
 
 a:hover {
-    color: lightgray;
+    color: #a9a9a9;
     cursor: pointer;
+    font-size: x-large;
 }
 
 #dica {

@@ -38,11 +38,14 @@
     font-size: xx-large;
     color: #d9d9d9;
     background-color: whitesmoke;
+    transition: all 1s;
 }
 
 #sair:hover {
     background-color: rgb(185, 185, 185);
     cursor: pointer;
+    width: 50px;
+    height: 50px;
 }
 
 #perguntas {
@@ -59,11 +62,14 @@
     font-size: 50px;
     color: #d9d9d9;
     background-color: #0b2545;
+    transition: all 1s;
 }
 
 #perguntas:hover {
     background-color: rgb(185, 185, 185);
     cursor: pointer;
+    width: 95px;
+    height: 95px;
 }
 
 #alinhar-centro {
@@ -102,6 +108,7 @@ table {
     border-color: black;
     border: 1;
     height: 30px;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -124,10 +131,9 @@ table {
 }
 
 #Progresso {
-    margin-top: 10%;
-    margin-left: 28%;
+    margin: auto;
     width: 80%;
-    height: auto;
+    height: 30%;
 }
 
 .index-dado {
@@ -161,7 +167,7 @@ button {
 }
 
 .tdDado {
-    width: 80%;
+    width: 100%;
 }
 
 b {

@@ -94,7 +94,7 @@
                                 </td>
                             </tr>
                                     <tr>
-                                    <td>
+                                    <td class='tdDado'>
                                         <div class='progressbar' class='dado'>
                                             <div style='border-radius: 10px;height: 30px; width: 40%;background-color: orangered;'></div>
                                         </div>
@@ -112,7 +112,7 @@
                                 </td>
                             </tr>
                                     <tr>
-                                    <td>
+                                    <td class='tdDado'>
                                         <div class='progressbar' class='dado'>
                                             <div style='border-radius: 10px;height: 30px;width: 60%;background-color: orange;'></div>
                                         </div>
@@ -130,7 +130,7 @@
                                 </td>
                             </tr>
                                     <tr>
-                                    <td>
+                                    <td class='tdDado'>
                                         <div class='progressbar' class='dado'>
                                             <div style='border-radius: 10px;height: 30px;width: 80%;background-color: greenyellow;'></div>
                                         </div>
@@ -145,7 +145,7 @@
                     <tr>
                                 <td colspan='2'>
                                     <h3 class='index-dado'>" . $resultado['nome'] . "</h3>
-                                </td>
+                                </td class='tdDado'>
                             </tr>
                                     <tr>
                                     <td>
@@ -188,6 +188,7 @@
 
             echo "
     </section>
+    <br>
     ";
 
             ?>
