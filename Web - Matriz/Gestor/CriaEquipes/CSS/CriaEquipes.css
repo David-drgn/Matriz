@@ -80,17 +80,25 @@ table {
     margin-top: 15%;
     margin-left: 3%;
     border-radius: 10px;
+    background-color: #a6a6a6;
+}
+
+.imagens{
+    height: 150px;
+    border-radius: 100%;
+    width: 150px;
 }
 
 #EXfunc {
     display: none;
     grid-template-columns: auto auto;
     width: 95%;
-    height: 75%;
+    height: 70%;
     overflow-y: auto;
     margin-top: 15%;
     margin-left: 3%;
     border-radius: 10px;
+    background-color: #a6a6a6;
 }
 
 .card {
@@ -379,16 +387,34 @@ button {
     z-index: 1;
 }
 
-#vermelho {
+#Vermelho {
     background-color: red;
+    height: 150px;
+    border-radius: 100%;
 }
 
-#amarelo {
+#Amarelo {
     background-color: yellow;
+    height: 150px;
+    border-radius: 100%;
 }
 
-#verde {
+#Verde {
     background-color: green;
+    height: 150px;
+    border-radius: 100%;
+}
+
+#VermelhoLaranja{
+    background-color: orangered;
+    height: 150px;
+    border-radius: 100%;
+}
+
+#Laranja{
+    background-color: orange;
+    height: 150px;
+    border-radius: 100%;
 }
 
 .flex {

@@ -100,7 +100,7 @@ if ($conexao == false) {
                     echo "<table class='table-funcionarios'>
         <tr>
             <td class='td-imagem'>
-                <img src='../../Imagens/user.png' style='width:100%'>
+                <img src='../../Imagens/perfilFoto/".$buscando['foto']."' class='imagens'>
             </td>
             <td>
                 <div class='container'>
@@ -128,7 +128,7 @@ if ($conexao == false) {
                     echo "<table class='table-funcionarios'>
         <tr class='trColor'>
             <td class='td-imagem'>
-                <img src='../../Imagens/user.png' style='width:100%'>
+                <div id='".$buscando['semaforo']."' style='width:100%'></div>
             </td>
             <td>
                 <div class='container'>
