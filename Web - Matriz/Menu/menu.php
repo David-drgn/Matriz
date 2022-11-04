@@ -69,9 +69,9 @@
 
     #imagem-usuario {
         margin-top: 20px;
-        border-radius: 100%;
-        width: 60%;
-        height: 210px;
+        border-radius: 50%;
+        width: 290px;
+        height: 290px;
     }
 
     #tamanho-dados {

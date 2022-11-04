@@ -39,7 +39,7 @@ if ($conexao == false) {
             $dados = "SELECT * FROM equipe WHERE IDequipe = '" . $IDequipe . "'";
             $coectado = mysqli_query($conexao, $dados);
             while ($recebendo = mysqli_fetch_array($coectado)) {
-                echo "<h3 id='Txt'>Nome da Equipe: <input type='text' name='NameEquipe' placeholder='" . $recebendo['nome'] . "'/> <input type='submit' name='SalvaNome' id='SalvaNome' value='Salvar Nome da Equipe' /></h3>";
+                echo "<h3 id='Txt'>Nome da Equipe: <input type='text' name='NameEquipe' placeholder='" . $recebendo['nome'] . "'/> <input class='inputButton' type='submit' name='SalvaNome' id='SalvaNome' value='Salvar Nome da Equipe' /></h3>";
             }
             ?>
             <div id="txtContainer">
@@ -104,7 +104,7 @@ if ($conexao == false) {
             </td>
             <td>
                 <div class='container'>
-                    <h4><b><a>" . $buscando['nome'] . "</a></b></h4>
+                    <h4><b><p>" . $buscando['nome'] . "</p></b></h4>
                     <p>" . $buscando['funcao'] . "</p>
                     <p><a href='ApagaIntegrante2.php?id=" . $buscando['IDintegrantes'] . "'>Clique aqui para retirar o integrante</a></p>
                 </div>
@@ -132,7 +132,7 @@ if ($conexao == false) {
             </td>
             <td>
                 <div class='container'>
-                    <h4><b><a>" . $buscando['descricao'] . "</a></b></h4>
+                    <h4><b><p>" . $buscando['descricao'] . "</p></b></h4>
                     <p><a href='ApagaComp2.php?id=" . $buscando['IDqualificacaoEqp'] . "'>Clique aqui para retirar a qualificação</a></p>
                 </div>
             </td>
@@ -146,8 +146,8 @@ if ($conexao == false) {
             <div id=" mostraFuncionarios">
                 <br>
                 <div id="btn">
-                    <a href="Confirmar.php">Excluir equipe</a>
-                    <input type="button" value="Voltar a tela inicial!" onclick="Volta()" />
+                    <a id="excluirEQP" href="Confirmar.php">Excluir equipe</a>
+                    <input type="button" class="inputButton" value="Voltar a tela inicial!" onclick="Volta()" />
                 </div>
             </div>
             <div class="card" id="adicionarCompetencias">
@@ -187,7 +187,7 @@ if ($conexao == false) {
                 <h1>Nome competência: <input type="text" name="NomeCompetencia" /></h1>
                 <br>
                 <div>
-                    <input type="submit" name="vermelho" id="" value="Salvar competencia"
+                    <input class="inputButton" type="submit" name="vermelho" id="" value="Salvar competencia"
                         onclick="SalvarCompetencias()" />
                 </div>
             </div>
@@ -233,7 +233,7 @@ if (isset($_GET["vermelho"])) {
     while ($ver = mysqli_fetch_array($verificando)) {
         echo "
 <script> window.alert('Competencia já foi registrada!');
-window.location.href='CriaEquipes.php';
+window.location.href='EditaEquipes.php';
 </script>";
         exit;
     }
@@ -245,11 +245,11 @@ window.location.href='CriaEquipes.php';
         echo "<script> window.alert('Erro ao adicionar competencia!!');</script>";
     }
 
-    $AdicionaComp = "INSERT INTO qualificacaoeqp VALUES (DEFAULT, '" . $nomeComp . "', ' " . $IDequipe . " ', '" . $IDgestor . "' )";
+    $AdicionaComp = "INSERT INTO qualificacaoeqp VALUES (DEFAULT, '" . $nomeComp . "', ' " . $IDequipe . " ', '" . $IDgestor . "', 'Vermelho' )";
     $verificacao = mysqli_query($conexao, $AdicionaComp);
 
     if (!$verificacao) {
-        echo "<script> window.alert('Erro ao adicionar Competência!!');
+        echo "<script> window.alert('Erro ao adicionar competência a equipe!!');
     </script>";
     }
 }

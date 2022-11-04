@@ -69,9 +69,9 @@
 
     #imagem-usuario {
         margin-top: 20px;
-        border-radius: 100%;
-        width: 60%;
-        height: 210px;
+        border-radius: 50%;
+        width: 290px;
+        height: 290px;
     }
 
     #tamanho-dados {
@@ -145,7 +145,7 @@
     <section id='Menu-gestor'>
         <div id='alinhar-centro'>
             <center>
-                <img src='../Imagens/perfilFoto/" . $Foto . "' id='imagem-usuario'> <br>
+            <img src='../../Imagens/perfilFoto/" . $Foto . "'' id='imagem-usuario'> <br>
                 <b>
                     <p>" . $Nome . "</p>
                 </b>
@@ -257,8 +257,6 @@
                 </table>
             </div>
         </div>
-        <script src='../Menu/JavaScript/java-back.js'></script>
-                        <button id='sair' onclick='TelaHome()'><b><</b></button>
     </section>
     ";
     } else {
@@ -302,8 +300,6 @@
                 </table>
             </div>
         </div>
-        <script src='JavaScript/java-back.js'></script>
-                        <button id='sair' onclick='TelaHome()'><b><</b></button>
     </section>
     ";
         }

@@ -57,6 +57,7 @@
     border-radius: 15px;
     overflow-x: hidden;
     word-wrap: break-word;
+    z-index: 10000;
 }
 
 #EquipesEditar {
