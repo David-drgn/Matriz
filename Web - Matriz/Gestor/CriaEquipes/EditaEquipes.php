@@ -100,7 +100,7 @@ if ($conexao == false) {
                     echo "<table class='table-funcionarios'>
         <tr>
             <td class='td-imagem'>
-                <img src='../../Imagens/perfilFoto/".$buscando['foto']."' class='imagens'>
+                <img src='../../Imagens/perfilFoto/" . $buscando['foto'] . "' class='imagens'>
             </td>
             <td>
                 <div class='container'>
@@ -128,7 +128,7 @@ if ($conexao == false) {
                     echo "<table class='table-funcionarios'>
         <tr class='trColor'>
             <td class='td-imagem'>
-                <div id='".$buscando['semaforo']."' style='width:100%'></div>
+                <div id='" . $buscando['semaforo'] . "' style='width:100%'></div>
             </td>
             <td>
                 <div class='container'>
@@ -163,18 +163,22 @@ if ($conexao == false) {
 
                 <div class="grid-container">
 
-                    <div class="grid-item">
-                        <i id="Outro"><input type="checkbox" onclick="CriaCompetencia()" value="Outro" />Outro</i>
-                    </div>
+                    <center>
+
+                        <div class="grid-item">
+                            <i id="Outro"><input type="checkbox" onclick="CriaCompetencia()" value="Outro" />Outro</i>
+                        </div>
+
+                    </center>
 
                     <?php
                     $flagComp = false;
                     $busca = "SELECT * FROM competencia ORDER BY nome";
                     $resultadoBuscaCompetencias = mysqli_query($conexao, $busca);
                     while ($competencias = mysqli_fetch_array($resultadoBuscaCompetencias)) {
-                        echo "<div class='grid-item'>
+                        echo "<center><div class='grid-item'>
                      <a href='AdicionaComp1.php?id=" . $competencias['IDcompetencia'] . "'> " . $competencias['nome'] . " </a>
-                </div>";
+                </div></center>";
                     }
                     ?>
 

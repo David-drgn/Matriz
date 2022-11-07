@@ -7,12 +7,12 @@ body {
     font-family: VWHead_Regular;
 }
 
-#excluirEQP:hover{
+#excluirEQP:hover {
     background-color: #a6a6a6;
     color: #0B2545;
 }
 
-a{
+a {
     background-color: #d9d9d9;
     color: #0B2545;
     text-decoration: none;
@@ -22,23 +22,24 @@ a{
     padding-bottom: 2px;
     border-radius: 10px;
     transition: all 1s;
+    white-space: nowrap;
+    word-wrap: break-word;
 }
 
-a:hover{
+a:hover {
     background-color: #0B2545;
     color: #d9d9d9;
-    padding-right: 15px;
-    padding-left: 15px;
+
     padding-top: 7px;
     padding-bottom: 7px;
 }
 
-a:visited{
+a:visited {
     background-color: #0B2545;
     color: #d9d9d9;
 }
 
-.inputButton{
+.inputButton {
     background-color: #0B2545;
     color: #d9d9d9;
     font-size: 15px;
@@ -47,7 +48,7 @@ a:visited{
     border: transparent;
 }
 
-.inputButton:hover{
+.inputButton:hover {
     background-color: #a6a6a6;
     color: #0B2545;
     font-size: large;
@@ -55,7 +56,7 @@ a:visited{
     cursor: pointer;
 }
 
-h3{
+h3 {
     color: #0B2545;
 }
 
@@ -65,10 +66,6 @@ b {
 
 table {
     padding: 30px 30px 30px 30px;
-}
-
-.table-funcionarios {
-    background-color: #a6a6a6;
 }
 
 #EXquali {
@@ -83,15 +80,15 @@ table {
     background-color: #a6a6a6;
 }
 
-.imagens{
-    height: 150px;
+.imagens {
+    height: 190px;
     border-radius: 100%;
-    width: 150px;
+    width: 190px;
 }
 
 #EXfunc {
     display: none;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     width: 95%;
     height: 70%;
     overflow-y: auto;
@@ -119,16 +116,20 @@ table {
 }
 
 .grid-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-items: center;
+    text-align: center;
     padding: 10px;
     width: 100%;
 }
 
 .grid-item {
+    display: grid;
+    grid-template-areas: auto;
+    text-align: center;
     padding: 25px;
     font-size: 20px;
-    text-align: center;
 }
 
 .card:hover {
@@ -140,7 +141,7 @@ table {
 }
 
 .td-imagem {
-    width: 30%;
+    width: 40%;
 }
 
 .progressbar {
@@ -290,11 +291,8 @@ table {
     padding: 2px 16px;
 }
 
-.td-imagem {
-    width: 30%;
-}
-
 .table-funcionarios {
+    width: 100%;
     margin-left: 0px;
 }
 
@@ -405,13 +403,13 @@ button {
     border-radius: 100%;
 }
 
-#VermelhoLaranja{
+#VermelhoLaranja {
     background-color: orangered;
     height: 150px;
     border-radius: 100%;
 }
 
-#Laranja{
+#Laranja {
     background-color: orange;
     height: 150px;
     border-radius: 100%;
