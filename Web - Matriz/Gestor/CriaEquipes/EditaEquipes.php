@@ -70,7 +70,7 @@ if ($conexao == false) {
 
                     <h3 id="TxtCargo">Função: <input id="Cargo" type="text" name="Cargo" /></h3>
 
-                    <h3>Escolher foto: <input type="file" id="foto" /></h3>
+                    <h3>Escolher foto: <input type="file" name="foto" id="foto" /></h3>
 
                     <br>
                     <br>
@@ -262,8 +262,37 @@ if (isset($_GET["SalvarFuncionario"])) {
 
     $Nome = $_GET['Nome'];
     $Email = $_GET['Email'];
+    $foto = $_FILES['foto'];
     $Funcao = $_GET['Cargo'];
     $flag = false;
+
+    if (!empty($foto["name"])) {
+
+
+        if (!preg_match("/^image\/(jpeg|png|gif|bmp)$/", $foto["type"])) {
+            echo   "<script> window.alert('Isto não é uma imagem');</script>";
+            exit;
+        }
+
+        $conn = mysqli_connect("localhost", "root", "", "matriz");
+        if ($conn == false) {
+            echo   "<script> window.alert('Erro ao se conectar ao banco de dados');</script>";
+            exit;
+        }
+
+        // Pega extensão da imagem
+        preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
+        // Gera um nome único para a imagem
+        $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
+        // Caminho de onde ficará a imagem
+        $caminho_imagem = "Imagens/perfilFoto/" . $nome_imagem;
+        // Faz o upload da imagem para seu respectivo caminho
+        move_uploaded_file($foto["tmp_name"], $caminho_imagem);
+
+        }
+    else {
+        echo "<span  class = 'blinking' >Selecione um arquivo para cadastrar</span> <br>";
+    }
 
     if (empty($Nome) or empty($Email) or empty($Funcao)) {
         echo "<script> window.alert('Erro ao adicionar integrante, dados incompletos!!');

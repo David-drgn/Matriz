@@ -7,7 +7,7 @@ body {
     font-family: VWHead_Regular;
 }
 
-#excluirEQP:hover {
+#excluirEQP{
     background-color: #a6a6a6;
     color: #0B2545;
 }
@@ -298,6 +298,32 @@ table {
 
 #btnSalvarBD {
     width: 50%;
+    background-color: #0B2545;
+    color: #d9d9d9;
+    transition: all 1s;
+    border-radius: 15px;
+    border-color: transparent;
+}
+
+#btnSalvarBD:hover {
+    width: 60%;
+    background-color: #d9d9d9;
+    color: #0B2545;
+    cursor: pointer;
+}
+
+#foto{
+    background-color: #0B2545;
+    color: #d9d9d9;
+    transition: all 1s;
+    border-radius: 15px;
+    border-color: transparent;
+}
+
+#foto:hover{
+    background-color: #d9d9d9;
+    color: #0B2545;
+    cursor: pointer;
 }
 
 #AdicionarFuncionario {
