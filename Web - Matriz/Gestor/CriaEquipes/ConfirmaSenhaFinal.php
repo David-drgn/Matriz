@@ -9,20 +9,19 @@
 
     <style>
     body {
-        background-color: rgba(0, 0, 0, 0.582);
+        background-color: #0B2545;
     }
 
     #dadosCompetenciaNova {
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: absolute;
-        top: 30vh;
-        left: 30vw;
-        height: 200px;
-        width: 500px;
+        height: 160px;
+        width: 505px;
         background-color: lightgray;
         border-radius: 15px;
+        margin-top: 5px;
+        margin-left: 5px;
         z-index: 1;
     }
 
@@ -39,25 +38,35 @@
     }
 
     .head {
-        width: 100%;
-        height: 30px;
-        background-color: darkgray;
-        border-radius: 5px;
+        display: grid;
+        height: 170px;
+        width: 515px;
+        background-color: darkgrey;
+        border-radius: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 33vh;
+    }
+
+    input[type="submit"] {
+        background-color: #0B2545;
+        border-radius: 15px;
+        color: lightgray;
     }
     </style>
 </head>
 
 <body>
-
-    <form action="CriaEquipes.php" method="GET">
-        <div id="dadosCompetenciaNova">
-            <div class="head"></div>
-            <h1>Confirmar senha:</h1>
-            <input type="password" name="senha" id="senha" size="50" />
-            <br>
-            <div>
-                <input type="submit" name="Salvar" id="Salvar" value="Confirmar senha" />
-                <input type="submit" name="Esqueci" id="Esqueci" value="Esqueci minha senha" />
+    <form action="CriaEquipes.php" method="POST">
+        <div class="head">
+            <div id="dadosCompetenciaNova">
+                <h1>Confirmar senha:</h1>
+                <input type="password" name="senha" id="senha" size="50" />
+                <br>
+                <div>
+                    <input type="submit" name="Salvar" id="Salvar" value="Confirmar senha" />
+                    <input type="submit" name="Esqueci" id="Esqueci" value="Esqueci minha senha" />
+                </div>
             </div>
         </div>
     </form>

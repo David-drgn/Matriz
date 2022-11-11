@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matriz de conhecimento</title>
     <link rel="stylesheet" href="CSS/CSShomePage.css">
+    <link rel="shortcut icon" href="../Imagens/LogoTipo.ico">
 </head>
 
 <body>
@@ -41,7 +42,8 @@
                 <div>
                     <center>
                         <h1 id="dicaTexto">Dica:<br>
-                            As habilidades interpessoais são tão importantes quanto as habilidades técnicas. Portanto, não se esqueça
+                            As habilidades interpessoais são tão importantes quanto as habilidades técnicas. Portanto,
+                            não se esqueça
                             de<br>
                             desenvolvê-las!</h1>
                     </center>

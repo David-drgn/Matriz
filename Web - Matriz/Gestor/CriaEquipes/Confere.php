@@ -43,3 +43,7 @@ if (isset($_GET["Salvar"])) {
         echo "<script>window.location.href = 'EditaEquipes.php';</script>";
     }
 }
+
+if (isset($_GET["Esqueci"])) {
+    echo "<script>window.location.href = '../../EsqueciSenha/Requerimento.php';</script>";
+}

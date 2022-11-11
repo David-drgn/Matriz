@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/CSS-bot.css">
+    <link rel="shortcut icon" href="../Imagens/LogoTipo.ico">
     <title>Perguntas frequentes!!</title>
 </head>
 
@@ -27,7 +28,7 @@
 
                 <tbody id="tbody">
 
-                <tr class="body">
+                    <tr class="body">
                         <td colspan="2" class="mensagem">
                             <img src="../Imagens/Oliver.png">
                             <div class="card" id="respostas">

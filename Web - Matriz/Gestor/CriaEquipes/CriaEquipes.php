@@ -148,7 +148,7 @@ if ($conexao == false) {
             <div id=" mostraFuncionarios">
                 <br>
                 <div id="btn">
-                    <input type="button" class="inputButton" value="Voltar a tela inicial!" onclick="Volta()" />
+                    <input type="submit" name="SalvarEquipe" class="inputButton" value="Salvar equipe" />
                 </div>
             </div>
             <div class="card" id="adicionarCompetencias">
@@ -389,7 +389,7 @@ if (isset($_POST["Salvar"])) {
 if (confirmacao == true) {
 var confirma = confirm('Deseja editar algo na equipe?');
 if (confirma == true){}
-else {window.location.href = 'ConfirmaSenha.php';}
+else {window.location.href = 'ConfirmaSenhaFinal.php';}
 }
 
 else {
