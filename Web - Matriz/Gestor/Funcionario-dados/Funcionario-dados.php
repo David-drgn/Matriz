@@ -313,7 +313,7 @@
                 $Verifica = mysqli_query($conexao, $buscandoComp);
 
                 while ($resultado = mysqli_fetch_array($Verifica)) {
-                    echo "<a href='AdicionaDados.php?desc=" . $resultado['descricao'] . "'>" . $resultado['descricao'] . "</a>";
+                    echo "<a class='ADD' href='AdicionaDados.php?desc=" . $resultado['descricao'] . "'>" . $resultado['descricao'] . "</a>";
                 }
 
                 ?>

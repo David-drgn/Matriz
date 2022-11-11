@@ -26,7 +26,7 @@
                 </thead>
 
                 <tbody id="tbody">
-                <tr class="body">
+                    <tr class="body">
                         <td colspan="2" class="mensagem">
                             <img src="../Imagens/Oliver.png">
                             <div class="card" id="respostas">

@@ -9,52 +9,62 @@
 
     <style>
     body {
-        background-color: rgba(0, 0, 0, 0.582);
+        background-color: #0B2545;
     }
 
     #dadosCompetenciaNova {
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: absolute;
-        top: 30%;
-        left: 28%;
-        height: 200px;
-        width: 500px;
+        height: 160px;
+        width: 505px;
         background-color: lightgray;
         border-radius: 15px;
+        margin-top: 5px;
+        margin-left: 5px;
         z-index: 1;
     }
 
     #vermelho {
         background-color: darkgrey;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        border-radius: 10px;
+        border: transparent;
+        padding: 5px;
     }
 
     #amarelo {
         background-color: darkgrey;
+        border: transparent;
+        border-radius: 10px;
     }
 
     #verde {
         background-color: darkgrey;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border: transparent;
+        border-radius: 10px;
     }
 
     #laranja {
         background-color: darkgrey;
+        border: transparent;
+        border-radius: 10px;
     }
 
     #laranjaAmarelo {
         background-color: darkgrey;
+        border: transparent;
+        border-radius: 10px;
     }
 
     .head {
-        width: 100%;
-        height: 30px;
+        display: grid;
+        height: 170px;
+        width: 515px;
         background-color: darkgrey;
-        border-radius: 10px;
+        border-radius: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 33vh;
     }
 
     #verde:hover,
@@ -63,14 +73,15 @@
     #vermelho:hover,
     #laranja:hover,
     #um {
-        background-color: lightgray;
+        transition: all 1s;
+        background-color: #0b25458c;
         cursor: pointer;
     }
 
     #Grid {
         width: 90%;
         display: grid;
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
         border-radius: 10px;
     }
     </style>
@@ -88,16 +99,23 @@
 
     ?>
     <form action="Funcionario-dados.php" method="GET">
-        <div id="dadosCompetenciaNova">
-            <div class="head"></div>
-            <h1>Nível atual do Funcionário:</h1>
-            <br>
-            <div id="Grid">
-                <input type="submit" name="vermelhoAtual" id="vermelho" value="1" />
-                <input type="submit" name="laranjaAtual" id="laranja" value="2" />
-                <input type="submit" name="laranjaAmareloAtual" id="laranjaAmarelo" value="3" />
-                <input type="submit" name="amareloAtual" id="amarelo" value="4" />
-                <input type="submit" name="verdeAtual" id="verde" value="5" />
+        <div class="head">
+            <div id="dadosCompetenciaNova">
+                <h1>Nível atual do funcionário:</h1>
+                <br>
+                <div id="Grid">
+                    <div></div>
+                    <input type="submit" name="vermelhoAtual" id="vermelho" value="1" />
+                    <div></div>
+                    <input type="submit" name="laranjaAtual" id="laranja" value="2" />
+                    <div></div>
+                    <input type="submit" name="laranjaAmareloAtual" id="laranjaAmarelo" value="3" />
+                    <div></div>
+                    <input type="submit" name="amareloAtual" id="amarelo" value="4" />
+                    <div></div>
+                    <input type="submit" name="verdeAtual" id="verde" value="5" />
+                    <div></div>
+                </div>
             </div>
         </div>
     </form>

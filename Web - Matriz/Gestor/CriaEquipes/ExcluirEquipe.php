@@ -19,6 +19,14 @@ if (!$verifica){
                 </script>";
 }
 
+$deletando = "DELETE FROM funcao WHERE IDequipe = '" . $IDequipe . "'";
+$verifica = mysqli_query($conexao,$deletando);
+if (!$verifica){
+    Echo "<script> window.alert('Não foi possível deletar funções da equipe');
+    window.location.href = '../Gestor.php';
+                </script>";
+}
+
 $deletando = "DELETE FROM qualificacaoFunc WHERE IDequipe = '" . $IDequipe . "'";
 $verifica = mysqli_query($conexao,$deletando);
 if (!$verifica){
@@ -46,5 +54,3 @@ if (!$verifica){
 Echo "<script> window.alert('Todos os dados foram excluídos com sucesso');
     window.location.href = '../Gestor.php';
                 </script>";
-
-?>

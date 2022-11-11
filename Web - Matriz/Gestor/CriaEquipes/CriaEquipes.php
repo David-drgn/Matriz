@@ -29,7 +29,7 @@ if ($conexao == false) {
     $IDgestor = $_SESSION['IDcadastro'];
     ?>
 
-    <form action="CriaEquipes.php" method="GET">
+    <form action="CriaEquipes.php" method="POST" enctype="multipart/form-data">
 
         <section id="Menu-funcionarios">
 
@@ -41,18 +41,21 @@ if ($conexao == false) {
             }
             ?>
             <div id="txtContainer">
-                <h3 id="Txt1">Integrantes <input type="checkbox" onchange="Funcionario()" id="btnSalvaFuncionario" />
-                </h3>
+                <label class="label">Integrantes <input type="checkbox" onchange="Funcionario()"
+                        id="btnSalvaFuncionario" />
+                </label>
 
-                <h3 id="Txt2">Competências <input type="checkbox" onchange="Competencias()"
+                <label class="label">Competências <input type="checkbox" onchange="Competencias()"
                         id="btnSalvarCompetencias" />
-                </h3>
+                </label>
 
-                <h3 id="Txt3">Excluir Integrantes <input type="checkbox" onchange="EXFuncionario()" id="btnEXfunc" />
-                </h3>
+                <label class="label">Excluir Integrantes <input type="checkbox" onchange="EXFuncionario()"
+                        id="btnEXfunc" />
+                </label>
 
-                <h3 id="Txt4">Excluir Competências <input type="checkbox" onchange="EXCompetencias()" id="btnEXquali" />
-                </h3>
+                <label class="label">Excluir Competências <input type="checkbox" onchange="EXCompetencias()"
+                        id="btnEXquali" />
+                </label>
 
             </div>
 
@@ -68,7 +71,8 @@ if ($conexao == false) {
 
                     <h3 id="TxtCargo">Função: <input id="Cargo" type="text" name="Cargo" /></h3>
 
-                    <h3>Escolher foto: <input type="file" id="foto" name="foto" /></h3>
+                    <label id="txtFoto">Escolher foto: <input type="file" name="file" />
+                    </label>
 
                     <br>
                     <br>
@@ -98,13 +102,13 @@ if ($conexao == false) {
                     echo "<table class='table-funcionarios'>
         <tr>
             <td class='td-imagem'>
-                <img src='../../Imagens/user.png' style='width:100%'>
+                <img src='../../Imagens/perfilFoto/" . $buscando['foto'] . "' style='width:100%'>
             </td>
             <td>
                 <div class='container'>
                     <h4><b><a>" . $buscando['nome'] . "</a></b></h4>
                     <p>" . $buscando['funcao'] . "</p>
-                    <p><a href=''>Clique aqui para retirar o integrante</a></p>
+                    <p><a href='ApagaIntegrante.php?id=" . $buscando['IDintegrantes'] . "'>Clique aqui para retirar o integrante</a></p>
                 </div>
             </td>
         </tr>
@@ -126,11 +130,11 @@ if ($conexao == false) {
                     echo "<table class='table-funcionarios'>
         <tr class='trColor'>
             <td class='td-imagem'>
-                <img src='../../Imagens/user.png' style='width:100%'>
+                <div id='" . $buscando['semaforo'] . "'></div>
             </td>
             <td>
                 <div class='container'>
-                    <h4><b><a>" . $buscando['descricao'] . "</a></b></h4>
+                    <h4><b><p>" . $buscando['descricao'] . "</p></b></h4>
                     <p><a href='ApagaComp2.php?id=" . $buscando['IDqualificacaoEqp'] . "'>Clique aqui para retirar a qualificação</a></p>
                 </div>
             </td>
@@ -161,7 +165,8 @@ if ($conexao == false) {
                 <div class="grid-container">
 
                     <div class="grid-item">
-                        <i id="Outro"><input type="checkbox" onclick="CriaCompetencia()" value="Outro" />Outro</i>
+                        <label class="label"><input type="checkbox" onclick="CriaCompetencia()"
+                                value="Outro" />Outra</label>
                     </div>
 
                     <?php
@@ -201,9 +206,9 @@ if ($conexao == false) {
 
 <?php
 
-if (isset($_GET["SalvaNome"])) {
+if (isset($_POST["SalvaNome"])) {
 
-    $nomeNovoEquipe = $_GET['NameEquipe'];
+    $nomeNovoEquipe = $_POST['NameEquipe'];
 
     $selecionarNome = "UPDATE equipe
            SET nome = '" . $nomeNovoEquipe . "'
@@ -215,9 +220,9 @@ if (isset($_GET["SalvaNome"])) {
     }
 }
 
-if (isset($_GET["vermelho"])) {
+if (isset($_POST["vermelho"])) {
 
-    $nomeComp = $_GET['NomeCompetencia'];
+    $nomeComp = $_POST['NomeCompetencia'];
 
     if (empty($nomeComp)) {
         echo "<script> window.alert('Dados incompletos!!');</script>";
@@ -251,51 +256,15 @@ window.location.href='CriaEquipes.php';
     }
 }
 
-if (isset($_GET["SalvarFuncionario"])) {
+if (isset($_POST['SalvarFuncionario'])) {
 
-    $Nome = $_GET['Nome'];
-    $Email = $_GET['Email'];
-    $Funcao = $_GET['Cargo'];
-    $foto = $_FILES["foto"];
-    $flagIMG = false;
-    $flag = false;
+    $Nome = $_POST['Nome'];
+    $Email = $_POST['Email'];
+    $Funcao = $_POST['Cargo'];
+    $Foto = $_FILES["file"];
+    $flag2 = false;
 
-    if (!empty($foto["name"])) {
-
-
-        if (!preg_match("/^image\/(jpeg|png|gif|bmp)$/", $foto["type"])) {
-            echo "
-		        <script> 
-						window.alert('Isso não é uma imagem...');
-					</script>";
-            exit;
-        }
-
-        $conn = mysqli_connect("localhost", "root", "", "matriz");
-        if ($conn == false) {
-            echo "
-		        <script> 
-						window.alert('Erro ao se conectar ao banco de dados...');
-					</script>";
-            exit;
-        }
-        preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
-        $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
-        $caminho_imagem = "../../Imagens/perfilFoto/" . $nome_imagem;
-        // Faz o upload da imagem para seu respectivo caminho
-        move_uploaded_file($foto["tmp_name"], $caminho_imagem);
-
-        $buscar = "select * from cadastro where email = '" . $Email . "'and nome='" . $Nome . "'";
-        $resultado = mysqli_query($conn, $buscar);
-
-        while ($registro = mysqli_fetch_array($resultado)) {
-            $ID = $registro['IDcadastro'];
-        }
-    } else {
-        echo "<span  class = 'blinking' >Selecione um arquivo para cadastrar</span> <br>";
-    }
-
-    if (empty($Nome) or empty($Email) or empty($Funcao)) {
+    if (empty($Nome) or empty($Email)) {
         echo "<script> window.alert('Erro ao adicionar integrante, dados incompletos!!');
     </script>";
         exit();
@@ -306,10 +275,10 @@ if (isset($_GET["SalvarFuncionario"])) {
 
     while ($registro = mysqli_fetch_array($resultado)) {
         $IDcadastro = $registro['IDcadastro'];
-        $flag = true;
+        $flag2 = true;
     }
 
-    if ($flag == false) {
+    if ($flag2 == false) {
         echo "<script> window.alert('Cadastro não encontrado');
     </script>";
         exit();
@@ -332,7 +301,32 @@ if (isset($_GET["SalvarFuncionario"])) {
     </script>";
     }
 
-    $AdicionaFuncionario = "INSERT INTO integrantes VALUES (DEFAULT, ' " . $Nome . " ' , ' " . $Funcao . " ' , '" . $IDcadastro . "', '" . $IDgestor . "' , '" . $IDequipe . "')";
+    if (!empty($Foto["name"])) {
+
+
+        if (!preg_match("/^image\/(jpeg|png|gif|bmp)$/", $Foto["type"])) {
+            echo   "Isso não é uma imagem.";
+            exit;
+        }
+
+        $conn = mysqli_connect("localhost", "root", "", "matriz");
+        if ($conn == false) {
+            echo "Erro ao conectar ao BD";
+            exit;
+        }
+        // Pega extensão da imagem
+        preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $Foto["name"], $ext);
+        // Gera um nome único para a imagem
+        $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
+        // Caminho de onde ficará a imagem
+        $caminho_imagem = "../../Imagens/perfilFoto/" . $nome_imagem;
+        // Faz o upload da imagem para seu respectivo caminho
+        move_uploaded_file($Foto["tmp_name"], $caminho_imagem);
+    } else {
+        echo "<span  class = 'blinking' >Selecione um arquivo para cadastrar</span> <br>";
+    }
+
+    $AdicionaFuncionario = "INSERT INTO integrantes VALUES (DEFAULT, ' " . $Nome . " ' , ' " . $Funcao . " ' , '" . $IDcadastro . "', '" . $IDgestor . "' , '" . $IDequipe . "', '" . $nome_imagem . "')";
     $resultadoEquipe = mysqli_query($conexao, $AdicionaFuncionario);
 
     if (!$resultadoEquipe) {
@@ -340,31 +334,28 @@ if (isset($_GET["SalvarFuncionario"])) {
     </script>";
     }
 
-    $sql = "update integrantes
-                        set foto = '" . $nome_imagem . "'
-                        where IDcadastro='" . $ID . "';";
-    $resultado = mysqli_query($conn, $sql);
+    $flag = false;
 
-    if ($resultado) {
-        echo "Você foi cadastrado com sucesso.<br> ";
-        $flag = true;
-    } else {
-        echo "Erro ao salvar os dados";
+    if ($flag == false) {
+        echo "
+		<script> 
+						window.alert('Ação não sucedida...');
+					</script>";
     }
 }
 
-if (isset($_GET["SalvarEquipe"])) {
+if (isset($_POST["SalvarEquipe"])) {
 
     echo "<script> window.location.href = 'ConfirmaSenhaFinal.php';
     </script>";
 }
 
-if (isset($_GET["SalvarComp"])) {
+if (isset($_POST["SalvarComp"])) {
     $vendoSeFoiMarcado = "SELECT * FROM competencia";
     $sql = mysqli_query($conexao, $vendoSeFoiMarcado);
 
     while ($dadosComp = mysqli_fetch_array($sql)) {
-        if (isset($_GET[$dadosComp['nome']])) {
+        if (isset($_POST[$dadosComp['nome']])) {
             $AdicionaComp = "INSERT INTO qualificacaoeqp VALUES (DEFAULT, '" . $dadosComp['nome'] . "', ' " . $IDequipe . " ', '" . $IDgestor . "' )";
             $verificacao = mysqli_query($conexao, $AdicionaComp);
 
@@ -376,9 +367,9 @@ if (isset($_GET["SalvarComp"])) {
     }
 }
 
-if (isset($_GET["Salvar"])) {
+if (isset($_POST["Salvar"])) {
 
-    $senha = $_GET['senha'];
+    $senha = $_POST['senha'];
     if (empty($senha)) {
         echo "<script> window.alert('Por favor, digite a senha!!');
     </script>";
@@ -413,7 +404,7 @@ window.location.href = 'ExcluirEquipe.php';
     }
 }
 
-if (isset($_GET["Esqueci"])) {
+if (isset($_POST["Esqueci"])) {
     echo "<script> 
     window.location.href = '../ponte-senha.php';
 </script>";

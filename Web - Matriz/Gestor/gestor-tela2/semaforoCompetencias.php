@@ -129,12 +129,14 @@
             }
         }
 
+        echo "<br></br>";
+
         ?>
 
     </section>
 
     <section id="Menu-funcao">
-        <button id="funcao" onclick="semaforo()">Nível da competencia:</button>
+        <button id="funcao" onclick="semaforo()">Nível da competência:</button>
     </section>
     <div id="nivel" class="show">
         <center>

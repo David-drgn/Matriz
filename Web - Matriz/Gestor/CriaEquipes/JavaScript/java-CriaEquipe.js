@@ -73,3 +73,7 @@ function DadosCompetencia() {
 function Volta() {
     window.location.href = "ApagaSession.php";
 }
+
+function preview() {
+    document.getElementById("imagem-funcionario").src = "";
+}

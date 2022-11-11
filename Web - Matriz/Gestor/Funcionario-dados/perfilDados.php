@@ -44,7 +44,7 @@
                 <p> " . $resultado['cargo'] . " </p>
                 <br>
                 <script src='../../Menu/JavaScript/java-back.js'></script>
-                        <button id='Botao-input2' onclick='TelaGestor()'><b><</b></button>
+                        <button id='Botao-input2' onclick='TelaHome2()'><b><</b></button>
                         <div id='eqp'>
                         <div id='info'>
                         <br>
@@ -69,7 +69,7 @@
     <section id="Menu-funcionarios">
 
         <form action="EditandoDados.php" method="GET">
-            <table id="item-tabela" border="1">
+            <table id="item-tabela">
                 <?php
 
                 $Sql = "SELECT * FROM qualificacaofunc WHERE IDcadastro = '" . $IDfuncionario . "'";

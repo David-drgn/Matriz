@@ -25,7 +25,7 @@
                 </tr>
             </table>
         </header>
-        <section>
+        <div id="tamanho">
             <div id="back">
                 <img src="../Imagens/pc-telaFundo-index.jpg" id="inicial">
             </div>
@@ -33,6 +33,9 @@
                 <img src="../Imagens/android-telaFundo-index.jpg" id="inicial-android">
             </div>
             <div id="loc">
+                <h3>
+                    <b class="log">Digite a senha nova</b>
+                </h3>
                 <b class="tex">Nova senha:</b>
                 <input type="password" class="txt" id="senha-usuario" name="senha-usuario"
                     placeholder="Digite a senha nova" />
@@ -41,7 +44,7 @@
                     placeholder="Confirme a nova senha" />
                 <input type="submit" id="enviar" size="80" value="Enviar" />
             </div>
-        </section>
+        </div>
     </form>
 
 </body>

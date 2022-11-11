@@ -11,6 +11,13 @@ if ($conexao == false) {
 $senha = $_GET['senha-usuario'];
 $confirmaSenha = $_GET['confirmaSenha-usuario'];
 
+if (empty($senha) or empty($confirmaSenha)) {
+    echo "<script> 
+					window.alert('Preencha os campos');
+                    window.location.href='mudaSenha.php';
+			</script>";
+}
+
 if ($senha === $confirmaSenha) {
     $SQL = "UPDATE cadastro
     SET senha = '" . $senha . "'

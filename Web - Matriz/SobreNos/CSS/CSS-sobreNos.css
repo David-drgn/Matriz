@@ -2,17 +2,24 @@
 
 body {
     overflow-y: hidden;
-    font-family: VWText_Regular;
+    font-family: VWHead_Bold;
     color: #0B2545;
 }
 
-a{
-    text-decoration:none;
-    background-color:#113159;
-    border-radius:20px;
+a {
+    text-decoration: none;
+    background-color: #113159;
+    border-radius: 20px;
+    padding: 5px;
     color: white;
     width: 40px;
     height: 30PX;
+}
+
+p {
+    font-family: VWText_Regular;
+    font-size: large;
+    color: #0B2545;
 }
 
 .area {
@@ -28,9 +35,9 @@ a{
 
 .area2 {
     display: grid;
-    grid-template-areas: 
-    'titulo titulo titulo titulo'
-    'bruna david eduardo filipe';
+    grid-template-areas:
+        'titulo titulo titulo titulo'
+        'bruna david eduardo filipe';
     align-items: center;
     margin-top: 2vh;
     width: 97vw;
@@ -39,11 +46,11 @@ a{
     border-radius: 25px;
 }
 
-#bruna{
-    grid-area: bruna; 
+#bruna {
+    grid-area: bruna;
 }
 
-#btnSair{
+#btnSair {
     position: absolute;
     top: 3vh;
     left: 2vw;
@@ -57,7 +64,7 @@ a{
     transition: all 1s;
 }
 
-#btnSair:hover{
+#btnSair:hover {
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -66,22 +73,22 @@ a{
     color: #c4c4c4;
 }
 
-#titulo{
+#titulo {
     margin-top: -5vh;
     height: 10vh;
     align-items: center;
     grid-area: titulo;
 }
 
-#david{
-    grid-area: david; 
+#david {
+    grid-area: david;
 }
 
-#eduardo{
+#eduardo {
     grid-area: eduardo;
 }
 
-#filipe{
+#filipe {
     grid-area: filipe;
 }
 
@@ -245,8 +252,8 @@ img {
 
 #total {
     display: flex;
-    flex-direction:column;
-    align-items:center;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 0%;
     left: 0%;

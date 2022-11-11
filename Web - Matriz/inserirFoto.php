@@ -26,11 +26,12 @@
 <?php
 
 if (isset($_POST['cadastrar'])) {
-
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $foto = $_FILES["foto"];
     $flag = false;
+
+    echo "<script> window.alert('" . $foto["name"] . "')";
 
 
     if (!empty($foto["name"])) {
@@ -85,6 +86,7 @@ if (isset($_POST['cadastrar'])) {
 					</script>";
     }
 }
+
 ?>
 
 <a href="index.html" style="color:green"> Ver registros</a>

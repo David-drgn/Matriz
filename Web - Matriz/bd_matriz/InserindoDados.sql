@@ -21,10 +21,10 @@ insert into cadastro values
 (1, 'David Raphael', 'david.raphael@gmail.com', '54321', '54240682789',1, 1, 'Funcionario','carioca.jpg'),
 (2, 'Filipe', 'filipe@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Filipe.jpg'),
 (3, 'Eduardo', 'eduardo@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Eduardo.jpg'),
-(4, 'Bruna', 'bruna@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Bruna.jpg'),
+(100, 'Bruna', 'bruna@gmail.com', '54321', '54240682789', 2, 2, 'Gestor','Bruna.jpg'),
 (5, 'Kauê', 'kaue@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Kaue.jpg'),
 (6, 'Giulia', 'giulia@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','giulia.jpg'),
-(100, 'GestorTop', 'GestorTop@gmail.com', '12345', '54240682789', 2, 2, 'Gestor','user.png');
+(4, 'GestorTop', 'GestorTop@gmail.com', '12345', '54240682789', 2, 2, 'Gestor','user.png');
 
 -- ALTER table cadastro 
 -- add column foto varchar(245);
@@ -60,7 +60,7 @@ INSERT INTO competencia VALUES
 (default, 'Marketing');
 
 INSERT INTO equipe VALUES
-(default, 'Matriz de conhecimento', NULL, 'Vermelho', 100);
+(default, 'Matriz de conhecimento', NULL, 'Vermelho', 4);
 
 INSERT INTO qualificacaoEqp VALUES
 (default,'Liderança', 1, 100, 'Vermelho'),
@@ -78,18 +78,18 @@ INSERT INTO qualificacaoEqp VALUES
 
 -- Carioca
 INSERT INTO qualificacaoFunc VALUES
-(default, 1, 5,'Liderança', 1, 1, 100, null, null),
-(default, 1, 5,'Trabalho em equipe', 1, 1, 100, null, null),
-(default, 1, 5,'Programação Web', 1, 1, 100, null, null),
-(default, 1, 5,'Banco de Dados', 1, 1, 100, null, null),
-(default, 1, 5,'Design', 1, 1, 100, null, null),
-(default, 1, 5,'Programação Mobile', 1, 1, 100, null, null),
-(default, 1, 5,'Redes', 1, 1, 100, null, null),
-(default, 1, 5,'Gestão de Projetos', 1, 1, 100, null, null),
-(default, 1, 5,'Ética', 1, 1, 100, null, null),
-(default, 1, 5,'RH', 1, 1, 100, null, null),
-(default, 1, 5,'Comunicação', 1, 1, 100, null, null),
-(default, 1, 5,'Marketing', 1, 1, 100, null, null),
+(default, 4, 2,'Liderança', 1, 1, 100, null, null),
+(default, 4, 5,'Trabalho em equipe', 1, 1, 100, null, null),
+(default, 5, 5,'Programação Web', 1, 1, 100, null, null),
+(default, 3, 4,'Banco de Dados', 1, 1, 100, null, null),
+(default, 4, 1,'Design', 1, 1, 100, null, null),
+(default, 1, 2,'Programação Mobile', 1, 1, 100, null, null),
+(default, 3, 1,'Redes', 1, 1, 100, null, null),
+(default, 5, 2,'Gestão de Projetos', 1, 1, 100, null, null),
+(default, 4, 5,'Ética', 1, 1, 100, null, null),
+(default, 2, 1,'RH', 1, 1, 100, null, null),
+(default, 4, 5,'Comunicação', 1, 1, 100, null, null),
+(default, 1, 1,'Marketing', 1, 1, 100, null, null),
  -- Filipe
 (default, 3, 1,'Liderança', 1, 2, 100, null, null),
 (default, 4, 3,'Trabalho em equipe', 1, 2, 100, null, null),

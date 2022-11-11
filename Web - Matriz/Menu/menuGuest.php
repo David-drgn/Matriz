@@ -44,7 +44,7 @@
     }
 
     table {
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     #imagem-usuario {

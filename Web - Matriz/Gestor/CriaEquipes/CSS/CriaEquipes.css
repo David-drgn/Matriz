@@ -7,7 +7,7 @@ body {
     font-family: VWHead_Regular;
 }
 
-#excluirEQP{
+#excluirEQP {
     background-color: #a6a6a6;
     color: #0B2545;
 }
@@ -56,6 +56,21 @@ a:visited {
     cursor: pointer;
 }
 
+#txtFoto {
+    background-color: #d9d9d9;
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    transition: all 1s;
+    border-radius: 15px;
+}
+
+#txtFoto:hover {
+    background-color: #0B2545;
+    color: #d9d9d9;
+    cursor: pointer;
+}
+
 h3 {
     color: #0B2545;
 }
@@ -68,9 +83,13 @@ table {
     padding: 30px 30px 30px 30px;
 }
 
+input[type="file"] {
+    display: none;
+}
+
 #EXquali {
     display: none;
-    grid-template-columns: auto auto;
+    grid-template-columns: 100%;
     width: 95%;
     height: 75%;
     overflow-y: auto;
@@ -277,11 +296,19 @@ table {
     top: 5px;
 }
 
+.label:hover {
+    font-size: larger;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
 #txtContainer {
     display: grid;
     grid-template-columns: auto auto auto auto;
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 10px;
     width: 100%;
     text-align: center;
@@ -312,17 +339,7 @@ table {
     cursor: pointer;
 }
 
-#foto{
-    background-color: #0B2545;
-    color: #d9d9d9;
-    transition: all 1s;
-    border-radius: 15px;
-    border-color: transparent;
-}
-
-#foto:hover{
-    background-color: #d9d9d9;
-    color: #0B2545;
+label {
     cursor: pointer;
 }
 
@@ -413,30 +430,35 @@ button {
 
 #Vermelho {
     background-color: red;
+    width: 150px;
     height: 150px;
     border-radius: 100%;
 }
 
 #Amarelo {
     background-color: yellow;
+    width: 150px;
     height: 150px;
     border-radius: 100%;
 }
 
 #Verde {
     background-color: green;
+    width: 150px;
     height: 150px;
     border-radius: 100%;
 }
 
 #VermelhoLaranja {
     background-color: orangered;
+    width: 150px;
     height: 150px;
     border-radius: 100%;
 }
 
 #Laranja {
     background-color: orange;
+    width: 150px;
     height: 150px;
     border-radius: 100%;
 }

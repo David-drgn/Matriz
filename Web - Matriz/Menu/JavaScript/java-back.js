@@ -7,3 +7,6 @@ function TelaHome() {
 function TelaGestor() {
     window.location.href = "../gestor.php";
 }
+function TelaHome2() {
+    window.location.href = "../../HomePage/homePage.php";
+}

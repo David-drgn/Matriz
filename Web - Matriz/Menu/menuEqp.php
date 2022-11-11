@@ -43,7 +43,7 @@
         height: 100%;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
     }
 

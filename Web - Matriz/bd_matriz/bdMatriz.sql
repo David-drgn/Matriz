@@ -140,10 +140,10 @@ insert into cadastro values
 (1, 'David Raphael', 'david.raphael@gmail.com', '54321', '54240682789',1, 1, 'Funcionario','carioca.jpg'),
 (2, 'Filipe', 'filipe@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Filipe.jpg'),
 (3, 'Eduardo', 'eduardo@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Eduardo.jpg'),
-(4, 'Bruna', 'bruna@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Bruna.jpg'),
+(100, 'Bruna', 'bruna@gmail.com', '54321', '54240682789', 2, 2, 'Gestor','Bruna.jpg'),
 (5, 'Kauê', 'kaue@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','Kaue.jpg'),
 (6, 'Giulia', 'giulia@gmail.com', '54321', '54240682789', 2, 2, 'Funcionario','giulia.jpg'),
-(100, 'GestorTop', 'GestorTop@gmail.com', '12345', '54240682789', 2, 2, 'Gestor','user.png');
+(4, 'GestorTop', 'GestorTop@gmail.com', '12345', '54240682789', 2, 2, 'Gestor','user.png');
 
 -- ALTER table cadastro 
 -- add column foto varchar(245);
@@ -197,18 +197,18 @@ INSERT INTO qualificacaoEqp VALUES
 
 -- Carioca
 INSERT INTO qualificacaoFunc VALUES
-(default, 1, 5,'Liderança', 1, 1, 100, null, null),
-(default, 1, 5,'Trabalho em equipe', 1, 1, 100, null, null),
-(default, 1, 5,'Programação Web', 1, 1, 100, null, null),
-(default, 1, 5,'Banco de Dados', 1, 1, 100, null, null),
-(default, 1, 5,'Design', 1, 1, 100, null, null),
-(default, 1, 5,'Programação Mobile', 1, 1, 100, null, null),
-(default, 1, 5,'Redes', 1, 1, 100, null, null),
-(default, 1, 5,'Gestão de Projetos', 1, 1, 100, null, null),
-(default, 1, 5,'Ética', 1, 1, 100, null, null),
-(default, 1, 5,'RH', 1, 1, 100, null, null),
-(default, 1, 5,'Comunicação', 1, 1, 100, null, null),
-(default, 1, 5,'Marketing', 1, 1, 100, null, null),
+(default, 4, 2,'Liderança', 1, 1, 100, null, null),
+(default, 4, 5,'Trabalho em equipe', 1, 1, 100, null, null),
+(default, 5, 5,'Programação Web', 1, 1, 100, null, null),
+(default, 3, 4,'Banco de Dados', 1, 1, 100, null, null),
+(default, 4, 1,'Design', 1, 1, 100, null, null),
+(default, 1, 2,'Programação Mobile', 1, 1, 100, null, null),
+(default, 3, 1,'Redes', 1, 1, 100, null, null),
+(default, 5, 2,'Gestão de Projetos', 1, 1, 100, null, null),
+(default, 4, 5,'Ética', 1, 1, 100, null, null),
+(default, 2, 1,'RH', 1, 1, 100, null, null),
+(default, 4, 5,'Comunicação', 1, 1, 100, null, null),
+(default, 1, 1,'Marketing', 1, 1, 100, null, null),
  -- Filipe
 (default, 3, 1,'Liderança', 1, 2, 100, null, null),
 (default, 4, 3,'Trabalho em equipe', 1, 2, 100, null, null),
@@ -236,18 +236,18 @@ INSERT INTO qualificacaoFunc VALUES
 (default, 4, 3,'Comunicação', 1, 3, 100, null, null),
 (default, 1, 1,'Marketing', 1, 3, 100, null, null),
 -- Bruna
-(default, 3, 4,'Liderança', 1, 4, 100, null, null),
-(default, 4, 3,'Trabalho em equipe', 1, 4, 100, null, null),
-(default, 4, 2,'Programação Web', 1, 4, 100, null, null),
-(default, 3, 1,'Banco de Dados', 1, 4, 100, null, null),
-(default, 3, 3,'Design', 1, 4, 100, null, null),
-(default, 1, 1,'Programação Mobile', 1,4, 100, null, null),
-(default, 2, 2,'Redes', 1, 4, 100, null, null),
-(default, 4, 4,'Gestão de Projetos', 1, 4, 100, null, null),
-(default, 4, 3,'Ética', 1, 4, 100, null, null),
-(default, 1, 2,'RH', 1,4, 100, null, null),
-(default, 4, 4,'Comunicação', 1, 4, 100, null, null),
-(default, 1, 2,'Marketing', 1, 4, 100, null, null),
+(default, 3, 4,'Liderança', 1, 100, 100, null, null),
+(default, 4, 3,'Trabalho em equipe', 1, 100, 100, null, null),
+(default, 4, 2,'Programação Web', 1, 100, 100, null, null),
+(default, 3, 1,'Banco de Dados', 1, 100, 100, null, null),
+(default, 3, 3,'Design', 1, 100, 100, null, null),
+(default, 1, 1,'Programação Mobile', 1,100, 100, null, null),
+(default, 2, 2,'Redes', 1, 100, 100, null, null),
+(default, 4, 4,'Gestão de Projetos', 1, 100, 100, null, null),
+(default, 4, 3,'Ética', 1, 100, 100, null, null),
+(default, 1, 2,'RH', 1,100, 100, null, null),
+(default, 4, 4,'Comunicação', 1, 100, 100, null, null),
+(default, 1, 2,'Marketing', 1, 100, 100, null, null), 
 -- Kauê
 (default, 3, 1,'Liderança', 1, 5, 100, null, null),
 (default, 4, 4,'Trabalho em equipe', 1, 5, 100, null, null),
@@ -292,28 +292,8 @@ INSERT INTO qualificacaoFunc VALUES
 
 INSERT INTO integrantes VALUES
 (default, 'David Raphael', 'Programador', 1, 100, 1, 'carioca.jpg'),
-(default, 'Bruna', 'Gestor de projetos', 4, 100, 1, 'Bruna.jpg'),
+/* (default, 'Bruna', 'Gestor de projetos', 4, 100, 1, 'Bruna.jpg'), */
 (default, 'Giulia', 'Programadora', 6, 100, 1, 'giulia.jpg'),
 (default, 'Kauê', 'Marketing', 5, 100, 1, 'Kaue.jpg'),
 (default, 'Eduardo', 'Programador', 3, 100, 1, 'eduardo.jpg'),
 (default, 'Filipe', 'Designer', 2, 100, 1, 'Filipe.jpg');
-
-update qualificacaoFunc 
-set nivelAtual = '2'
-where IDqualificacaoFunc='12';
-
-SELECT * FROM equipe;
-SELECT * FROM qualificacaoEqp;
-SELECT * FROM qualificacaoFunc;
-SELECT * FROM integrantes;
-
-DELETE from equipe where IDequipe = '3';
-DELETE FROM qualificacaoEqp WHERE IDequipe = '3';
-DELETE FROM qualificacaoFunc WHERE IDequipe = '3';
-DELETE FROM integrantes WHERE IDequipe = '3';
-
-SELECT COUNT(IDqualificacaoFunc) from qualificacaoFunc WHERE IDequipe = '1';
-SELECT SUM(nivelAtual) from qualificacaoFunc WHERE IDequipe = '1';
-SELECT SUM(nivelRecomendado) from qualificacaoFunc WHERE IDequipe = '1';
-
-SELECT descricao from qualificacaoEqp WHERE IDqualificacaoEqp = '3';

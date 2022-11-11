@@ -128,6 +128,8 @@
             }
         }
 
+        echo "<br></br>";
+
         ?>
 
     </section>
