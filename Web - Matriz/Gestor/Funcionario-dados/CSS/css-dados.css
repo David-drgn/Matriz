@@ -1,0 +1,165 @@
+body {
+    background-color: #0B2545;
+}
+
+#dadosCompetenciaNova {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 260px;
+    width: 505px;
+    background-color: lightgray;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+    z-index: 1;
+}
+
+#vermelho {
+    background-color: darkgrey;
+    border-radius: 10px;
+    border: transparent;
+    padding: 7px;
+    width: 50px;
+    font-size: large;
+}
+
+#amarelo {
+    background-color: darkgrey;
+    border: transparent;
+    border-radius: 10px;
+    padding: 7px;
+    font-size: large;
+    width: 50px;
+}
+
+#verde {
+    background-color: darkgrey;
+    border: transparent;
+    border-radius: 10px;
+    padding: 7px;
+    width: 50px;
+    font-size: large;
+}
+
+#laranja {
+    background-color: darkgrey;
+    border: transparent;
+    border-radius: 10px;
+    padding: 7px;
+    width: 50px;
+    font-size: large;
+}
+
+#laranjaAmarelo {
+    background-color: darkgrey;
+    border: transparent;
+    border-radius: 10px;
+    padding: 7px;
+    width: 50px;
+    font-size: large;
+}
+
+.head {
+    display: grid;
+    height: 270.5px;
+    width: 515px;
+    background-color: darkgrey;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 33vh;
+}
+
+#Grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    border-radius: 10px;
+}
+
+.arredores {
+    border-radius: 15px;
+    width: 200px;
+    height: 100px;
+    background-color: darkgrey;
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    font-size: larger;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    background-color: lightgray;
+    width: 190px;
+    height: 90px;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
+}
+
+#zero {
+    position: absolute;
+    margin-top: 10px;
+    left: 28%;
+    display: none;
+}
+
+#vermelho:hover+#zero {
+    display: block;
+}
+
+#um {
+    position: absolute;
+    margin-top: 10px;
+    left: 35%;
+    display: none;
+}
+
+#laranja:hover+#um {
+    display: block;
+}
+
+#dois {
+    position: absolute;
+    margin-top: 10px;
+    left: 42%;
+    display: none;
+}
+
+#laranjaAmarelo:hover+#dois {
+    display: block;
+}
+
+#tres {
+    position: absolute;
+    margin-top: 10px;
+    left: 48%;
+    display: none;
+}
+
+#amarelo:hover+#tres {
+    display: block;
+}
+
+#quatro {
+    position: absolute;
+    margin-top: 10px;
+    left: 55%;
+    display: none;
+}
+
+#verde:hover+#quatro {
+    display: block;
+}
+
+#vermelho:hover,
+#laranja:hover,
+#laranjaAmarelo:hover,
+#amarelo:hover,
+#verde:hover {
+    background-color: #0B2545;
+    color: white;
+    cursor: pointer;
+}
