@@ -18,21 +18,97 @@
     <form action="Funcionario-dados.php" method="GET">
         <div class="head">
             <div id="dadosCompetenciaNova">
+                <?php
+
+                echo "<h1>" . $_SESSION['nomeComp'] . "</h1>";
+                ?>
                 <h1>Nível recomendado do funcionário:</h1>
                 <br>
                 <div id="Grid">
                     <div></div>
-                    <input type="submit" name="vermelhoCria" id="vermelho" value="1" />
+
+                    <div>
+                        <input type="submit" name="vermelhoCria" id="vermelho" value="0" />
+                        <span id="zero">
+                            <div class="arredores">
+
+                                <div class="info">
+                                    <br>
+                                    <b>Não realiza a <br> atividade</b>
+                                    <br>
+                                </div>
+
+                            </div>
+                        </span>
+                    </div>
+
                     <div></div>
-                    <input type="submit" name="laranjaCria" id="laranja" value="2" />
+
+                    <div><input type="submit" name="laranjaCria" id="laranja" value="1" />
+                        <span id="um">
+                            <div class="arredores">
+
+                                <div class="info">
+                                    <br>
+                                    <b>Não realiza a <br> atividade</b>
+                                    <br>
+                                </div>
+
+                            </div>
+                        </span>
+                    </div>
+
                     <div></div>
-                    <input type="submit" name="laranjaAmareloCria" id="laranjaAmarelo" value="3" />
+
+                    <div><input type="submit" name="laranjaAmareloCria" id="laranjaAmarelo" value="2" />
+                        <span id="dois">
+                            <div class="arredores">
+
+                                <div class="info">
+                                    <br>
+                                    <b>Não realiza a <br> atividade</b>
+                                    <br>
+                                </div>
+
+                            </div>
+                        </span>
+                    </div>
+
                     <div></div>
-                    <input type="submit" name="amareloCria" id="amarelo" value="4" />
+
+                    <div><input type="submit" name="amareloCria" id="amarelo" value="3" />
+                        <span id="tres">
+                            <div class="arredores">
+
+                                <div class="info">
+                                    <br>
+                                    <b>Não realiza a <br> atividade</b>
+                                    <br>
+                                </div>
+
+                            </div>
+                        </span>
+                    </div>
+
                     <div></div>
-                    <input type="submit" name="verdeCria" id="verde" value="5" />
+
+                    <div><input type="submit" name="verdeCria" id="verde" value="4" />
+                        <span id="quatro">
+                            <div class="arredores">
+
+                                <div class="info">
+                                    <br>
+                                    <b>Não realiza a <br> atividade</b>
+                                    <br>
+                                </div>
+
+                            </div>
+                        </span>
+                    </div>
+
                     <div></div>
                 </div>
+
             </div>
         </div>
     </form>

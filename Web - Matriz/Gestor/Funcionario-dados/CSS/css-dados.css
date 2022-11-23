@@ -1,5 +1,8 @@
+@import url(../../../CSS/CSS-import/Fontes.css);
+
 body {
     background-color: #0B2545;
+    font-family: VWHead_Regular;
 }
 
 #dadosCompetenciaNova {
@@ -13,6 +16,17 @@ body {
     margin-top: 5px;
     margin-left: 5px;
     z-index: 1;
+}
+
+#data {
+    size: 20vh;
+}
+
+#gridData {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    text-align: center;
 }
 
 #vermelho {
@@ -69,6 +83,39 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 33vh;
+}
+
+#Grid2 {
+    padding: 10px;
+    margin: auto;
+    width: 90%;
+    height: 125%;
+    display: grid;
+}
+
+#salvaData {
+    border-radius: 15px;
+    border: transparent;
+    width: 50%;
+    background-color: darkgray;
+    height: 90%;
+    margin: auto;
+    transition: all 1s;
+}
+
+input[type=date] {
+    border-radius: 15px;
+    border: transparent;
+    text-align: center;
+}
+
+#salvaData:hover {
+    background-color: #0B2545;
+    color: white;
+    width: 60%;
+    height: 100%;
+    font-size: larger;
+    cursor: pointer;
 }
 
 #Grid {
