@@ -1,3 +1,9 @@
+@import url(../../CSS/CSS-import/Fontes.css);
+
+body{
+    font-family: VWHead_Regular;
+}
+
 #background {
     position: absolute;
     left: 0px;

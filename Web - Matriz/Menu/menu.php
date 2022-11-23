@@ -79,7 +79,7 @@
         bottom: 0%;
         left: 0%;
         width: 100%;
-        height: 50%;
+        height: 40vh;
         background-color: #a6a6a6;
         border-radius: 20px;
     }
