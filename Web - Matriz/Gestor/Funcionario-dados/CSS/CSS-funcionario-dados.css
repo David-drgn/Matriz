@@ -1,5 +1,8 @@
+@import url(../../../CSS/CSS-import/Fontes.css);
+
 body {
     background-color: #113159;
+    font-family: VWHead_Regular;
 }
 
 b {
@@ -12,7 +15,7 @@ b {
     align-items: center;
     background-color: #a6a6a6;
     width: 100%;
-    height: 82vh;
+    height: 45vh;
     border-radius: 20px;
 }
 

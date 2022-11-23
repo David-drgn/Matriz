@@ -1,3 +1,5 @@
+@import url(../../CSS/CSS-import/Fontes.css);
+
 header {
     height: 80px;
     width: 100%;
@@ -14,6 +16,7 @@ body {
     background-color: white;
     background-image: src="Imagens/android-telaFundo-index.jpg";
     height: 100%;
+    font-family: VWHead_Regular;
     overflow: hidden;
     display: flex;
 }
