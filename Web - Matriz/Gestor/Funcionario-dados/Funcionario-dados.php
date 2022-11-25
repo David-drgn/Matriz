@@ -24,6 +24,8 @@
     $IDequipe = $_SESSION['IDequipe'];
     $IDgestor = $_SESSION['IDcadastro'];
 
+    include 'AtualizaFunc.php';
+
     $dadosFuncionario = "SELECT * FROM cadastro WHERE IDcadastro = ' " . $IDfuncionario . " '";
     $buscando = mysqli_query($conexao, $dadosFuncionario);
 

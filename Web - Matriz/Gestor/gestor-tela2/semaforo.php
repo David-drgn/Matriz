@@ -14,6 +14,7 @@
     <script src="semaforo.js"></script>
 
     <?php
+    include 'atualizaSemaforo.php';
     include __DIR__ . '/../../Menu/menuSemaforo.php';
     $conexao = mysqli_connect("localhost", "root", "", "matriz");
 
@@ -40,7 +41,6 @@
                     <td>
                         <div class='container'>
                             <h4><b>" . $resultado['nome'] . "</b></h4>
-                            <p><a href='atualizaSemaforo.php?id=" . $resultado['IDequipe'] . "'>Atualizar</a></p>
                             <p><a href='../gestorEquipe.php?id=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
@@ -59,7 +59,6 @@
                     <td>
                         <div class='container'>
                             <h4><b>" . $resultado['nome'] . "</b></h4>
-                            <p><a href='atualizaSemaforo.php?id=" . $resultado['IDequipe'] . "'>Atualizar</a></p>
                             <p><a href='../gestorEquipe.php?id=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
@@ -78,7 +77,6 @@
                     <td>
                         <div class='container'>
                         <h4><b>" . $resultado['nome'] . "</b></h4>
-                        <p><a href='atualizaSemaforo.php?id=" . $resultado['IDequipe'] . "'>Atualizar</a></p>
                         <p><a href='../gestorEquipe.php?id=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
@@ -97,7 +95,6 @@
                     <td>
                         <div class='container'>
                         <h4><b>" . $resultado['nome'] . "</b></h4>
-                        <p><a href='atualizaSemaforo.php?id=" . $resultado['IDequipe'] . "'>Atualizar</a></p>
                         <p><a href='../gestorEquipe.php?id=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
@@ -116,7 +113,6 @@
                     <td>
                         <div class='container'>
                         <h4><b>" . $resultado['nome'] . "</b></h4>
-                        <p><a href='atualizaSemaforo.php?id=" . $resultado['IDequipe'] . "'>Atualizar</a></p>
                         <p><a href='../gestorEquipe.php?id=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>

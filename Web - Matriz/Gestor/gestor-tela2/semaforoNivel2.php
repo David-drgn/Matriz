@@ -41,7 +41,6 @@
                     <td>
                         <div class='container'>
                             <h4><b>" . $resultado['descricao'] . "</b></h4>
-                            <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
                             <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
@@ -60,7 +59,6 @@
                     <td>
                         <div class='container'>
                             <h4><b>" . $resultado['descricao'] . "</b></h4>
-                            <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
                             <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
@@ -79,7 +77,6 @@
                     <td>
                         <div class='container'>
                         <h4><b>" . $resultado['descricao'] . "</b></h4>
-                        <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
                         <p><a href='../ge../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
@@ -98,7 +95,6 @@
                     <td>
                         <div class='container'>
                         <h4><b>" . $resultado['descricao'] . "</b></h4>
-                        <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
                         <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . "'>Ver detalhes</a></p>
                         </div>
                     </td>
@@ -117,7 +113,6 @@
                     <td>
                         <div class='container'>
                         <h4><b>" . $resultado['descricao'] . "</b></h4>
-                        <p><a href='atualizaQualificacao.php?id=" . $resultado['IDqualificacaoEqp'] . "'>Atualizar</a></p>
                         <p><a href='../Funcionario-dados/Competencias.php?id=" . $resultado['IDqualificacaoEqp'] . "&IDeqp=" . $resultado['IDequipe'] . " '>Ver detalhes</a></p>
                         </div>
                     </td>

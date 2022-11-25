@@ -156,6 +156,11 @@
     if ($Cargo == "Gestor") {
         echo "<div id='tamanho-dados'>
                 <table id='Progresso'>";
+        echo "<tr>
+                <td colspan='2'>
+                <h2 class='index-dado'><b>Equipe:</b></h2>
+                </td>
+                </tr>   ";
         $pegandoDados = "SELECT * FROM equipe WHERE gestor = '" . $IDdados . "' ORDER BY nome";
         $SQL = mysqli_query($conexao, $pegandoDados);
 
@@ -178,24 +183,6 @@
                             </td>
                             </tr>";
             }
-            if ($resultado['semaforo'] == "VermelhoLaranja") {
-                echo "
-            <tr>
-                        <td colspan='2'>
-                            <h3 class='index-dado'>" . $resultado['nome'] . "</h4>
-                        </td>
-                    </tr>
-                            <tr>
-                            <td class='tdDado'>
-                                <div class='progressbar' class='dado'>
-                                    <div style='border-radius: 10px;height: 20px; width: 40%;background-color: orangered;'></div>
-                                </div>
-                            </td>
-                            <td>
-                                <h4>40%</h4>
-                            </td>
-                            </tr>";
-            }
             if ($resultado['semaforo'] == "Laranja") {
                 echo "
             <tr>
@@ -214,7 +201,7 @@
                             </td>
                             </tr>";
             }
-            if ($resultado['semaforo'] == "VerdeAmarelo") {
+            if ($resultado['semaforo'] == "Amarelo") {
                 echo "
             <tr>
                         <td colspan='2'>
@@ -224,7 +211,7 @@
                             <tr>
                             <td class='tdDado'>
                                 <div class='progressbar' class='dado'>
-                                    <div style='border-radius: 10px;height: 20px;width: 80%;background-color: greenyellow;'></div>
+                                    <div style='border-radius: 10px;height: 20px;width: 80%;background-color: yellow;'></div>
                                 </div>
                             </td>
                             <td>
@@ -249,6 +236,90 @@
                                 <h4>100%</h4>
                             </td>
                             </tr>";
+            }
+
+            echo "<tr>
+                <td colspan='2'>
+                <h2 class='index-dado'><b>Integrantes:</b></h2>
+                </td>
+                </tr>   ";
+
+            $integra = "SELECT * FROM integrantes WHERE IDequipe = '" . $resultado['IDequipe'] . "'";
+            $sqli = mysqli_query($conexao, $integra);
+
+            while ($dadosIntegrantes = mysqli_fetch_array($sqli)) {
+                if ($dadosIntegrantes['semaforo'] == "Vermelho") {
+                    echo "
+                                <tr>
+                            <td colspan='2'>
+                                <h3 class='index-dado'>" . $dadosIntegrantes['nome'] . "</h4>
+                            </td>
+                        </tr>   
+                                <tr>
+                                <td  class='tdDado'>
+                                    <div class='progressbar' class='dado'>
+                                        <div style='border-radius: 10px;height: 20px;width: 20%;background-color: red;'></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h4>20%</h4>
+                                </td>
+                                </tr>";
+                }
+                if ($dadosIntegrantes['semaforo'] == "Laranja") {
+                    echo "
+                <tr>
+                            <td colspan='2'>
+                                <h3 class='index-dado'>" . $dadosIntegrantes['nome'] . "</h4>
+                            </td>
+                        </tr>
+                                <tr>
+                                <td class='tdDado'>
+                                    <div class='progressbar' class='dado'>
+                                        <div style='border-radius: 10px;height: 20px;width: 60%;background-color: orange;'></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h4>60%</h4>
+                                </td>
+                                </tr>";
+                }
+                if ($dadosIntegrantes['semaforo'] == "Amarelo") {
+                    echo "
+                <tr>
+                            <td colspan='2'>
+                                <h3 class='index-dado'>" . $dadosIntegrantes['nome'] . "</h4>
+                            </td>
+                        </tr>
+                                <tr>
+                                <td class='tdDado'>
+                                    <div class='progressbar' class='dado'>
+                                        <div style='border-radius: 10px;height: 20px;width: 80%;background-color: yellow;'></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h4>80%</h4>
+                                </td>
+                                </tr>";
+                }
+                if ($dadosIntegrantes['semaforo'] == "Verde") {
+                    echo "
+                <tr>
+                            <td colspan='2'>
+                                <h3 class='index-dado'>" . $dadosIntegrantes['nome'] . "</h4>
+                            </td>
+                        </tr>
+                                <tr>
+                                <td class='tdDado'>
+                                    <div class='progressbar' class='dado'>
+                                        <div style='border-radius: 10px;height: 20px;width: 100%;background-color: green;'></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h4>100%</h4>
+                                </td>
+                                </tr>";
+                }
             }
         }
         echo "

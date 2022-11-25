@@ -1,103 +1,77 @@
 <?php
 
-session_start();
+$pessoas1 = 0;
+$pessoas2 = 0;
+$pessoas3 = 0;
+$pessoas4 = 0;
 
-$IDequipe = $_GET['id'];
-
-$conexao = mysqli_connect("localhost", "root", "", "matriz");
-
-if ($conexao == false) {
-	echo "Erro ao conectar ao banco de dados.";
-}
-
-$seleciona = "SELECT descricao from qualificacaoEqp WHERE IDqualificacaoEqp = '" . $IDequipe . "'";
-$verifica = mysqli_query($conexao, $seleciona);
-
-while ($row = mysqli_fetch_array($verifica)) {
-	$descricao = $row['descricao'];
-}
-
-$soma = "SELECT SUM(nivelAtual) from qualificacaoFunc WHERE IDgestor = '" . $_SESSION['IDcadastro'] . "' and descricao = '" . $descricao . "'";
-$verifica = mysqli_query($conexao, $soma);
-$Soma = mysqli_fetch_row($verifica);
-
-if (!$verifica) {
-}
-
-$somaTotal = "SELECT COUNT(nivelRecomendado) from qualificacaoFunc WHERE IDgestor = '" . $_SESSION['IDcadastro'] . "' and descricao = '" . $descricao . "'";
-$verifica = mysqli_query($conexao, $somaTotal);
-$Somatotal = mysqli_fetch_row($verifica);
-
-if (!$verifica) {
-	echo "<script>alert('Erro ao atualizar');
-	window.location.href = 'semaforoCompetencias.php';</script>";
-}
-
-if ($Soma[0] == 0) {
-	echo "<script>alert('Erro ao atualizar');
-	window.location.href = 'semaforoCompetencias.php';</script>";
-}
-
-if ($Somatotal[0] == 0) {
-	echo "<script>alert('Erro ao atualizar');
-	window.location.href = 'semaforoCompetencias.php';</script>";
-}
-
-$resultado = round($Soma[0] / $Somatotal[0]);
-
-if ($resultado == 5) {
-	$atualiza = "
+$select = "SELECT * from qualificacaoeqp";
+$teste = mysqli_query($conexao, $select);
+while ($dadosQualificacao = mysqli_fetch_array($teste)) {
+	$pessoas1 = 0;
+	$pessoas2 = 0;
+	$pessoas3 = 0;
+	$pessoas4 = 0;
+	$funcionarios = "SELECT * from qualificacaofunc WHERE IDequipe = '" . $dadosQualificacao['IDequipe'] . "' AND descricao = '" . $dadosQualificacao['descricao'] . "'";
+	$recebendo = mysqli_query($conexao, $funcionarios);
+	while ($dadosFuncionario = mysqli_fetch_array($recebendo)) {
+		switch ($dadosFuncionario['nivelAtual']) {
+			case 1:
+				$pessoas1 = $pessoas1 + 1;
+				break;
+			case 2:
+				$pessoas2 = $pessoas2 + 1;
+				break;
+			case 3:
+				$pessoas3 = $pessoas3 + 1;
+				break;
+			case 4:
+				$pessoas4 = $pessoas4 + 1;
+				break;
+			case 5:
+				$pessoas4 = $pessoas4 + 1;
+				break;
+		}
+	}
+	if ($pessoas1 == 0 and $pessoas2 == 1 and $pessoas3 >= 1 || $pessoas4 >= 0) {
+		$atualiza = "
 		UPDATE qualificacaoeqp
 		SET semaforo = 'Verde'
-		WHERE IDqualificacaoEqp = '" . $IDequipe .  "';";
-	$sql = mysqli_query($conexao, $atualiza);
-	if (!$atualiza) {
-		echo "<script>alert('Erro ao atualizar');
-		window.location.href = 'semaforoCompetencias.php';</script>";
-	}
-	echo "<script>window.location.href = 'semaforoCompetencias.php';</script>";
-} else if ($resultado == 4) {
-	$atualiza = "
+		WHERE IDequipe = '" . $dadosQualificacao['IDequipe'] .  "';";
+		$sql = mysqli_query($conexao, $atualiza);
+		if (!$atualiza) {
+			echo "<script>alert('Erro ao atualizar');
+		window.location.href = 'semaforo.php';</script>";
+		}
+	} else if ($pessoas2 == 2) {
+		$atualiza = "
 		UPDATE qualificacaoeqp
-		SET semaforo = 'VerdeAmarelo'
-		WHERE IDqualificacaoEqp = '" . $IDequipe .  "';";
-	$sql = mysqli_query($conexao, $atualiza);
-	if (!$atualiza) {
-		echo "<script>alert('Erro ao atualizar');
-		window.location.href = 'semaforoCompetencias.php';</script></script>";
-	}
-	echo "<script>window.location.href = 'semaforoCompetencias.php';</script>";
-} else if ($resultado == 3) {
-	$atualiza = "
+		SET semaforo = 'Amarelo'
+		WHERE IDequipe = '" . $dadosQualificacao['IDequipe'] .  "';";
+		$sql = mysqli_query($conexao, $atualiza);
+		if (!$atualiza) {
+			echo "<script>alert('Erro ao atualizar');
+		window.location.href = 'semaforo.php';</script>";
+		}
+	} else if ($pessoas2 > 0 || $pessoas3 > 0 || $pessoas4 > 0) {
+		$atualiza = "
 		UPDATE qualificacaoeqp
 		SET semaforo = 'Laranja'
-		WHERE IDqualificacaoEqp = '" . $IDequipe .  "';";
-	$sql = mysqli_query($conexao, $atualiza);
-	if (!$atualiza) {
-		echo "<script>alert('Erro ao atualizar');
-		window.location.href = 'semaforoCompetencias.php';</script></script>";
-	}
-	echo "<script>window.location.href = 'semaforoCompetencias.php';</script>";
-} else if ($resultado == 2) {
-	$atualiza = "
-		UPDATE qualificacaoeqp
-		SET semaforo = 'VermelhoLaranja'
-		WHERE IDqualificacaoEqp = '" . $IDequipe .  "';";
-	$sql = mysqli_query($conexao, $atualiza);
-	if (!$atualiza) {
-		echo "<script>alert('Erro ao atualizar');
-		window.location.href = 'semaforoCompetencias.php';</script></script>";
-	}
-	echo "<script>window.location.href = 'semaforoCompetencias.php';</script>";
-} else if ($resultado == 1) {
-	$atualiza = "
+		WHERE IDequipe = '" . $dadosQualificacao['IDequipe'] .  "';";
+		$sql = mysqli_query($conexao, $atualiza);
+		if (!$atualiza) {
+			echo "<script>alert('Erro ao atualizar');
+		window.location.href = 'semaforo.php';</script>";
+		}
+	} else if ($pessoas2 == 0 || $pessoas3 == 0 || $pessoas4 == 0) {
+		$atualiza = "
 		UPDATE qualificacaoeqp
 		SET semaforo = 'Vermelho'
-		WHERE IDqualificacaoEqp = '" . $IDequipe .  "';";
-	$sql = mysqli_query($conexao, $atualiza);
-	if (!$atualiza) {
-		echo "<script>alert('Erro ao atualizar');
-		window.location.href = 'semaforoCompetencias.php';</script></script>";
+		WHERE IDequipe = '" . $dadosQualificacao['IDequipe'] .  "';";
+		$sql = mysqli_query($conexao, $atualiza);
+		if (!$atualiza) {
+			echo "<script>alert('Erro ao atualizar');
+		window.location.href = 'semaforo.php';</script>";
+		}
 	}
-	echo "<script>window.location.href = 'semaforoCompetencias.php';</script>";
 }

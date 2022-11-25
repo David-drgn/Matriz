@@ -70,6 +70,7 @@ create table integrantes
     gestor				INT,	
     IDequipe			INT,
     foto			    VARCHAR(245),
+    semaforo			VARCHAR(45),
     
     FOREIGN KEY (IDcadastro) REFERENCES cadastro(IDcadastro),
     FOREIGN KEY (IDequipe) REFERENCES equipe(IDequipe),
@@ -291,9 +292,9 @@ INSERT INTO qualificacaoFunc VALUES
 (default, 1, 1,'Marketing', 1, 1); */
 
 INSERT INTO integrantes VALUES
-(default, 'David Raphael', 'Programador', 1, 100, 1, 'carioca.jpg'),
+(default, 'David Raphael', 'Programador', 1, 100, 1, 'carioca.jpg', 'Vermelho'),
 /* (default, 'Bruna', 'Gestor de projetos', 4, 100, 1, 'Bruna.jpg'), */
-(default, 'Giulia', 'Programadora', 6, 100, 1, 'giulia.jpg'),
-(default, 'Kauê', 'Marketing', 5, 100, 1, 'Kaue.jpg'),
-(default, 'Eduardo', 'Programador', 3, 100, 1, 'eduardo.jpg'),
-(default, 'Filipe', 'Designer', 2, 100, 1, 'Filipe.jpg');
+(default, 'Giulia', 'Programadora', 6, 100, 1, 'giulia.jpg', 'Vermelho'),
+(default, 'Kauê', 'Marketing', 5, 100, 1, 'Kaue.jpg', 'Vermelho'),
+(default, 'Eduardo', 'Programador', 3, 100, 1, 'eduardo.jpg', 'Vermelho'),
+(default, 'Filipe', 'Designer', 2, 100, 1, 'Filipe.jpg', 'Vermelho');
