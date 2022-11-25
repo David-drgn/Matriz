@@ -138,11 +138,10 @@
         <center>
             <br>
             <a href="semaforoCompetencias.php">Todos</a> <br><br>
-            <a href="semaforoNivel2.php?semaforo=Vermelho">1 - Vermelho</a> <br><br>
-            <a href="semaforoNivel2.php?semaforo=VermelhoLaranja">2 - Laranja / Vermelho</a> <br><br>
-            <a href="semaforoNivel2.php?semaforo=Laranja">3 - Laranja</a> <br><br>
-            <a href="semaforoNivel2.php?semaforo=VerdeAmarelo">4 - Amarelo</a> <br><br>
-            <a href="semaforoNivel2.php?semaforo=Verde">5 - Verde</a> <br><br>
+            <a href="semaforoNivel2.php?semaforo=Vermelho">Vermelho</a> <br><br>
+            <a href="semaforoNivel2.php?semaforo=Laranja">Laranja</a> <br><br>
+            <a href="semaforoNivel2.php?semaforo=VerdeAmarelo">Amarelo</a> <br><br>
+            <a href="semaforoNivel2.php?semaforo=Verde">Verde</a> <br><br>
         </center>
     </div>
 

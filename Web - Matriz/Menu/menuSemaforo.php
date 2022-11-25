@@ -217,12 +217,6 @@
             </tr>
             <tr>
                 <td class='cores'>
-                    <div id='coresLaranjaVermelho'></div>
-                </td>
-                <td>Vulgar</td>
-            </tr>
-            <tr>
-                <td class='cores'>
                     <div id='coresVermelho'></div>
                 </td>
                 <td>Insatisfatório</td>

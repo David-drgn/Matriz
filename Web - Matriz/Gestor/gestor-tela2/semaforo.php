@@ -134,11 +134,10 @@
         <center>
             <br>
             <a href="semaforo.php">Todos</a> <br><br>
-            <a href="semaforoNivel.php?semaforo=Vermelho">1 - Vermelho</a> <br><br>
-            <a href="semaforoNivel.php?semaforo=VermelhoLaranja">2 - Laranja / Vermelho</a> <br><br>
-            <a href="semaforoNivel.php?semaforo=Laranja">3 - Laranja</a> <br><br>
-            <a href="semaforoNivel.php?semaforo=VerdeAmarelo">4 - Amarelo</a> <br><br>
-            <a href="semaforoNivel.php?semaforo=Verde">5 - Verde</a> <br><br>
+            <a href="semaforoNivel.php?semaforo=Vermelho">Vermelho</a> <br><br>
+            <a href="semaforoNivel.php?semaforo=Laranja">Laranja</a> <br><br>
+            <a href="semaforoNivel.php?semaforo=VerdeAmarelo">Amarelo</a> <br><br>
+            <a href="semaforoNivel.php?semaforo=Verde">Verde</a> <br><br>
         </center>
     </div>
 

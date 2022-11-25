@@ -58,7 +58,7 @@
 
                                 <div class="info">
                                     <br>
-                                    <b>Não realiza a <br> atividade</b>
+                                    <b>Em <br> aprendizagem</b>
                                     <br>
                                 </div>
 
@@ -74,7 +74,7 @@
 
                                 <div class="info">
                                     <br>
-                                    <b>Não realiza a <br> atividade</b>
+                                    <b>Executa a atividade sem auxílio</b>
                                     <br>
                                 </div>
 
@@ -90,7 +90,7 @@
 
                                 <div class="info">
                                     <br>
-                                    <b>Não realiza a <br> atividade</b>
+                                    <b>Consegue ensinar <br> outras pessoas</b>
                                     <br>
                                 </div>
 
@@ -106,7 +106,7 @@
 
                                 <div class="info">
                                     <br>
-                                    <b>Não realiza a <br> atividade</b>
+                                    <b>Consegue propor <br> melhorias</b>
                                     <br>
                                 </div>
 
